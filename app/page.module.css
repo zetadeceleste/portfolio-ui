@@ -2,13 +2,19 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 100%;
   justify-content: space-between;
-  min-height: calc(100vh - 12rem);
-  padding: 6rem;
+  padding: 3rem;
 }
 
 .description {
   font-family: var(--font-mono);
+  margin-top: 2rem;
   text-align: center;
-  width: 100%;
+}
+
+@media all and (max-width: var(--desktop-width)) {
+  .main {
+    padding: 6rem;
+  }
 }
