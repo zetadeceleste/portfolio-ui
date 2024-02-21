@@ -12,10 +12,10 @@ body {
 }
 
 body {
-  color: var(--foreground-rgb);
+  color: var(--color-neutral-500);
 }
 
 a {
-  color: var(--color-blue-100);
+  color: var(--color-blue-400);
   text-decoration: none;
 }

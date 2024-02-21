@@ -1,21 +1,29 @@
 .body {
-  --color-black-100: rgb(0 0 0 / 10%);
-  --color-blue-100: #428bca;
-  --color-blue-200: #2a6496;
-  --color-blue-300: #268296;
-  --color-blue-400: #405574;
-  --color-blue-500: #002c54;
-  --color-green-100: #35b577;
-  --color-grey-100: #b0b0b0;
-  --color-grey-200: #f1f1f1;
-  --color-grey-300: #c4c4c4;
-  --color-orange-100: #f6a300;
-  --color-purple-100: #ad618f;
-  --color-red-100: #da2037;
-  --color-red-200: #cb3737;
-  --color-yellow-100: #c5c900;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Blues: Variations of the Star Color: #268296 */
+  --color-blue-100: #e0f7fa;
+  --color-blue-200: #b2ebf2;
+  --color-blue-300: #80deea;
+  --color-blue-400: #4dd0e1;
+  --color-blue-500: #26c6da;
+  --color-blue-600: #268296;
+  --color-blue-700: #007c91;
+  --color-blue-800: #006064;
+
+  /* Complementary and Accents */
+  --color-accent-100: #ffcdd2;
+  --color-accent-200: #ef9a9a;
+  --color-accent-300: #e57373;
+
+  /* Neutrals */
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #eee;
+  --color-neutral-300: #bdbdbd;
+  --color-neutral-400: #757575;
+  --color-neutral-500: #424242;
+
+  /* Text on Blue Background */
+  --color-text-on-blue: #fff;
+
   --border-radius: 0.5rem;
   --desktop-width: 1024px;
   --foreground-rgb: 0, 0, 0;

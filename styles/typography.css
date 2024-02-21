@@ -1,11 +1,11 @@
 .body {
-  --font-limelight: 'Limelight', arial, helvetica, sans-serif;
+  --font-headline: 'Limelight', arial, helvetica, sans-serif;
   --font-number: arial, helvetica, sans-serif;
-  --font-oswald: 'Oswald', arial, helvetica, sans-serif;
+  --font-stack: 'Oswald', arial, helvetica, sans-serif;
 }
 
 body {
-  font-family: var(--font-oswald);
+  font-family: var(--font-stack);
   font-size: 0.875rem; /* 14px */
   font-weight: 400;
 }
@@ -15,7 +15,8 @@ caption {
 }
 
 h1 {
-  font-family: var(--font-limelight);
+  color: var(--color-blue-600);
+  font-family: var(--font-headline);
   font-size: 2.25rem; /* 36px */
 }
 
