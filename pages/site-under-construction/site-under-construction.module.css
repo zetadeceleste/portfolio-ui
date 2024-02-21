@@ -1,3 +1,5 @@
+@import url("../../styles/variables.css");
+
 .container {
   align-items: center;
   display: flex;
@@ -8,12 +10,10 @@
 }
 
 .description {
-  font-family: var(--font-mono);
-  margin-top: 2rem;
   text-align: center;
 }
 
-@media all and (max-width: var(--desktop-width)) {
+@media all and (width >= 1024px) {
   .container {
     padding: 6rem;
   }

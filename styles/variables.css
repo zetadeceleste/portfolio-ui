@@ -1,0 +1,22 @@
+.body {
+  --color-black-100: rgb(0 0 0 / 10%);
+  --color-blue-100: #428bca;
+  --color-blue-200: #2a6496;
+  --color-blue-300: #268296;
+  --color-blue-400: #405574;
+  --color-blue-500: #002c54;
+  --color-green-100: #35b577;
+  --color-grey-100: #b0b0b0;
+  --color-grey-200: #f1f1f1;
+  --color-grey-300: #c4c4c4;
+  --color-orange-100: #f6a300;
+  --color-purple-100: #ad618f;
+  --color-red-100: #da2037;
+  --color-red-200: #cb3737;
+  --color-yellow-100: #c5c900;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --border-radius: 0.5rem;
+  --desktop-width: 1024px;
+  --foreground-rgb: 0, 0, 0;
+}

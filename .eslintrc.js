@@ -8,7 +8,6 @@ module.exports = {
     "eslint:recommended", // ESLint recommended rules
     "plugin:react/recommended", // React recommended rules
     "plugin:@typescript-eslint/recommended", // TypeScript recommended rules
-    "prettier", // Disable rules conflicting with Prettier
   ],
   parser: "@typescript-eslint/parser", // Parser for TypeScript
   parserOptions: {
@@ -21,11 +20,9 @@ module.exports = {
   plugins: [
     "react", // React plugin
     "@typescript-eslint", // TypeScript plugin
-    "prettier", // Prettier plugin
     "import", // Ensure to include "import" plugin
   ],
   rules: {
-    "prettier/prettier": "error", // Format errors are reported as errors
     "react/react-in-jsx-scope": "off", // Not require 'React' in scope with JSX
     "react/prop-types": "off", // Disable propTypes checking in React
     "@typescript-eslint/explicit-module-boundary-types": "off", // Allow TypeScript to infer return types
