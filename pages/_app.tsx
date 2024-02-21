@@ -4,7 +4,7 @@ import React from "react";
 
 import RootLayout from "../layouts/RootLayout";
 
-import "../styles/globals.css";
+import "../styles/main.css";
 
 type Props = AppProps;
 

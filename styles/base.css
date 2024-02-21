@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body {
+  color: var(--foreground-rgb);
+}
+
+a {
+  color: var(--color-blue-100);
+  text-decoration: none;
+}
