@@ -1,7 +1,7 @@
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
-const RootLayout: React.FC<Props> = ({ children }) => children;
+const RootLayout: React.FC<Props> = ({ children }) => children
 
-export default RootLayout;
+export default RootLayout

@@ -1,16 +1,16 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
-import Loader from "@/components/common/Loader";
+import Loader from '@/components/common/Loader'
 
 const Custom404Page = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   useEffect(() => {
-    router.push("/");
-  }, [router]);
+    router.push('/')
+  }, [router])
 
-  return <Loader />;
-};
+  return <Loader />
+}
 
-export default Custom404Page;
+export default Custom404Page

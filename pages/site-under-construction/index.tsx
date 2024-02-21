@@ -1,4 +1,4 @@
-import styles from "./site-under-construction.module.css";
+import styles from './site-under-construction.module.css'
 
 const SiteUnderConstructionPage: React.FC = () => (
   <div className={styles.container}>
@@ -9,6 +9,6 @@ const SiteUnderConstructionPage: React.FC = () => (
       </h2>
     </div>
   </div>
-);
+)
 
-export default SiteUnderConstructionPage;
+export default SiteUnderConstructionPage

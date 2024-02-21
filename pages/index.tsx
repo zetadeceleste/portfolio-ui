@@ -1,6 +1,6 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import SiteUnderConstructionPage from "./site-under-construction";
+import SiteUnderConstructionPage from './site-under-construction'
 
 // TODO: Add a real homepage
 const HomePage: React.FC = () => (
@@ -11,6 +11,6 @@ const HomePage: React.FC = () => (
     </Head>
     <SiteUnderConstructionPage />
   </>
-);
+)
 
-export default HomePage;
+export default HomePage

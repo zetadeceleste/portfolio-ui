@@ -1,7 +1,7 @@
 .body {
-  --font-limelight: "Limelight", arial, helvetica, sans-serif;
+  --font-limelight: 'Limelight', arial, helvetica, sans-serif;
   --font-number: arial, helvetica, sans-serif;
-  --font-oswald: "Oswald", arial, helvetica, sans-serif;
+  --font-oswald: 'Oswald', arial, helvetica, sans-serif;
 }
 
 body {
