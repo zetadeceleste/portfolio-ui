@@ -1,21 +1,22 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
 body {
-  height: 100vh;
-  overflow-x: hidden;
-  width: 100vw;
-}
-
-body {
-  color: var(--color-neutral-500);
+  background-color: var(--color-background);
+  color: var(--color-neutral-dark);
 }
 
 a {
-  color: var(--color-blue-400);
+  color: var(--color-accent);
   text-decoration: none;
+
+  &:hover {
+    color: var(--color-accent-hover);
+  }
+}
+
+button {
+  background-color: var(--color-star);
+  color: var(--color-background);
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
 }
