@@ -1,16 +1,17 @@
 import styles from './site-under-construction.module.css'
 
+import Container from '@/components/common/Container'
 import Headline from '@/components/common/Headline'
 
 const SiteUnderConstructionPage: React.FC = () => (
-  <div className={styles.container}>
+  <Container>
     <div className={styles.description}>
       <Headline title="Site under construction" />
-      <h2>
+      <p>
         Follow me on <a href="https://github.com/zetadeceleste">Github</a> ;-)
-      </h2>
+      </p>
     </div>
-  </div>
+  </Container>
 )
 
 export default SiteUnderConstructionPage

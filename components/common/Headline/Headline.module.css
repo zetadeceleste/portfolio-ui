@@ -1,6 +1,6 @@
 @import url('../../../styles/variables.css');
 
 .truncate {
-  width: 3em;
+  width: 2.5em;
   word-break: break-all;
 }

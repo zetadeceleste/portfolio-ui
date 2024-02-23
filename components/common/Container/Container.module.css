@@ -1,0 +1,21 @@
+.container {
+  align-items: center;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* height: calc(100vh - 6rem); */
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.container.row {
+  flex-direction: row;
+}
+
+@media all and (width >= 1024px) {
+  .container {
+    /* height: calc(100vh - 12rem); */
+    padding: 6rem;
+  }
+}
