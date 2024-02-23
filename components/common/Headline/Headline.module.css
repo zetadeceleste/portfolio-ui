@@ -1,6 +1,11 @@
-@import url('../../../styles/variables.css');
-
 .truncate {
-  width: 2.5em;
+  width: 4ch;
   word-break: break-all;
+  font-size: 3.75rem;
+}
+
+@media all and (width >= 1024px) {
+  .truncate {
+    font-size: 7.5rem;
+  }
 }

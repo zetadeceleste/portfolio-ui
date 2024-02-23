@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
-import React from 'react'
+import { useEffect } from 'react'
 
 import Loader from '@/components/common/Loader'
 
-const Custom404Page: React.FC = () => {
+const Custom404Page = () => {
   const router = useRouter()
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       router.push('/')
     }, 5000)

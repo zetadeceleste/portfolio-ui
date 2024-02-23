@@ -2,17 +2,19 @@ import Head from 'next/head'
 
 import Container from '@/components/common/Container'
 import Headline from '@/components/common/Headline'
-import Image from '@/components/common/Image'
+import ImageResponsive from '@/components/common/ImageResponsive'
 
-const HomePage: React.FC = () => (
+const HomePage = () => (
   <>
     <Head>
       <title>Celeste Zapata | Developer</title>
       <meta name="description" content="Portfolio Web" />
     </Head>
-    <Container row>
-      <Image
-        imagePath="public/images/home-page-hero.jpeg"
+    <Container twoColumns>
+      <ImageResponsive
+        imageName={'home-page-hero'}
+        width={1300}
+        height={1033}
         description="Ilustration of developer girl programming"
       />
       <Headline

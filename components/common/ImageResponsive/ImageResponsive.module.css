@@ -1,0 +1,9 @@
+.responsive {
+  height: 50%;
+}
+
+@media all and (width >= 1024px) {
+  .responsive {
+    height: 100%;
+  }
+}

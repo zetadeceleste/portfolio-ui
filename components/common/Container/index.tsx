@@ -1,12 +1,14 @@
 import styles from './Container.module.css'
 
-type Props = {
+interface Props {
   children: React.ReactNode
-  row?: boolean
+  twoColumns?: boolean
 }
 
-const Container: React.FC<Props> = ({ children, row = false }) => (
-  <div className={`${styles.container} ${row ? styles.row : ''}`}>
+const Container = ({ children, twoColumns = false }: Props) => (
+  <div
+    className={`${styles.container} ${twoColumns ? styles['two-columns'] : ''}`}
+  >
     {children}
   </div>
 )

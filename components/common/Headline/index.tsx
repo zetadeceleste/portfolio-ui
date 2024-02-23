@@ -1,22 +1,16 @@
-import React from 'react'
-
 import styles from './Headline.module.css'
 
-type Props = {
+interface Props {
   title: string
   subtitle?: string
   truncate?: boolean
 }
 
-const Headline: React.FC<Props> = ({
-  title,
-  subtitle = '',
-  truncate = false,
-}) => {
+const Headline = ({ title, subtitle = '', truncate = false }: Props) => {
   return (
     <hgroup>
       <h1 className={truncate ? styles.truncate : ''}>{title}</h1>
-      {subtitle && <h2>{subtitle}</h2>}
+      {subtitle && <h3>{subtitle}</h3>}
     </hgroup>
   )
 }

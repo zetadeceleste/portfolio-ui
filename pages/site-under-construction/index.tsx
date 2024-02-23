@@ -3,7 +3,7 @@ import styles from './site-under-construction.module.css'
 import Container from '@/components/common/Container'
 import Headline from '@/components/common/Headline'
 
-const SiteUnderConstructionPage: React.FC = () => (
+const SiteUnderConstructionPage = () => (
   <Container>
     <div className={styles.description}>
       <Headline title="Site under construction" />

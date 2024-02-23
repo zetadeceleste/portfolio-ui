@@ -1,14 +1,11 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import React from 'react'
 
 import RootLayout from '../layouts/RootLayout'
 
 import '../styles/main.css'
 
-type Props = AppProps
-
-const App: React.FC<Props> = ({ Component, pageProps }) => (
+const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
