@@ -1,7 +1,7 @@
 .truncate {
+  font-size: 3.75rem;
   width: 4ch;
   word-break: break-all;
-  font-size: 3.75rem;
 }
 
 @media all and (width >= 1024px) {
