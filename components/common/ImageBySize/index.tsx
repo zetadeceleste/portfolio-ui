@@ -1,8 +1,7 @@
 import Image from 'next/image'
 
-import { ImageSet } from '../../../types'
-
 import styles from './ImageBySize.module.css'
+import { ImageSet } from './types'
 
 import useWindowSize from '@/utils/useWindowSize'
 
@@ -14,31 +13,47 @@ const ImageBySize = ({ images }: Props) => {
   const { name, description, desktop, tablet, mobile } = images
   const { width } = useWindowSize()
 
-  const getImagePath = () => {
-    if (width >= 1024) return `/images/${name}-desktop.jpeg`
-    if (width >= 768)
-      return tablet
-        ? `/images/${name}-tablet.jpeg`
-        : `/images/${name}-desktop.jpeg`
-    return mobile
-      ? `/images/${name}-mobile.jpeg`
-      : `/images/${name}-tablet.jpeg` || `/images/${name}-desktop.jpeg`
+  const getImageProps = () => {
+    if (width >= 1024) {
+      return {
+        src: `/images/${name}-desktop.jpeg`,
+        height: desktop.height,
+        width: desktop.width,
+      }
+    }
+
+    if (width >= 768 && tablet) {
+      return {
+        src: `/images/${name}-tablet.jpeg`,
+        height: tablet.height,
+        width: tablet.width,
+      }
+    }
+
+    if (mobile) {
+      return {
+        src: `/images/${name}-mobile.jpeg`,
+        height: mobile.height,
+        width: mobile.width,
+      }
+    }
+
+    // Fallback to desktop image
+    return {
+      src: `/images/${name}-desktop.jpeg`,
+      height: desktop.height,
+      width: desktop.width,
+    }
   }
 
-  const getImageSize = () => {
-    if (width >= 1024) return desktop
-    if (width >= 768) return tablet || desktop
-    return mobile || tablet || desktop
-  }
-
-  const { height, width: imgWidth } = getImageSize()
+  const imageProps = getImageProps()
 
   return (
     <Image
-      src={getImagePath()}
+      src={imageProps.src}
       alt={description}
-      height={height}
-      width={imgWidth}
+      height={imageProps.height}
+      width={imageProps.width}
       className={styles.image}
     />
   )

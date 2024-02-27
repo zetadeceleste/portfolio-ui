@@ -1,8 +1,8 @@
-import { ImageSet } from '@/types'
+import { ImageSet } from '@/components/common/ImageBySize/types'
 
 export const HOME_PAGE_IMAGES: ImageSet = {
   name: 'home-page',
-  description: 'Ilustration',
+  description: 'Test Home Image',
   desktop: {
     height: 1033,
     width: 1300,
