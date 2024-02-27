@@ -4,61 +4,43 @@ import { ImageSet } from '../../../types'
 
 import styles from './ImageBySize.module.css'
 
+import useWindowSize from '@/utils/useWindowSize'
+
 interface Props {
   images: ImageSet
 }
 
-const renderImage = (
-  imagePath: string | undefined,
-  description: string,
-  height: number | undefined,
-  width: number | undefined,
-  className: string,
-) => {
-  if (!imagePath) return null
+const ImageBySize = ({ images }: Props) => {
+  const { name, description, desktop, tablet, mobile } = images
+  const { width } = useWindowSize()
+
+  const getImagePath = () => {
+    if (width >= 1024) return `/images/${name}-desktop.jpeg`
+    if (width >= 768)
+      return tablet
+        ? `/images/${name}-tablet.jpeg`
+        : `/images/${name}-desktop.jpeg`
+    return mobile
+      ? `/images/${name}-mobile.jpeg`
+      : `/images/${name}-tablet.jpeg` || `/images/${name}-desktop.jpeg`
+  }
+
+  const getImageSize = () => {
+    if (width >= 1024) return desktop
+    if (width >= 768) return tablet || desktop
+    return mobile || tablet || desktop
+  }
+
+  const { height, width: imgWidth } = getImageSize()
 
   return (
     <Image
-      src={imagePath}
+      src={getImagePath()}
       alt={description}
-      sizes="100vw"
       height={height}
-      width={width}
-      className={`${styles.image} ${styles[className]}`}
+      width={imgWidth}
+      className={styles.image}
     />
-  )
-}
-
-const ImageBySize = ({ images }: Props) => {
-  const { name, description, desktop, tablet, mobile } = images
-  const imagePathDesktop = `/images/${name}-desktop.jpeg`
-  const imagePathTablet = tablet && `/images/${name}-tablet.jpeg`
-  const imagePathMobile = mobile && `/images/${name}-mobile.jpeg`
-
-  return (
-    <>
-      {renderImage(
-        imagePathDesktop,
-        description,
-        desktop.height,
-        desktop.width,
-        'desktop',
-      )}
-      {renderImage(
-        imagePathTablet,
-        description,
-        tablet?.height,
-        tablet?.width,
-        'tablet',
-      )}
-      {renderImage(
-        imagePathMobile,
-        description,
-        mobile?.height,
-        mobile?.width,
-        'mobile',
-      )}
-    </>
   )
 }
 
