@@ -1,0 +1,23 @@
+{
+  "short_name": "Portfolio Web",
+  "name": "Celeste Zapata | Developer",
+  "icons": [
+    {
+      "src": "/appIcon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/appIcon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#D4CEFD",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#D4CEFD",
+  "prefer_related_applications": true,
+  "related_applications": [{ "platform": "play", "id": "4973723444991202506" }]
+}
