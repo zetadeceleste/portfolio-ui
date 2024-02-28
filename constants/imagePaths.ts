@@ -8,11 +8,11 @@ export const HOME_PAGE_IMAGES: ImageSet = {
     width: 1300,
   },
   tablet: {
-    height: 566,
-    width: 700,
+    height: 814,
+    width: 1024,
   },
   mobile: {
-    height: 254,
-    width: 320,
+    height: 611,
+    width: 768,
   },
 }

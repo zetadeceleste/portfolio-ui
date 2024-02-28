@@ -14,33 +14,24 @@ const ImageBySize = ({ images }: Props) => {
   const { width } = useWindowSize()
 
   const getImageProps = () => {
-    if (width >= 1024) {
+    if (width <= 768 && mobile) {
       return {
-        src: `/images/${name}-desktop.jpeg`,
-        height: desktop.height,
-        width: desktop.width,
-      }
-    }
-
-    if (width >= 768 && tablet) {
-      return {
-        src: `/images/${name}-tablet.jpeg`,
-        height: tablet.height,
-        width: tablet.width,
-      }
-    }
-
-    if (mobile) {
-      return {
-        src: `/images/${name}-mobile.jpeg`,
+        src: `/images/${name}-mobile.webp`,
         height: mobile.height,
         width: mobile.width,
       }
     }
 
-    // Fallback to desktop image
+    if (width <= 1024 && width >= 768 && tablet) {
+      return {
+        src: `/images/${name}-tablet.webp`,
+        height: tablet.height,
+        width: tablet.width,
+      }
+    }
+
     return {
-      src: `/images/${name}-desktop.jpeg`,
+      src: `/images/${name}-desktop.webp`,
       height: desktop.height,
       width: desktop.width,
     }
