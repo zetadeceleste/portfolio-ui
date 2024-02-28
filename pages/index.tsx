@@ -8,15 +8,20 @@ import { HOME_PAGE_IMAGES } from '@/constants/imagePaths'
 const HomePage = () => (
   <>
     <Head>
-      <title>Celeste Zapata | Developer</title>
+      <title>Celeste Zapata | Web Developer</title>
       <meta name="description" content="Portfolio Web" />
     </Head>
     <Container twoColumns>
       <ImageBySize images={HOME_PAGE_IMAGES} />
       <Headline
-        title="portfolio"
-        subtitle="Celeste Zapata | Developer"
-        truncate
+        title={
+          <>
+            port <br />
+            folio
+          </>
+        }
+        subtitle="Celeste Zapata | Web Developer"
+        center
       />
     </Container>
   </>

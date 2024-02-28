@@ -1,15 +1,23 @@
 import styles from './Headline.module.css'
 
 interface Props {
-  title: string
+  title: JSX.Element
+  center?: boolean
   subtitle?: string
-  truncate?: boolean
+  underline?: boolean
 }
 
-const Headline = ({ title, subtitle = '', truncate = false }: Props) => {
+const Headline = ({
+  title,
+  center = false,
+  subtitle = '',
+  underline = false,
+}: Props) => {
   return (
-    <hgroup>
-      <h1 className={truncate ? styles.truncate : ''}>{title}</h1>
+    <hgroup
+      className={`${styles.headline} ${center ? styles.center : ''} ${underline ? styles.underline : ''}`}
+    >
+      <h1 className={styles.title}>{title}</h1>
       {subtitle && <h3>{subtitle}</h3>}
     </hgroup>
   )

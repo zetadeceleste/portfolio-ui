@@ -1,11 +1,27 @@
-.truncate {
-  font-size: 3.75rem;
-  width: 4ch;
-  word-break: break-all;
+.headline {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.headline.underline {
+  border-bottom: var(--color-neutral-dark) solid;
+}
+
+.title {
+  line-height: 3.5rem;
 }
 
 @media all and (width >= 1024px) {
-  .truncate {
-    font-size: 7.5rem;
+  .headline.center {
+    align-items: center;
+    justify-self: center;
+  }
+
+  .title {
+    line-height: 7.5rem;
   }
 }
