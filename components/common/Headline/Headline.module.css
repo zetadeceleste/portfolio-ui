@@ -14,6 +14,5 @@
 @media all and (width >= 1024px) {
   .headline.center {
     align-items: center;
-    justify-self: center;
   }
 }
