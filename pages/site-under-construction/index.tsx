@@ -6,7 +6,7 @@ import Headline from '@/components/common/Headline'
 const SiteUnderConstructionPage = () => (
   <Container>
     <div className={styles.description}>
-      <Headline title="Site under construction" />
+      <Headline title={<>Site under construction</>} />
       <p>
         Follow me on <a href="https://github.com/zetadeceleste">Github</a> ;-)
       </p>
