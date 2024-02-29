@@ -11,17 +11,9 @@
   border-bottom: var(--color-neutral-dark) solid;
 }
 
-.title {
-  line-height: 3.5rem;
-}
-
 @media all and (width >= 1024px) {
   .headline.center {
     align-items: center;
     justify-self: center;
-  }
-
-  .title {
-    line-height: 7.5rem;
   }
 }
