@@ -8,6 +8,12 @@ body {
   color: var(--color-neutral-dark);
 }
 
+h1,
+h2,
+strong {
+  color: var(--color-primary);
+}
+
 a {
   color: var(--color-accent);
   text-decoration: none;

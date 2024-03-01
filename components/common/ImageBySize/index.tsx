@@ -16,35 +16,35 @@ const ImageBySize = ({ images }: Props) => {
   const getImageProps = () => {
     if (width <= 768 && mobile) {
       return {
-        src: `/images/${name}-mobile.webp`,
-        height: mobile.height,
-        width: mobile.width,
+        path: `/images/${name}-mobile.webp`,
+        imageHeight: mobile.height,
+        imageWidth: mobile.width,
       }
     }
 
     if (width <= 1024 && width >= 768 && tablet) {
       return {
-        src: `/images/${name}-tablet.webp`,
-        height: tablet.height,
-        width: tablet.width,
+        path: `/images/${name}-tablet.webp`,
+        imageHeight: tablet.height,
+        imageWidth: tablet.width,
       }
     }
 
     return {
-      src: `/images/${name}-desktop.webp`,
-      height: desktop.height,
-      width: desktop.width,
+      path: `/images/${name}-desktop.webp`,
+      imageHeight: desktop.height,
+      imageWidth: desktop.width,
     }
   }
 
-  const imageProps = getImageProps()
+  const { path, imageHeight, imageWidth } = getImageProps()
 
   return (
     <Image
-      src={imageProps.src}
+      src={path}
       alt={description}
-      height={imageProps.height}
-      width={imageProps.width}
+      height={imageHeight}
+      width={imageWidth}
       className={styles.image}
     />
   )

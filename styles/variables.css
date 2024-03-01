@@ -14,8 +14,8 @@
   --color-neutral-dark: #262524; /* Near black, excellent for main text and titles */
 
   /* Complementary and Accent Colors */
-  --color-accent: #f4938f; /* Medium pink, for interactive elements like buttons and links */
-  --color-accent-hover: #f4747c; /* Slightly more saturated pink, for hover or active states */
+  --color-accent: #333; /* Dark gray, close to black, for interactive elements like buttons and links */
+  --color-accent-hover: #1a1a1a; /* Even darker gray (almost black), for hover or active states */
 
   /* ADDITIONAL */
   --border-radius: 0.5rem; /* 8px */
