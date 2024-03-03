@@ -1,4 +1,4 @@
-import MailIcon from '../../../public/images/icons/email.svg'
+import CrossIcon from '../../../public/images/icons/cross.svg'
 
 import { IconName } from '@/types'
 
@@ -9,11 +9,11 @@ interface Props {
 const getIcon = (iconName: IconName) => {
   switch (iconName) {
     case 'github':
-      return <MailIcon />
+      return <CrossIcon />
     case 'mail':
-      return <MailIcon />
+      return <CrossIcon />
     case 'linkedin':
-      return <MailIcon />
+      return <CrossIcon />
     default:
       return null
   }

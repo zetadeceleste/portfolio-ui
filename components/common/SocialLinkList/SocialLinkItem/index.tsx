@@ -10,8 +10,8 @@ import { IconProps } from '@/types'
 const SocialLinkItem = ({ link, iconName, text }: IconProps) => (
   <li className={styles.wrapper}>
     <Link href={link} target="_blank" rel="noopener noreferrer">
-      <FlexWrapper gap="extra-small">
-        <Icon name={iconName} /> {text}
+      <FlexWrapper alignItems="center" gap="extra-small">
+        <Icon name={iconName} /> <span>{text}</span>
       </FlexWrapper>
     </Link>
   </li>

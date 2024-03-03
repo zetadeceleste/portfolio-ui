@@ -31,21 +31,19 @@ const AboutPage = () => (
             collaborated with designers, marketers, and analysts.
           </p>
           <p>
-            I’m committed to the principles of{' '}
-            <em>🌱 Sustainable Software Engineering</em>: prioritizing best
-            practices for clean code and resource optimization, both to minimize
-            environmental impact and to smartly cut costs.
-          </p>
-          <p>
             Passionate about continuous learning, I strive to deliver
             pixel-perfect designs with a focus on <strong>SEO</strong> and{' '}
             <strong>Performance</strong> optimization, essential for maintaining
             a high <em>Quality Score</em> for websites.
           </p>
           <p>
-            Additionally, I consider <em>Web Accessibility</em> a priority,
-            ensuring an inclusive user experience by providing seamless access
-            for individuals with disabilities.
+            I’m committed to the principles of{' '}
+            <em>🌱 Sustainable Software Engineering</em>: prioritizing best
+            practices for clean code and resource optimization, both to minimize
+            environmental impact and to smartly cut costs. Additionally, I
+            consider <em>Web Accessibility</em> a priority, ensuring an
+            inclusive user experience by providing seamless access for
+            individuals with disabilities.
           </p>
         </FlexWrapper>
         <SocialLinkList />
