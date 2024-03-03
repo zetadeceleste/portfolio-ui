@@ -1,19 +1,19 @@
-import Icon from '@/components/common/Icon'
+import { IconProps } from '@/types'
 
-export const SOCIAL_LINKS_DATA = [
+export const SOCIAL_LINKS_DATA: IconProps[] = [
   {
     link: 'mailto:zdceleste@gmail.com',
-    icon: <Icon icon="mail" />,
+    iconName: 'mail',
     text: 'zdceleste@gmail.com',
   },
   {
     link: 'https://github.com/zetadeceleste',
-    icon: <Icon icon="github" />,
+    iconName: 'github',
     text: 'github.com/zetadeceleste',
   },
   {
     link: 'https://www.linkedin.com/in/zetadeceleste/',
-    icon: <Icon icon="linkedin" />,
+    iconName: 'linkedin',
     text: 'linkedin.com/in/zetadeceleste',
   },
 ]

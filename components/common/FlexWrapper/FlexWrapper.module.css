@@ -21,6 +21,10 @@
     align-items: flex-end;
   }
 
+  &.gap-extra-small {
+    gap: 0.5rem;
+  }
+
   &.gap-small {
     gap: 1rem;
   }
@@ -33,7 +37,7 @@
     gap: 3rem;
   }
 
-  &.justify-spaced {
+  &.justify-space-between {
     justify-content: space-between;
   }
 

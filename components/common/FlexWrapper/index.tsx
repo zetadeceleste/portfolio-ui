@@ -4,8 +4,8 @@ interface Props {
   children: React.ReactNode
   flexDirection?: 'row' | 'column'
   alignItems?: 'start' | 'center' | 'end'
-  justifyContent?: 'spaced' | 'start' | 'center' | 'end'
-  gap?: 'small' | 'medium' | 'large'
+  justifyContent?: 'space-between' | 'start' | 'center' | 'end'
+  gap?: 'extra-small' | 'small' | 'medium' | 'large'
 }
 
 const FlexWrapper = ({

@@ -1,15 +1,18 @@
 import Link from 'next/link'
 
-interface Props {
-  link: string
-  icon: JSX.Element
-  text: string
-}
+import FlexWrapper from '../../FlexWrapper'
+import Icon from '../../Icon'
 
-const SocialLinkItem = ({ link, icon, text }: Props) => (
-  <li>
+import styles from './SocialLinkItem.module.css'
+
+import { IconProps } from '@/types'
+
+const SocialLinkItem = ({ link, iconName, text }: IconProps) => (
+  <li className={styles.wrapper}>
     <Link href={link} target="_blank" rel="noopener noreferrer">
-      {icon} {text}
+      <FlexWrapper gap="extra-small">
+        <Icon name={iconName} /> {text}
+      </FlexWrapper>
     </Link>
   </li>
 )

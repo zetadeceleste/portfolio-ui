@@ -5,8 +5,8 @@ import { SOCIAL_LINKS_DATA } from '@/constants/data'
 
 const SocialLinkList = () => (
   <ul className={styles.wrapper}>
-    {SOCIAL_LINKS_DATA.map(({ link, icon, text }, index) => (
-      <SocialLinkItem key={index} link={link} icon={icon} text={text} />
+    {SOCIAL_LINKS_DATA.map(({ link, iconName, text }, index) => (
+      <SocialLinkItem key={index} link={link} iconName={iconName} text={text} />
     ))}
   </ul>
 )

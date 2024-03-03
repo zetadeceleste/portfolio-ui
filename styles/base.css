@@ -11,12 +11,11 @@ body {
 h1,
 h2,
 strong {
-  color: var(--color-primary);
+  color: var(--color-star);
 }
 
 a {
   color: var(--color-accent);
-  text-decoration: none;
 
   &:hover {
     color: var(--color-accent-hover);
@@ -28,6 +27,6 @@ button {
   color: var(--color-background);
 
   &:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-star-dark);
   }
 }

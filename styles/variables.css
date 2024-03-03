@@ -2,20 +2,19 @@
   /* COLORS */
 
   /* Star Color and Primary Shades */
-  --color-star: #ec4a4b; /* Vibrant red, great for CTAs and highlighted elements */
-  --color-primary-light: #f4b4ab; /* Light pink, good for soft backgrounds or highlights */
-  --color-primary: #ec4a4b; /* Your star color */
-  --color-primary-dark: #d27c74; /* Dark red, useful for emphasis or hover states on elements */
+  --color-star: #eb3333; /* Vibrant red, great for CTAs and highlighted elements */
+  --color-star-hover: #d27c74; /* Dark red, useful for emphasis or hover states on elements */
+  --color-star-light: #f4b4ab; /* Light pink, good for soft backgrounds or highlights */
 
   /* Background and Neutral Colors */
-  --color-background: #fbf4ec; /* Near white, perfect for general backgrounds */
+  --color-background: #fafafa; /* Near white, perfect for general backgrounds */
   --color-neutral-light: #e5c2bc; /* Soft beige, for section backgrounds or cards */
   --color-neutral: #9b9995; /* Medium gray, for secondary text or dividers */
-  --color-neutral-dark: #262524; /* Near black, excellent for main text and titles */
+  --color-neutral-dark: #1f1f1e; /* Near black, excellent for main text and titles */
 
   /* Complementary and Accent Colors */
   --color-accent: #333; /* Dark gray, close to black, for interactive elements like buttons and links */
-  --color-accent-hover: #1a1a1a; /* Even darker gray (almost black), for hover or active states */
+  --color-accent-hover: #4d4d4d; /* Lighter gray for hover or active states, making the hover effect more noticeable */
 
   /* ADDITIONAL */
   --border-radius: 0.5rem; /* 8px */

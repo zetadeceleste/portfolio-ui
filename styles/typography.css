@@ -26,12 +26,29 @@ h2 {
 h3,
 p {
   font-size: 0.75rem;
-  font-weight: bolder;
+}
+
+h3,
+em,
+strong {
+  font-weight: 700;
+}
+
+p {
+  line-height: 2rem;
 }
 
 a,
 span {
   font-size: 0.625rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  font-style: italic;
 }
 
 @media all and (width >= 1024px) {
