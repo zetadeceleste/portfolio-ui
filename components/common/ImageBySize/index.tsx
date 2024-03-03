@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
 import styles from './ImageBySize.module.css'
-import { ImageSet } from './types'
 
+import { ImageSet } from '@/types'
 import useWindowSize from '@/utils/useWindowSize'
 
 interface Props {

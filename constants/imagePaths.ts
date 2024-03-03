@@ -1,4 +1,4 @@
-import { ImageSet } from '@/components/common/ImageBySize/types'
+import { ImageSet } from '@/types'
 
 export const HOME_PAGE_IMAGES: ImageSet = {
   name: 'home-page',
