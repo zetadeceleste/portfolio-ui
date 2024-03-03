@@ -12,7 +12,7 @@ const Container = ({
   children,
 }: Props) => (
   <section className={`${breakpoint ? styles.breakpoint : ''}`}>
-    <div className={`${styles.container}  ${divided ? styles.divided : ''} `}>
+    <div className={`${styles.container} ${divided ? styles.divided : ''}`}>
       {children}
     </div>
   </section>

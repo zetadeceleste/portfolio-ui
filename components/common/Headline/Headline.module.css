@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 
   &.underline {
     border-bottom: var(--color-neutral-dark) 0.25rem solid;

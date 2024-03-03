@@ -37,19 +37,23 @@
     gap: 3rem;
   }
 
-  &.justify-space-between {
+  &.justify-content-space-between {
     justify-content: space-between;
   }
 
-  &.justify-start {
+  &.justify-content-start {
     justify-content: flex-start;
   }
 
-  &.justify-center {
+  &.justify-content-center {
     justify-content: center;
   }
 
-  &.justify-end {
+  &.justify-content-end {
     justify-content: flex-start;
+  }
+
+  &.justify-self-start {
+    justify-self: start;
   }
 }

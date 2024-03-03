@@ -1,10 +1,9 @@
 .container {
-  align-items: center;
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr;
-  justify-content: center;
   min-height: 100vh;
+  place-items: center;
 
   &.divided {
     grid-template-rows: auto 1fr;
