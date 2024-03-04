@@ -15,7 +15,7 @@ const HomePage = () => (
         content="Celeste Zapata is a professional developer based in Mendoza, Argentina."
       />
     </Head>
-    <Container divided>
+    <Container divided full>
       <ImageBySize images={HOME_PAGE_IMAGES} />
       <FlexWrapper flexDirection="column" justifySelf="start" gap="medium">
         <Headline

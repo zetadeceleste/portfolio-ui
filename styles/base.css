@@ -3,30 +3,16 @@
   min-height: 100%;
 }
 
-body {
-  background-color: var(--color-background);
-  color: var(--color-neutral-dark);
-}
-
-h1,
+/* h1,
 h2,
 strong {
   color: var(--color-star);
-}
+} */
 
 a {
-  color: var(--color-accent);
+  color: var(--color-link);
 
   &:hover {
-    color: var(--color-accent-hover);
-  }
-}
-
-button {
-  background-color: var(--color-star);
-  color: var(--color-background);
-
-  &:hover {
-    background-color: var(--color-star-dark);
+    color: var(--color-link-hover);
   }
 }

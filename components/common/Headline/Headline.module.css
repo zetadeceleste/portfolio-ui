@@ -3,9 +3,31 @@
   flex-direction: column;
   gap: 1.5rem;
 
+  .title {
+    color: var(--color-headline);
+  }
+
   &.underline {
-    border-bottom: var(--color-neutral-dark) 0.25rem solid;
-    width: 400px;
+    border-bottom: var(--color-border) 0.25rem solid;
+    padding-right: 8ch;
+
+    .title {
+      font-size: 2.75rem;
+
+      @media all and (width >= 1024px) {
+        font-size: 5.5rem;
+      }
+    }
+  }
+
+  &.variant {
+    &.underline {
+      border-bottom: var(--color-border-variant) 0.25rem solid;
+    }
+
+    .title {
+      color: var(--color-headline-variant);
+    }
   }
 }
 

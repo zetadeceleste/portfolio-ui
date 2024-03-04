@@ -16,7 +16,7 @@ const AboutPage = () => (
         content="Celeste Zapata is a professional developer based in Mendoza, Argentina."
       />
     </Head>
-    <Container breakpoint>
+    <Container>
       <FlexWrapper flexDirection="column" gap="medium">
         <Headline title={<>Hello!</>} underline />
         <FlexWrapper flexDirection="column">

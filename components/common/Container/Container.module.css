@@ -1,7 +1,19 @@
 .container {
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  &.variant {
+    background-color: var(--color-background-variant);
+    color: var(--color-text-variant);
+  }
+}
+
+.wrapper {
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: var(--breakpoint-width);
   min-height: 100vh;
   place-items: center;
 
@@ -17,9 +29,8 @@
       grid-template-columns: 1.25fr 1fr;
     }
   }
-}
 
-.breakpoint {
-  margin: 0 auto;
-  max-width: var(--breakpoint-width);
+  &.full {
+    max-width: 100%;
+  }
 }

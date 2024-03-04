@@ -1,22 +1,32 @@
 .body {
   /* COLORS */
 
-  /* Star Color and Primary Shades */
-  --color-star: #eb3333; /* Vibrant red, great for CTAs and highlighted elements */
-  --color-star-hover: #d27c74; /* Dark red, useful for emphasis or hover states on elements */
-  --color-star-light: #f4b4ab; /* Light pink, good for soft backgrounds or highlights */
+  /* Principal Colors */
+  --color-accent: #333;
+  --color-accent-hover: #4d4d4d;
+  --color-neutral: #9b9995;
+  --color-neutral-dark: #1f1f1e;
+  --color-neutral-light: #fafafa;
+  --color-star: #eb3333;
+  --color-star-hover: #d27c74;
+  --color-star-light: #f4b4ab;
+  --color-start-variant: #fafafa;
 
-  /* Background and Neutral Colors */
-  --color-background: #fafafa; /* Near white, perfect for general backgrounds */
-  --color-neutral-light: #e5c2bc; /* Soft beige, for section backgrounds or cards */
-  --color-neutral: #9b9995; /* Medium gray, for secondary text or dividers */
-  --color-neutral-dark: #1f1f1e; /* Near black, excellent for main text and titles */
+  /* Text Color */
+  --color-text: var(--color-neutral-dark);
+  --color-text-variant: var(--color-neutral-light);
+  --color-headline: var(--color-star);
+  --color-headline-variant: var(--color-star-variant);
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
 
-  /* Complementary and Accent Colors */
-  --color-accent: #333; /* Dark gray, close to black, for interactive elements like buttons and links */
-  --color-accent-hover: #4d4d4d; /* Lighter gray for hover or active states, making the hover effect more noticeable */
+  /* Elements Colors */
+  --color-background: var(--color-neutral-light);
+  --color-background-variant: var(--color-neutral-dark);
+  --color-border: var(--color-neutral-dark);
+  --color-border-variant: var(--color-neutral-light);
 
-  /* ADDITIONAL */
+  /* SIZES */
   --border-radius: 0.5rem; /* 8px */
   --breakpoint-width: 1000px;
 }

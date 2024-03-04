@@ -1,18 +1,22 @@
 import styles from './Container.module.css'
 
 interface Props {
-  breakpoint?: boolean
+  variant?: boolean
   divided?: boolean
+  full?: boolean
   children: React.ReactNode
 }
 
 const Container = ({
-  breakpoint = false,
+  variant = false,
   divided = false,
+  full = false,
   children,
 }: Props) => (
-  <section className={`${breakpoint ? styles.breakpoint : ''}`}>
-    <div className={`${styles.container} ${divided ? styles.divided : ''}`}>
+  <section className={`${styles.container} ${variant ? styles.variant : ''}`}>
+    <div
+      className={`${styles.wrapper} ${divided ? styles.divided : ''} ${full ? styles.full : ''}`}
+    >
       {children}
     </div>
   </section>
