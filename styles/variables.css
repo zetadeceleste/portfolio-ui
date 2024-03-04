@@ -18,4 +18,5 @@
 
   /* ADDITIONAL */
   --border-radius: 0.5rem; /* 8px */
+  --breakpoint-width: 1000px;
 }

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import styles from './contact.module.css'
+
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
@@ -21,7 +23,7 @@ const ContactPage = () => (
             <>
               thank
               <br />
-              you!
+              <span className={styles.black}>you!</span>
             </>
           }
           subtitle="Let´s work together!"

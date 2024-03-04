@@ -37,12 +37,8 @@ p {
   font-size: 0.625rem;
 }
 
-a,
-span {
-  font-size: 0.5rem;
-}
-
 a {
+  font-size: 0.5rem;
   text-decoration: none;
 }
 
@@ -68,8 +64,7 @@ em {
     font-size: 1.25rem;
   }
 
-  a,
-  span {
+  a {
     font-size: 1rem;
   }
 }
