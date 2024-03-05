@@ -3,16 +3,19 @@
   min-height: 100%;
 }
 
-/* h1,
-h2,
-strong {
-  color: var(--color-star);
-} */
-
 a {
   color: var(--color-link);
+  text-decoration: none;
 
   &:hover {
     color: var(--color-link-hover);
+  }
+
+  &.variant {
+    color: var(--color-link-variant);
+
+    &:hover {
+      color: var(--color-link-variant-hover);
+    }
   }
 }

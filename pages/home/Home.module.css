@@ -1,0 +1,12 @@
+.home-container {
+  grid-template-rows: auto 1fr;
+
+  @media (width >= 768px) {
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+  }
+
+  @media (width >= 1024px) {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}

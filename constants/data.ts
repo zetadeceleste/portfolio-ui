@@ -1,5 +1,6 @@
 import { IconProps } from '@/types'
 
+// TODO: This should be API data, considerer delete non shared types after the update
 export const SOCIAL_LINKS_DATA: IconProps[] = [
   {
     link: 'mailto:zdceleste@gmail.com',

@@ -8,9 +8,9 @@
   --color-neutral-dark: #1f1f1e;
   --color-neutral-light: #fafafa;
   --color-star: #eb3333;
-  --color-star-hover: #d27c74;
-  --color-star-light: #f4b4ab;
-  --color-start-variant: #fafafa;
+  --color-star-light: #d27c74;
+  --color-star-light-hover: #f4b4ab;
+  --color-star-variant: #fafafa;
 
   /* Text Color */
   --color-text: var(--color-neutral-dark);
@@ -19,6 +19,8 @@
   --color-headline-variant: var(--color-star-variant);
   --color-link: var(--color-accent);
   --color-link-hover: var(--color-accent-hover);
+  --color-link-variant: var(--color-star-light);
+  --color-link-variant-hover: var(--color-star-light-hover);
 
   /* Elements Colors */
   --color-background: var(--color-neutral-light);
@@ -28,5 +30,5 @@
 
   /* SIZES */
   --border-radius: 0.5rem; /* 8px */
-  --breakpoint-width: 1000px;
+  --breakpoint-width: 1100px;
 }

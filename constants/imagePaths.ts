@@ -1,5 +1,6 @@
 import { ImageSet } from '@/types'
 
+// TODO: This should be API data, considerer delete non shared types after the update
 export const HOME_PAGE_IMAGES: ImageSet = {
   name: 'home-page',
   description: 'Test Home Image',

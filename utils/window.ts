@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const useWindowSize = () => {
+export const useWindowSize = () => {
   // Initialize state with width and height set to 0
   const [windowSize, setWindowSize] = useState({
     width: 0,
@@ -29,5 +29,3 @@ const useWindowSize = () => {
   // Return the current window size
   return windowSize
 }
-
-export default useWindowSize

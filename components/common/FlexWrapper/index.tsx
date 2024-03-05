@@ -1,32 +1,36 @@
 import styles from './FlexWrapper.module.css'
 
+import buildClassNameList from '@/utils/styles'
+
 interface Props {
   children: React.ReactNode
   flexDirection?: 'row' | 'column'
-  alignItems?: 'start' | 'center' | 'end'
-  justifyContent?: 'space-between' | 'start' | 'center' | 'end'
-  justifySelf?: 'start' | 'center' | 'end'
   gap?: 'extra-small' | 'small' | 'medium' | 'large'
+  alignItems?: 'start' | 'center' | 'end'
+  alignSelf?: 'start' | 'center' | 'end'
+  justifyContent?: 'start' | 'center' | 'space-between' | 'end'
+  justifySelf?: 'start' | 'center' | 'end'
 }
 
 const FlexWrapper = ({
   children,
   flexDirection = 'row',
-  alignItems = 'start',
-  justifyContent = 'start',
-  justifySelf = 'center',
   gap = 'small',
-}: Props) => (
-  <div
-    className={`${styles.wrapper} ${styles[flexDirection]}
-    ${styles[`align-${alignItems}`]}
-    ${styles[`justify-content-${justifyContent}`]}
-    ${styles[`justify-self-${justifySelf}`]}
-    ${styles[`gap-${gap}`]}
-    `}
-  >
-    {children}
-  </div>
-)
+  alignItems,
+  alignSelf,
+  justifyContent,
+  justifySelf,
+}: Props) => {
+  const classNameList = buildClassNameList(styles, {
+    flexDirection,
+    alignItems,
+    alignSelf,
+    justifyContent,
+    justifySelf,
+    gap,
+  })
+
+  return <div className={`${styles.wrapper} ${classNameList}`}>{children}</div>
+}
 
 export default FlexWrapper

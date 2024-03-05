@@ -2,20 +2,20 @@ import styles from './Container.module.css'
 
 interface Props {
   variant?: boolean
-  divided?: boolean
   full?: boolean
+  className?: string
   children: React.ReactNode
 }
 
 const Container = ({
   variant = false,
-  divided = false,
   full = false,
+  className = '',
   children,
 }: Props) => (
   <section className={`${styles.container} ${variant ? styles.variant : ''}`}>
     <div
-      className={`${styles.wrapper} ${divided ? styles.divided : ''} ${full ? styles.full : ''}`}
+      className={`${styles.wrapper} ${full ? styles.full : ''} ${className}`}
     >
       {children}
     </div>
