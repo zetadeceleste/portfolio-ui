@@ -15,7 +15,7 @@ const SiteUnderConstructionPage = () => (
         <Headline
           title={
             <>
-              Site under <span className="black">construction</span>
+              site under <span className="black">construction</span>
             </>
           }
           subtitle="Feel free to visit my social media!"

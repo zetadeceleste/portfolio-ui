@@ -11,3 +11,7 @@
 .item {
   align-items: center;
 }
+
+.text {
+  font-size: 1rem;
+}

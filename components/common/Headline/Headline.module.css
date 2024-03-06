@@ -6,6 +6,7 @@
 
   .title {
     color: var(--color-headline);
+    width: min-content;
   }
 
   &.underline {
@@ -15,9 +16,11 @@
 
     .title {
       font-size: 2.75rem;
+      line-height: 1.75rem;
 
       @media all and (width >= 1024px) {
         font-size: 5.5rem;
+        line-height: 4.5rem;
       }
     }
   }

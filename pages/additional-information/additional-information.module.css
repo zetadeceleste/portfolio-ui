@@ -1,4 +1,4 @@
-.experience-container {
+.additional-information-container {
   grid-template-rows: auto 1fr;
   justify-content: flex-start;
 }

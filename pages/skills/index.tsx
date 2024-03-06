@@ -12,48 +12,27 @@ const SkillsPage = () => (
     </Head>
     <Container>
       <FlexWrapper gap="medium">
-        <Headline title={<>Skills</>} underline />
+        <Headline title={<>skills</>} underline />
         <FlexWrapper flexDirection="row" gap="large">
           <List
             data={[
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
+              { text: 'React.js' },
+              { text: 'React.js' },
+              { text: 'React.js' },
             ]}
           />
           <List
             data={[
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
+              { text: 'React.js' },
+              { text: 'React.js' },
+              { text: 'React.js' },
             ]}
           />
           <List
             data={[
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'React.js',
+              { text: 'React.js' },
+              { text: 'React.js' },
+              { text: 'React.js' },
             ]}
           />
         </FlexWrapper>

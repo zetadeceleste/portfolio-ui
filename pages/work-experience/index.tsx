@@ -13,10 +13,18 @@ const WorkExperiencePage = () => (
       <title>Celeste Zapata | Work experience</title>
     </Head>
     <Container className={styles['experience-container']} variant>
-      <FlexWrapper flexDirection="row" justifySelf="start">
-        <Headline title={<>Work Experience</>} underline variant />
+      <FlexWrapper alignSelf="start" gap="medium">
+        <Headline
+          title={
+            <>
+              work <br /> experience
+            </>
+          }
+          underline
+          variant
+        />
+        <ExperienceCarousel />
       </FlexWrapper>
-      <ExperienceCarousel />
     </Container>
   </>
 )
