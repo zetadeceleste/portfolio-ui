@@ -3,12 +3,10 @@ import Icon from '../Icon'
 
 import styles from './List.module.css'
 
-import { IconName } from '@/types'
-
 interface Props {
   data: Item[]
   title?: string
-  iconName?: IconName
+  variant?: boolean
 }
 
 type Item = {
@@ -16,13 +14,13 @@ type Item = {
   label?: string
 }
 
-const List = ({ data, title, iconName = 'start-black' }: Props) => (
+const List = ({ data, title, variant }: Props) => (
   <FlexWrapper>
     {title && <span className="bold">{title}</span>}
     <ul className={styles.list}>
       {data.map(({ text, label }, index) => (
         <li className={styles.item} key={index}>
-          <Icon name={iconName} />
+          <Icon name={variant ? 'start-white' : 'start-black'} />
           <p className={styles.text}>{text}</p>
           <span>{label}</span>
         </li>

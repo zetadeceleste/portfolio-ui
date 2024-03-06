@@ -20,7 +20,6 @@ const ExperienceItem = () => (
     </FlexWrapper>
     <List
       title="RESPONSABILITIES"
-      iconName="start-white"
       data={[
         {
           text: 'Develop and maintain WordPress and Next.js websites to boost functionality and engagement.',
@@ -29,15 +28,16 @@ const ExperienceItem = () => (
           text: 'Foster clear team communication to meet project goals, employ agile methods for efficient development.',
         },
       ]}
+      variant
     />
     <List
       title="KEY ACCOMPLISHMENT"
-      iconName="start-white"
       data={[
         {
           text: 'Significantly enhanced website performance and user satisfaction across multiple projects.',
         },
       ]}
+      variant
     />
   </FlexWrapper>
 )
