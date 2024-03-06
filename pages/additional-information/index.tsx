@@ -17,7 +17,7 @@ const AdditionalInformationPage = () => (
         <Headline
           title={
             <>
-              additional <br /> information
+              additional <br /> <span className="black">information</span>
             </>
           }
           underline

@@ -3,7 +3,6 @@ import ExperienceItem from './ExperienceItem'
 
 const ExperienceCarousel = () => (
   <div className={styles.carousel}>
-    <span>01</span>
     <ExperienceItem />
   </div>
 )

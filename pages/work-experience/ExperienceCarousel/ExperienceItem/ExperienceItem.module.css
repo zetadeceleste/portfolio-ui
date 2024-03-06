@@ -1,13 +1,4 @@
-.category-list,
-.category-item {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.category-list {
-  flex-direction: column;
-}
-
-.category-item {
-  align-items: center;
+.number {
+  font-size: 3rem;
+  font-weight: 700;
 }

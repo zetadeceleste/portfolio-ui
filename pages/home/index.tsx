@@ -15,7 +15,7 @@ const HomePage = () => (
     </Head>
     <Container className={styles['home-container']} full>
       <ImageBySize images={HOME_PAGE_IMAGES} />
-      <FlexWrapper justifySelf="start" gap="medium">
+      <FlexWrapper justifySelf="start">
         <Headline
           title={
             <>

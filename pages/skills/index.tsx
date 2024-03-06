@@ -13,7 +13,7 @@ const SkillsPage = () => (
     <Container>
       <FlexWrapper gap="medium">
         <Headline title={<>skills</>} underline />
-        <FlexWrapper flexDirection="row" gap="large">
+        <FlexWrapper flexDirection="row" gap="medium">
           <List
             data={[
               { text: 'React.js' },

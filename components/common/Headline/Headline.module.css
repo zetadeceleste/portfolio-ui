@@ -38,6 +38,7 @@
 
 @media all and (width >= 1024px) {
   .wrapper.center {
+    align-items: center;
     text-align: center;
   }
 }
