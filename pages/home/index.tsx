@@ -12,14 +12,10 @@ const HomePage = () => (
   <>
     <Head>
       <title>Celeste Zapata | Developer</title>
-      <meta
-        name="description"
-        content="Celeste Zapata is a professional developer based in Mendoza, Argentina."
-      />
     </Head>
     <Container className={styles['home-container']} full>
       <ImageBySize images={HOME_PAGE_IMAGES} />
-      <FlexWrapper flexDirection="column" justifySelf="start" gap="medium">
+      <FlexWrapper justifySelf="start" gap="medium">
         <Headline
           title={
             <>

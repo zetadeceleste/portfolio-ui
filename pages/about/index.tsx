@@ -11,15 +11,11 @@ const AboutPage = () => (
   <>
     <Head>
       <title>Celeste Zapata | About me</title>
-      <meta
-        name="description"
-        content="Celeste Zapata is a professional developer based in Mendoza, Argentina."
-      />
     </Head>
     <Container>
-      <FlexWrapper flexDirection="column" gap="medium">
+      <FlexWrapper gap="medium">
         <Headline title={<>Hello!</>} underline />
-        <FlexWrapper flexDirection="column">
+        <FlexWrapper>
           <p>
             I´m <strong className={styles.name}>Celes</strong>, a developer with
             an Associate Degree in Computer Programming, focused in{' '}

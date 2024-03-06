@@ -1,0 +1,13 @@
+.list,
+.item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.list {
+  flex-flow: column;
+}
+
+.item {
+  align-items: center;
+}

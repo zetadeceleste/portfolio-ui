@@ -1,17 +1,29 @@
-import styles from './site-under-construction.module.css'
+import Head from 'next/head'
 
 import Container from '@/components/common/Container'
+import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
+import SocialLinkList from '@/components/common/SocialLinkList'
 
 const SiteUnderConstructionPage = () => (
-  <Container>
-    <div className={styles.description}>
-      <Headline title={<>Site under construction</>} />
-      <p>
-        Follow me on <a href="https://github.com/zetadeceleste">Github</a> ;-)
-      </p>
-    </div>
-  </Container>
+  <>
+    <Head>
+      <title>Celeste Zapata | Site under construction</title>
+    </Head>
+    <Container>
+      <FlexWrapper gap="medium">
+        <Headline
+          title={
+            <>
+              Site under <span className="black">construction</span>
+            </>
+          }
+          subtitle="Feel free to visit my social media!"
+        />
+        <SocialLinkList />
+      </FlexWrapper>
+    </Container>
+  </>
 )
 
 export default SiteUnderConstructionPage

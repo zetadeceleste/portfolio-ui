@@ -14,8 +14,8 @@ interface Props {
 
 const FlexWrapper = ({
   children,
-  flexDirection = 'row',
-  gap = 'small',
+  flexDirection = 'column',
+  gap = 'extra-small',
   alignItems,
   alignSelf,
   justifyContent,

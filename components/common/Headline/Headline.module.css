@@ -1,7 +1,8 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+  width: fit-content;
 
   .title {
     color: var(--color-headline);
@@ -9,6 +10,7 @@
 
   &.underline {
     border-bottom: var(--color-border) 0.25rem solid;
+    padding-bottom: 0.5rem;
     padding-right: 8ch;
 
     .title {

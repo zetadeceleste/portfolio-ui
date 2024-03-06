@@ -14,6 +14,10 @@ const getIcon = (iconName: IconName) => {
       return <CrossIcon />
     case 'linkedin':
       return <CrossIcon />
+    case 'start-black':
+      return <CrossIcon />
+    case 'start-white':
+      return <CrossIcon />
     default:
       return null
   }

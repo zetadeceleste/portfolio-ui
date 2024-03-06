@@ -33,8 +33,10 @@ strong {
   font-weight: 700;
 }
 
+h4,
 p {
   font-size: 0.625rem;
+  line-height: 1.5rem;
 }
 
 a {
@@ -43,6 +45,14 @@ a {
 
 em {
   font-style: italic;
+}
+
+.black {
+  color: var(--color-neutral-dark);
+}
+
+.bold {
+  font-weight: 700;
 }
 
 @media all and (width >= 1024px) {
@@ -59,6 +69,7 @@ em {
     font-size: 1.75rem;
   }
 
+  h4,
   p {
     font-size: 1.25rem;
   }

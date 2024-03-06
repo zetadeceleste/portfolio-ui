@@ -11,13 +11,14 @@
 .wrapper {
   display: grid;
   gap: 3rem;
+  height: 100vh;
   margin: 0 auto;
   max-width: var(--breakpoint-width);
-  min-height: 100vh;
-  padding: 32px 0;
+  padding: 64px 32px;
   place-items: center;
 
   &.full {
     max-width: 100%;
+    padding: 0;
   }
 }

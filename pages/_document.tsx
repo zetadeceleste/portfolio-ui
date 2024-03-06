@@ -5,6 +5,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta
+            name="description"
+            content="Celeste Zapata is a professional developer based in Mendoza, Argentina."
+          />
           <meta name="theme-color" content="#000000" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/logo192.png" />
