@@ -1,10 +1,12 @@
+import { memo } from 'react'
+
 import FlexWrapper from '../../FlexWrapper'
 import Icon from '../../Icon'
 import { ItemType } from '../types'
 
 import styles from './Item.module.css'
 
-const Item = ({
+const ItemInner = ({
   text,
   label,
   iconName = 'start',
@@ -18,5 +20,7 @@ const Item = ({
     </FlexWrapper>
   </FlexWrapper>
 )
+
+const Item = memo(ItemInner)
 
 export default Item
