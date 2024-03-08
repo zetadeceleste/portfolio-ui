@@ -17,7 +17,7 @@ const SkillsPage = () => {
       <Container>
         <FlexWrapper gap="medium">
           <Headline title={<>skills</>} highlighted />
-          <FlexWrapper flexDirection={width <= 768 ? 'column' : 'row'}>
+          <FlexWrapper flexDirection={width >= 768 ? 'row' : 'column'}>
             <List
               data={[
                 { text: 'React.js' },

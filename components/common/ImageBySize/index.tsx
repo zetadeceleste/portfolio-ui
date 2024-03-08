@@ -7,22 +7,22 @@ import { useWindowSize } from '@/utils/window'
 
 interface Props {
   images: ImageSet
+  priority?: boolean
 }
 
-const ImageBySize = ({ images }: Props) => {
-  const { name, description, desktop, tablet, mobile } = images
+const ImageBySize = ({ images, priority = false }: Props) => {
+  const { name, description, desktop, tablet } = images
   const { width } = useWindowSize()
 
   const getImageProps = () => {
-    if (width <= 768 && mobile) {
+    if (width < 768) {
       return {
         path: `/images/${name}-mobile.webp`,
-        imageHeight: mobile.height,
-        imageWidth: mobile.width,
+        imageMobile: true,
       }
     }
 
-    if (width <= 1024 && width >= 768 && tablet) {
+    if (width >= 768 && width <= 1024 && tablet) {
       return {
         path: `/images/${name}-tablet.webp`,
         imageHeight: tablet.height,
@@ -30,6 +30,7 @@ const ImageBySize = ({ images }: Props) => {
       }
     }
 
+    // Fallback to desktop
     return {
       path: `/images/${name}-desktop.webp`,
       imageHeight: desktop.height,
@@ -37,15 +38,17 @@ const ImageBySize = ({ images }: Props) => {
     }
   }
 
-  const { path, imageHeight, imageWidth } = getImageProps()
+  const { path, imageHeight, imageWidth, imageMobile } = getImageProps()
 
   return (
     <Image
       src={path}
       alt={description}
-      height={imageHeight}
-      width={imageWidth}
-      className={styles.image}
+      height={imageMobile ? 0 : imageHeight}
+      width={imageMobile ? 0 : imageWidth}
+      className={imageMobile ? styles.mobile : styles.image}
+      sizes="100vw"
+      priority={priority}
     />
   )
 }

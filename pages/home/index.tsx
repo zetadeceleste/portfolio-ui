@@ -18,7 +18,7 @@ const HomePage = () => {
         <title>Celeste Zapata | Developer</title>
       </Head>
       <Container className={styles['home-container']} full>
-        <ImageBySize images={HOME_PAGE_IMAGES} />
+        <ImageBySize images={HOME_PAGE_IMAGES} priority />
         <FlexWrapper
           alignItems={width >= 768 ? 'start' : 'center'}
           alignSelf={width >= 768 ? 'center' : 'start'}

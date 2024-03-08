@@ -10,11 +10,11 @@ const ExperienceItem = () => {
   return (
     <FlexWrapper gap="medium">
       <FlexWrapper
-        flexDirection={width <= 768 ? 'column' : 'row-reverse'}
-        alignItems={width <= 768 ? 'start' : 'center'}
+        flexDirection={width >= 768 ? 'row-reverse' : 'column'}
+        alignItems={width >= 768 ? 'center' : 'start'}
         justifyContent="space-between"
       >
-        <FlexWrapper alignSelf={width <= 768 ? 'end' : 'start'}>
+        <FlexWrapper alignSelf={width >= 768 ? 'start' : 'end'}>
           <span className="number">1/5</span>
         </FlexWrapper>
         <FlexWrapper>
@@ -29,7 +29,7 @@ const ExperienceItem = () => {
               Ocean Ring Technologies
             </Link>
           </h2>
-          <FlexWrapper flexDirection={width <= 768 ? 'column' : 'row'}>
+          <FlexWrapper flexDirection={width >= 768 ? 'row' : 'column'}>
             <span>APR 2020 - PRESENT</span>
             <span>[Florida, USA]</span>
             <span>[Software solutions company, B2B]</span>

@@ -3,3 +3,8 @@
   object-fit: cover;
   width: 100%;
 }
+
+.mobile {
+  height: auto;
+  width: 100%;
+}
