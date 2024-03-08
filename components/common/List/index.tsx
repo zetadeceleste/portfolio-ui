@@ -14,7 +14,7 @@ interface Props {
 }
 
 const List = ({ data, title, variant = false, divided = false }: Props) => (
-  <FlexWrapper>
+  <FlexWrapper gap="small">
     {title && <h3>{title}</h3>}
     <ul className={`${styles.list} ${divided ? styles.divided : ''}`}>
       {data.map(({ text, link, label, iconName }, index) => (

@@ -14,7 +14,7 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/logo192.png" />
           <link rel="manifest" href="/manifest.json" />
         </Head>
-        <body lang="en" className="body">
+        <body className="body">
           <Main />
           <NextScript />
         </body>
