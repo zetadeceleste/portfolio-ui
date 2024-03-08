@@ -20,7 +20,6 @@ const Headline = ({
   subtitle = '',
 }: Props) => {
   const classNameList = buildBooleanClassNameList(styles, {
-    bigTitles,
     center,
     highlighted,
     variant,
@@ -28,9 +27,13 @@ const Headline = ({
 
   return (
     <hgroup className={`${styles.wrapper} ${classNameList}`}>
-      <h1 className={styles.title}>{title}</h1>
+      <h1 className={`${styles.title} ${bigTitles ? 'bigger' : ''}`}>
+        {title}
+      </h1>
       {subtitle && !highlighted && (
-        <h2 className={styles.subtitle}>{subtitle}</h2>
+        <h2 className={`${styles.subtitle} ${bigTitles ? 'bigger' : ''}`}>
+          {subtitle}
+        </h2>
       )}
     </hgroup>
   )

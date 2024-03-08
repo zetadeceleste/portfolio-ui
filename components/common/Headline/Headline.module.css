@@ -11,29 +11,6 @@
     padding: 0 5px;
   }
 
-  &.big-titles {
-    .title {
-      font-size: 5.5rem;
-      line-height: 4.75rem;
-
-      @media all and (width >= 768px) {
-        font-size: 6.5rem;
-        line-height: 5.5rem;
-      }
-
-      @media all and (width >= 1024px) {
-        font-size: 7.75rem;
-        line-height: 6.5rem;
-      }
-    }
-
-    .subtitle {
-      @media all and (width >= 1024px) {
-        font-size: 2rem;
-      }
-    }
-  }
-
   &.center {
     align-items: center;
     text-align: center;

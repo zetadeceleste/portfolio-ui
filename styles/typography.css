@@ -12,16 +12,22 @@ h1 {
   font-family: var(--font-headline);
   font-size: 5rem;
   letter-spacing: -0.25rem;
-  line-height: 3.5rem;
+  line-height: 3rem;
+
+  &.bigger {
+    font-size: 5.5rem;
+    line-height: 4.75rem;
+  }
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h3,
-p {
-  font-size: 1rem;
+p,
+.number {
+  font-size: 1.125rem;
 }
 
 h2,
@@ -47,42 +53,39 @@ em {
   font-weight: 700;
 }
 
-.number {
-  font-size: 1.125rem;
-}
-
 @media all and (width >= 768px) {
   h1 {
-    font-size: 5.75rem;
+    font-size: 5.5rem;
     letter-spacing: -0.25rem;
-    line-height: 3.75rem;
+    line-height: 3.25rem;
+
+    &.bigger {
+      font-size: 6.5rem;
+      line-height: 5.5rem;
+    }
   }
 
   h2 {
-    font-size: 1.75rem;
-  }
-
-  h3,
-  p {
-    font-size: 1.125rem;
-  }
-
-  .number {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
 @media all and (width >= 1024px) {
   h1 {
-    font-size: 6.5rem;
-    line-height: 4.25rem;
+    font-size: 6rem;
+    line-height: 3.75rem;
+
+    &.bigger {
+      font-size: 7.25rem;
+      line-height: 6rem;
+    }
   }
 
   h2 {
-    font-size: 2rem;
-  }
+    font-size: 1.75rem;
 
-  .number {
-    font-size: 1.5rem;
+    &.bigger {
+      font-size: 2rem;
+    }
   }
 }
