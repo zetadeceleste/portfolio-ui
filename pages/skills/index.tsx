@@ -12,7 +12,7 @@ const SkillsPage = () => (
     </Head>
     <Container>
       <FlexWrapper gap="medium">
-        <Headline title={<>skills</>} underline />
+        <Headline title={<>skills</>} highlight />
         <FlexWrapper flexDirection="row" gap="medium">
           <List
             data={[

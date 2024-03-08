@@ -1,28 +1,40 @@
-import FlexWrapper from '../FlexWrapper'
-import Icon from '../Icon'
+import Link from 'next/link'
 
+import FlexWrapper from '../FlexWrapper'
+
+import Item from './Item'
 import styles from './List.module.css'
+import { ItemType } from './types'
 
 interface Props {
-  data: Item[]
+  data: ItemType[]
   title?: string
   variant?: boolean
 }
 
-type Item = {
-  text: string
-  label?: string
-}
-
 const List = ({ data, title, variant }: Props) => (
   <FlexWrapper>
-    {title && <span className="bold">{title}</span>}
+    {title && <h3>{title}</h3>}
     <ul className={styles.list}>
-      {data.map(({ text, label }, index) => (
+      {data.map(({ text, link, label, iconName }, index) => (
         <li className={styles.item} key={index}>
-          <Icon name={variant ? 'start-white' : 'start-black'} />
-          <p className={styles.text}>{text}</p>
-          <span>{label}</span>
+          {link ? (
+            <Link href={link} target="_blank" rel="noopener noreferrer">
+              <Item
+                text={text}
+                label={label}
+                iconName={iconName}
+                variant={variant}
+              />
+            </Link>
+          ) : (
+            <Item
+              text={text}
+              label={label}
+              iconName={iconName}
+              variant={variant}
+            />
+          )}
         </li>
       ))}
     </ul>

@@ -1,14 +1,25 @@
-import SocialLinkItem from './SocialLinkItem'
-import styles from './SocialLinkList.module.css'
-
-import { SOCIAL_LINKS_DATA } from '@/constants/data'
+import List from '../List'
 
 const SocialLinkList = () => (
-  <ul className={styles.wrapper}>
-    {SOCIAL_LINKS_DATA.map(({ link, iconName, text }, index) => (
-      <SocialLinkItem key={index} link={link} iconName={iconName} text={text} />
-    ))}
-  </ul>
+  <List
+    data={[
+      {
+        text: 'zdceleste@gmail.com',
+        link: 'mailto:zdceleste@gmail.com',
+        iconName: 'mail',
+      },
+      {
+        text: 'github.com/zetadeceleste',
+        link: 'https://github.com/zetadeceleste',
+        iconName: 'github',
+      },
+      {
+        text: 'linkedin.com/in/zetadeceleste',
+        link: 'https://www.linkedin.com/in/zetadeceleste/',
+        iconName: 'linkedin',
+      },
+    ]}
+  />
 )
 
 export default SocialLinkList

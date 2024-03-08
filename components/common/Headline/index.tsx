@@ -4,29 +4,34 @@ import { buildBooleanClassNameList } from '@/utils/styles'
 
 interface Props {
   title: JSX.Element
+  bigTitles?: boolean
   center?: boolean
-  underline?: boolean
+  highlight?: boolean
   variant?: boolean
   subtitle?: string
 }
 
 const Headline = ({
   title,
+  bigTitles = false,
   center = false,
-  underline = false,
+  highlight = false,
   variant = false,
   subtitle = '',
 }: Props) => {
   const classNameList = buildBooleanClassNameList(styles, {
+    bigTitles,
     center,
-    underline,
+    highlight,
     variant,
   })
 
   return (
     <hgroup className={`${styles.wrapper} ${classNameList}`}>
       <h1 className={styles.title}>{title}</h1>
-      {subtitle && <h3>{subtitle}</h3>}
+      {subtitle && !highlight && (
+        <h2 className={styles.subtitle}>{subtitle}</h2>
+      )}
     </hgroup>
   )
 }

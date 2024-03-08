@@ -14,8 +14,8 @@ const AboutPage = () => (
     </Head>
     <Container>
       <FlexWrapper gap="medium">
-        <Headline title={<>hello!</>} underline />
-        <FlexWrapper>
+        <Headline title={<>hello!</>} highlight />
+        <FlexWrapper gap="small">
           <p>
             I´m <strong className={styles.name}>Celes</strong>, a developer with
             an Associate Degree in Computer Programming, focused in{' '}
@@ -23,7 +23,7 @@ const AboutPage = () => (
             <strong>Frontend Development</strong>.
           </p>
           <p>
-            With over 4 years of cross-industry experience, I have closely
+            With over 4 years of cross-industry experience, I´ve closely
             collaborated with designers, marketers, and analysts.
           </p>
           <p>
@@ -36,10 +36,12 @@ const AboutPage = () => (
             I’m committed to the principles of{' '}
             <em>🌱 Sustainable Software Engineering</em>: prioritizing best
             practices for clean code and resource optimization, both to minimize
-            environmental impact and to smartly cut costs. Additionally, I
-            consider <em>Web Accessibility</em> a priority, ensuring an
-            inclusive user experience by providing seamless access for
-            individuals with disabilities.
+            environmental impact and to smartly cut costs.
+          </p>
+          <p>
+            Additionally, I consider <em>Web Accessibility</em> a priority,
+            ensuring an inclusive user experience by providing seamless access
+            for individuals with disabilities.
           </p>
         </FlexWrapper>
         <SocialLinkList />

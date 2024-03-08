@@ -3,17 +3,17 @@ import { ImageSet } from '@/types'
 // TODO: This should be API data, considerer delete non shared types after the update
 export const HOME_PAGE_IMAGES: ImageSet = {
   name: 'home-page',
-  description: 'Test Home Image',
+  description: 'Ilustration of a girl developer and her dog Luna.',
   desktop: {
-    height: 1033,
+    height: 1461,
     width: 1300,
   },
   tablet: {
-    height: 814,
+    height: 1151,
     width: 1024,
   },
   mobile: {
-    height: 611,
+    height: 364,
     width: 768,
   },
 }

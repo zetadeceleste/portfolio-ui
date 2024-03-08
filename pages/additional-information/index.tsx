@@ -17,10 +17,10 @@ const AdditionalInformationPage = () => (
         <Headline
           title={
             <>
-              additional <br /> <span className="black">information</span>
+              additional <br /> information
             </>
           }
-          underline
+          highlight
         />
         <FlexWrapper gap="medium">
           <FlexWrapper>

@@ -1,12 +1,8 @@
-export type IconName =
-  | 'github'
-  | 'mail'
-  | 'linkedin'
-  | 'start-black'
-  | 'start-white'
+export type IconName = 'github' | 'mail' | 'linkedin' | 'start'
 
-export interface IconProps {
+export type IconType = {
+  text: string
   link: string
   iconName: IconName
-  text: string
+  variant?: boolean
 }

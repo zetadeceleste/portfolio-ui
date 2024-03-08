@@ -1,10 +1,10 @@
 import styles from './FlexWrapper.module.css'
 
-import buildClassNameList from '@/utils/styles'
+import { buildClassNameList } from '@/utils/styles'
 
 interface Props {
   children: React.ReactNode
-  flexDirection?: 'row' | 'column'
+  flexDirection?: 'row' | 'row-reverse' | 'column'
   gap?: 'extra-small' | 'small' | 'medium' | 'large'
   alignItems?: 'start' | 'center' | 'end'
   alignSelf?: 'start' | 'center' | 'end'

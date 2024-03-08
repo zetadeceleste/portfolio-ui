@@ -4,25 +4,28 @@ import { IconName } from '@/types'
 
 interface Props {
   name: IconName
+  variant?: boolean
 }
 
-const getIcon = (iconName: IconName) => {
+const getIcon = (iconName: IconName, variant?: boolean) => {
   switch (iconName) {
     case 'github':
+      if (variant) return <CrossIcon />
       return <CrossIcon />
     case 'mail':
+      if (variant) return <CrossIcon />
       return <CrossIcon />
     case 'linkedin':
+      if (variant) return <CrossIcon />
       return <CrossIcon />
-    case 'start-black':
-      return <CrossIcon />
-    case 'start-white':
+    case 'start':
+      if (variant) return <CrossIcon />
       return <CrossIcon />
     default:
       return null
   }
 }
 
-const Icon = ({ name }: Props) => getIcon(name)
+const Icon = ({ name, variant }: Props) => getIcon(name, variant)
 
 export default Icon

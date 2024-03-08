@@ -1,4 +1,4 @@
-export interface ImageSet {
+export type ImageSet = {
   name: string
   description: string
   desktop: Image
@@ -6,7 +6,7 @@ export interface ImageSet {
   tablet?: Image
 }
 
-interface Image {
+type Image = {
   height: number
   width: number
 }

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import ExperienceCarousel from './ExperienceCarousel'
-import styles from './work-experience.module.css'
 
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
@@ -12,7 +11,7 @@ const WorkExperiencePage = () => (
     <Head>
       <title>Celeste Zapata | Work experience</title>
     </Head>
-    <Container className={styles['experience-container']} variant>
+    <Container variant>
       <FlexWrapper alignSelf="start" gap="medium">
         <Headline
           title={
@@ -20,7 +19,7 @@ const WorkExperiencePage = () => (
               work <br /> experience
             </>
           }
-          underline
+          highlight
           variant
         />
         <ExperienceCarousel />

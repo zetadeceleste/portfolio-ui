@@ -4,19 +4,18 @@
   /* Principal Colors */
   --color-accent: #333;
   --color-accent-hover: #4d4d4d;
-  --color-neutral: #9b9995;
-  --color-neutral-dark: #3e3e3e;
-  --color-neutral-light: #fafafa;
-  --color-star: #e84d4d;
-  --color-star-light: #d27c74;
-  --color-star-light-hover: #f4b4ab;
-  --color-star-variant: #fafafa;
+  --color-neutral-dark: #201f1f;
+  --color-neutral-grey: #585755;
+  --color-neutral-light: #f9faf4;
+  --color-star: #ed4b4f;
+  --color-star-light: #c1665a;
+  --color-star-light-hover: #9d716b;
 
   /* Text Color */
   --color-text: var(--color-neutral-dark);
   --color-text-variant: var(--color-neutral-light);
   --color-headline: var(--color-star);
-  --color-headline-variant: var(--color-star-variant);
+  --color-headline-variant: var(--color-neutral-grey);
   --color-link: var(--color-accent);
   --color-link-hover: var(--color-accent-hover);
   --color-link-variant: var(--color-star-light);
@@ -25,8 +24,8 @@
   /* Elements Colors */
   --color-background: var(--color-neutral-light);
   --color-background-variant: var(--color-neutral-dark);
-  --color-border: var(--color-neutral-dark);
-  --color-border-variant: var(--color-neutral-light);
+  --color-highlight: var(--color-neutral-dark);
+  --color-highlight-variant: var(--color-neutral-light);
 
   /* SIZES */
   --border-radius: 0.5rem; /* 8px */
