@@ -1,3 +1,7 @@
+.body {
+  hyphens: auto;
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;

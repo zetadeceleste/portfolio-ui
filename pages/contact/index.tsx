@@ -21,6 +21,7 @@ const ContactPage = () => (
             </>
           }
           subtitle="Let´s work together!"
+          center
         />
         <SocialLinkList />
       </FlexWrapper>

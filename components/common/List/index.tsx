@@ -10,12 +10,13 @@ interface Props {
   data: ItemType[]
   title?: string
   variant?: boolean
+  divided?: boolean
 }
 
-const List = ({ data, title, variant }: Props) => (
+const List = ({ data, title, variant = false, divided = false }: Props) => (
   <FlexWrapper>
     {title && <h3>{title}</h3>}
-    <ul className={styles.list}>
+    <ul className={`${styles.list} ${divided ? styles.divided : ''}`}>
       {data.map(({ text, link, label, iconName }, index) => (
         <li className={styles.item} key={index}>
           {link ? (

@@ -22,11 +22,11 @@
   }
 
   &.gap-medium {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   &.gap-large {
-    gap: 3rem;
+    gap: 2rem;
   }
 
   &.align-items-start {

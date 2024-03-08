@@ -11,11 +11,13 @@ const SiteUnderConstructionPage = () => (
       <title>Celeste Zapata | Site under construction</title>
     </Head>
     <Container>
-      <FlexWrapper gap="medium">
+      <FlexWrapper justifyContent="center" gap="medium">
         <Headline
           title={
             <>
-              site under <span className="black">construction</span>
+              site under
+              <br />
+              <span className="black">construction</span>
             </>
           }
           subtitle="Feel free to visit my social media!"

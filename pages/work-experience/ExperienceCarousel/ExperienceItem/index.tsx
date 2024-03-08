@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-import styles from './ExperienceItem.module.css'
-
 import FlexWrapper from '@/components/common/FlexWrapper'
 import List from '@/components/common/List'
 import { useWindowSize } from '@/utils/window'
@@ -13,15 +11,15 @@ const ExperienceItem = () => {
     <FlexWrapper gap="medium">
       <FlexWrapper
         flexDirection={width <= 768 ? 'column' : 'row-reverse'}
-        alignItems="center"
+        alignItems={width <= 768 ? 'start' : 'center'}
         justifyContent="space-between"
       >
-        <FlexWrapper alignItems="end" alignSelf="start">
-          <span className={styles.number}>01</span>
+        <FlexWrapper alignSelf={width <= 768 ? 'end' : 'start'}>
+          <span className="number">1/5</span>
         </FlexWrapper>
         <FlexWrapper>
           <h2>
-            Frontend Developer at <br />
+            Frontend Developer at{' '}
             <Link
               className="variant"
               href=""
@@ -31,7 +29,7 @@ const ExperienceItem = () => {
               Ocean Ring Technologies
             </Link>
           </h2>
-          <FlexWrapper>
+          <FlexWrapper flexDirection={width <= 768 ? 'column' : 'row'}>
             <span>APR 2020 - PRESENT</span>
             <span>[Florida, USA]</span>
             <span>[Software solutions company, B2B]</span>
@@ -60,8 +58,26 @@ const ExperienceItem = () => {
         variant
       />
       <List
-        title="PRINCIPAL TECH STACK"
+        title="MAIN TECH STACK"
         data={[
+          {
+            text: 'React.js',
+          },
+          {
+            text: 'React.js',
+          },
+          {
+            text: 'React.js',
+          },
+          {
+            text: 'React.js',
+          },
+          {
+            text: 'React.js',
+          },
+          {
+            text: 'React.js',
+          },
           {
             text: 'React.js',
           },
@@ -73,6 +89,7 @@ const ExperienceItem = () => {
           },
         ]}
         variant
+        divided
       />
     </FlexWrapper>
   )

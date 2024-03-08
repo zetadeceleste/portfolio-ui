@@ -6,7 +6,7 @@ interface Props {
   title: JSX.Element
   bigTitles?: boolean
   center?: boolean
-  highlight?: boolean
+  highlighted?: boolean
   variant?: boolean
   subtitle?: string
 }
@@ -15,21 +15,21 @@ const Headline = ({
   title,
   bigTitles = false,
   center = false,
-  highlight = false,
+  highlighted = false,
   variant = false,
   subtitle = '',
 }: Props) => {
   const classNameList = buildBooleanClassNameList(styles, {
     bigTitles,
     center,
-    highlight,
+    highlighted,
     variant,
   })
 
   return (
     <hgroup className={`${styles.wrapper} ${classNameList}`}>
       <h1 className={styles.title}>{title}</h1>
-      {subtitle && !highlight && (
+      {subtitle && !highlighted && (
         <h2 className={styles.subtitle}>{subtitle}</h2>
       )}
     </hgroup>

@@ -20,7 +20,7 @@ const AdditionalInformationPage = () => (
               additional <br /> information
             </>
           }
-          highlight
+          highlighted
         />
         <FlexWrapper gap="medium">
           <FlexWrapper>

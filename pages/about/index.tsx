@@ -14,7 +14,7 @@ const AboutPage = () => (
     </Head>
     <Container>
       <FlexWrapper gap="medium">
-        <Headline title={<>hello!</>} highlight />
+        <Headline title={<>hello!</>} highlighted />
         <FlexWrapper gap="small">
           <p>
             I´m <strong className={styles.name}>Celes</strong>, a developer with

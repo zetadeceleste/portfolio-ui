@@ -19,7 +19,7 @@ const WorkExperiencePage = () => (
               work <br /> experience
             </>
           }
-          highlight
+          highlighted
           variant
         />
         <ExperienceCarousel />

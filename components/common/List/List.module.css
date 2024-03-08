@@ -1,13 +1,17 @@
-.list,
-.item {
-  display: flex;
-  gap: 0.5rem;
-}
-
 .list {
-  flex-flow: column;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-.item {
-  align-items: center;
+  &.divided {
+    @media all and (width >= 768px) {
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .item {
+        flex-basis: calc(33.333% - 1rem);
+        max-width: calc(33.333% - 1rem);
+      }
+    }
+  }
 }
