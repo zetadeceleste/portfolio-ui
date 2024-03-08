@@ -11,3 +11,13 @@
     grid-template-columns: 1.5fr 1fr;
   }
 }
+
+.wrapper {
+  align-items: center;
+  place-self: start center;
+
+  @media (width >= 768px) {
+    align-items: start;
+    place-self: center start;
+  }
+}

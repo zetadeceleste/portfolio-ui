@@ -4,11 +4,14 @@
   gap: 0.5rem;
 
   &.divided {
-    @media all and (width >= 768px) {
-      flex-flow: row wrap;
-      justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
-      .item {
+    .item {
+      flex-basis: calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+
+      @media all and (width >= 768px) {
         flex-basis: calc(33.333% - 1rem);
         max-width: calc(33.333% - 1rem);
       }

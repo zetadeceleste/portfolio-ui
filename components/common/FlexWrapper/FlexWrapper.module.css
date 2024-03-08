@@ -13,6 +13,14 @@
     flex-direction: column;
   }
 
+  &.flex-direction-column-to-row {
+    flex-direction: column;
+
+    @media (width >= 768px) {
+      flex-direction: row;
+    }
+  }
+
   &.gap-extra-small {
     gap: 0.5rem;
   }

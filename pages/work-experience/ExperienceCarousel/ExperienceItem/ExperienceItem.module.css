@@ -1,0 +1,7 @@
+.number {
+  align-self: start;
+
+  @media (width >= 768px) {
+    align-self: end;
+  }
+}
