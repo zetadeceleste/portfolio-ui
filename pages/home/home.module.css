@@ -1,4 +1,4 @@
-.home-container {
+.container {
   grid-template-rows: auto 1fr;
 
   @media (width >= 768px) {
