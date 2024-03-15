@@ -21,12 +21,7 @@ const List = ({ data, title, variant = false, divided = false }: Props) => (
         <li className={styles.item} key={index}>
           {link ? (
             <Link href={link} target="_blank" rel="noopener noreferrer">
-              <Item
-                text={text}
-                label={label}
-                iconName={iconName}
-                variant={variant}
-              />
+              <Item text={text} iconName={iconName} variant={variant} />
             </Link>
           ) : (
             <Item

@@ -23,7 +23,7 @@ const AboutPage = () => (
             <strong>Frontend Development</strong>.
           </p>
           <p>
-            With over 4 years of cross-industry experience, I´ve closely
+            With over 5 years of cross-industry experience, I´ve closely
             collaborated with designers, marketers, and analysts.
           </p>
           <p>

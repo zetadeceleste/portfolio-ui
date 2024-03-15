@@ -106,3 +106,14 @@ input {
   appearance: none;
   border-radius: 0;
 }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

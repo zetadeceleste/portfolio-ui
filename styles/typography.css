@@ -6,86 +6,81 @@
 body {
   font-family: var(--font-text);
   font-size: 1rem; /* 1rem = 16px */
+  hyphens: auto;
 }
 
 h1 {
-  font-family: var(--font-headline);
-  font-size: 4.5rem;
-  letter-spacing: -0.25rem;
-  line-height: 3rem;
+  font-size: 4rem;
+  line-height: 2.5rem;
+
+  @media all and (width >= 768px) {
+    font-size: 5.25rem;
+    line-height: 4.25rem;
+  }
+
+  @media all and (width >= 1024px) {
+    font-size: 6rem;
+    line-height: 4.75rem;
+  }
 
   &.bigger {
     font-size: 5.5rem;
     line-height: 4.75rem;
+
+    @media all and (width >= 768px) {
+      font-size: 6.5rem;
+      line-height: 5.5rem;
+    }
+
+    @media all and (width >= 1024px) {
+      font-size: 6rem;
+      line-height: 4.75rem;
+    }
   }
 }
 
-h2 {
+.big-text {
+  font-size: 3rem;
+
+  @media all and (width >= 1024px) {
+    font-size: 4rem;
+  }
+}
+
+h1,
+.big-text {
+  font-family: var(--font-headline);
+  letter-spacing: -0.25rem;
+}
+
+h2,
+.number {
   font-size: 1.5rem;
+
+  @media all and (width >= 1024px) {
+    font-size: 1.75rem;
+  }
+
+  &.bigger {
+    @media all and (width >= 1024px) {
+      font-size: 2rem;
+    }
+  }
 }
 
 h3,
-p,
-.number {
+p {
   font-size: 1.125rem;
 }
 
 h2,
 h3,
 em,
-strong {
-  font-weight: 700;
-}
-
-a {
-  text-decoration: none;
-}
-
-em {
-  font-style: italic;
-}
-
-.black {
-  color: var(--color-neutral-dark);
-}
-
+strong,
 .bold {
   font-weight: 700;
 }
 
-@media all and (width >= 768px) {
-  h1 {
-    font-size: 5.25rem;
-    letter-spacing: -0.25rem;
-    line-height: 4.25rem;
-
-    &.bigger {
-      font-size: 6.5rem;
-      line-height: 5.5rem;
-    }
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media all and (width >= 1024px) {
-  h1 {
-    font-size: 6rem;
-    line-height: 4.75rem;
-
-    &.bigger {
-      font-size: 7.25rem;
-      line-height: 6rem;
-    }
-  }
-
-  h2 {
-    font-size: 1.75rem;
-
-    &.bigger {
-      font-size: 2rem;
-    }
-  }
+em {
+  font-style: italic;
 }

@@ -1,10 +1,5 @@
-.body {
-  hyphens: auto;
-}
-
 a {
   color: var(--color-link);
-  text-decoration: none;
 
   &:hover {
     color: var(--color-link-hover);
@@ -17,4 +12,8 @@ a {
       color: var(--color-link-variant-hover);
     }
   }
+}
+
+.black {
+  color: var(--color-neutral-dark);
 }
