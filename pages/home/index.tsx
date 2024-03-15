@@ -14,7 +14,7 @@ const HomePage = () => (
       <title>Celeste Zapata | Developer</title>
     </Head>
     <Container className={styles.container} full>
-      <ImageBySize images={HOME_PAGE_IMAGES} priority />
+      <ImageBySize images={HOME_PAGE_IMAGES} />
       <FlexWrapper className={styles.wrapper}>
         <Headline
           title={

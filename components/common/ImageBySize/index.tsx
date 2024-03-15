@@ -7,10 +7,9 @@ import { useWindowSize } from '@/utils/window'
 
 interface Props {
   images: ImageSet
-  priority?: boolean
 }
 
-const ImageBySize = ({ images, priority = false }: Props) => {
+const ImageBySize = ({ images }: Props) => {
   const { name, description, desktop, tablet } = images
   const { width } = useWindowSize()
 
@@ -47,8 +46,9 @@ const ImageBySize = ({ images, priority = false }: Props) => {
       height={imageMobile ? 0 : imageHeight}
       width={imageMobile ? 0 : imageWidth}
       className={imageMobile ? styles.mobile : styles.image}
+      loading={imageMobile ? 'eager' : 'lazy'}
+      priority={imageMobile ? true : false}
       sizes="100vw"
-      priority={priority}
     />
   )
 }
