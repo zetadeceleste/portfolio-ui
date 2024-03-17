@@ -5,7 +5,7 @@ import styles from './about.module.css'
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
-import SocialLinkList from '@/components/common/SocialLinkList'
+import SocialLinks from '@/components/common/SocialLinks'
 
 const AboutPage = () => (
   <>
@@ -44,7 +44,7 @@ const AboutPage = () => (
             for individuals with disabilities.
           </p>
         </FlexWrapper>
-        <SocialLinkList />
+        <SocialLinks />
       </FlexWrapper>
     </Container>
   </>

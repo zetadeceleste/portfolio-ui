@@ -7,14 +7,14 @@ import HamburgerIcon from './HamburgerIcon'
 import styles from './MenuIcon.module.css'
 
 interface Props {
-  setShowList: Dispatch<SetStateAction<boolean>>
-  showList: boolean
+  setMenuVisible: Dispatch<SetStateAction<boolean>>
+  menuVisible: boolean
   loading: boolean
 }
 
-const MenuIcon = ({ setShowList, showList, loading }: Props) => {
+const MenuIcon = ({ setMenuVisible, menuVisible, loading }: Props) => {
   const toggleClass = () => {
-    setShowList(!showList)
+    setMenuVisible(!menuVisible)
   }
 
   return (
@@ -28,10 +28,10 @@ const MenuIcon = ({ setShowList, showList, loading }: Props) => {
         onClick={toggleClass}
         disabled={loading}
         aria-controls="menu"
-        aria-expanded={showList ? 'true' : 'false'}
+        aria-expanded={menuVisible ? 'true' : 'false'}
         aria-label="Toggle menu"
       >
-        {loading ? <Loader /> : <HamburgerIcon active={showList} />}
+        {loading ? <Loader /> : <HamburgerIcon active={menuVisible} />}
       </button>
     </FlexWrapper>
   )

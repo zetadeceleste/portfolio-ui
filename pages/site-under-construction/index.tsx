@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
-import SocialLinkList from '@/components/common/SocialLinkList'
+import SocialLinks from '@/components/common/SocialLinks'
 
 const SiteUnderConstructionPage = () => (
   <>
@@ -22,7 +22,7 @@ const SiteUnderConstructionPage = () => (
           }
           subtitle="Feel free to visit my social media!"
         />
-        <SocialLinkList />
+        <SocialLinks />
       </FlexWrapper>
     </Container>
   </>

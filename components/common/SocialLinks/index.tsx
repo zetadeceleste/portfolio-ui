@@ -1,6 +1,6 @@
 import List from '../List'
 
-const SocialLinkList = () => (
+const SocialLinks = () => (
   <List
     data={[
       {
@@ -22,4 +22,4 @@ const SocialLinkList = () => (
   />
 )
 
-export default SocialLinkList
+export default SocialLinks

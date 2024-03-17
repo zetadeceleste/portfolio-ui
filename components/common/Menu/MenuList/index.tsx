@@ -5,8 +5,8 @@ import { Dispatch, SetStateAction, MouseEvent } from 'react'
 import styles from './MenuList.module.css'
 
 interface Props {
-  showList: boolean
-  setShowList: Dispatch<SetStateAction<boolean>>
+  menuVisible: boolean
+  setMenuVisible: Dispatch<SetStateAction<boolean>>
   setLoading: Dispatch<SetStateAction<boolean>>
 }
 
@@ -34,7 +34,7 @@ const WEBSITE_PAGES = [
   { link: '/contact', text: <>contact</> },
 ]
 
-const MenuList = ({ showList, setShowList, setLoading }: Props) => {
+const MenuList = ({ menuVisible, setMenuVisible, setLoading }: Props) => {
   const router = useRouter()
 
   const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, path: string) => {
@@ -42,15 +42,15 @@ const MenuList = ({ showList, setShowList, setLoading }: Props) => {
     setLoading(true)
     router.push(path)
     router.events.on('routeChangeComplete', () => {
-      setShowList(false)
+      setMenuVisible(false)
       setLoading(false)
     })
   }
 
-  if (showList === false) return null
-
   return (
-    <div className={styles.menu}>
+    <div
+      className={`${styles.menu} ${menuVisible ? styles.show : styles.hide}`}
+    >
       <ul className={styles.list}>
         {WEBSITE_PAGES.map(({ text, link }, index) => (
           <ol key={index}>
@@ -59,7 +59,7 @@ const MenuList = ({ showList, setShowList, setLoading }: Props) => {
                 className={styles.item}
                 onClick={(e) => handleLinkClick(e, link)}
               >
-                <span className="number">0{index + 1}</span>
+                <span className="number">0{index + 1}.</span>
                 <p className="big-text">{text}</p>
               </a>
             </Link>

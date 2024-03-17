@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
-import SocialLinkList from '@/components/common/SocialLinkList'
+import SocialLinks from '@/components/common/SocialLinks'
 
 const ContactPage = () => (
   <>
@@ -23,7 +23,7 @@ const ContactPage = () => (
           subtitle="Let´s work together!"
           center
         />
-        <SocialLinkList />
+        <SocialLinks />
       </FlexWrapper>
     </Container>
   </>

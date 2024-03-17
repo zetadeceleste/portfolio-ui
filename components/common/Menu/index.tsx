@@ -4,19 +4,19 @@ import MenuIcon from './MenuIcon'
 import MenuList from './MenuList'
 
 const Menu = () => {
-  const [showList, setShowList] = useState(false)
+  const [menuVisible, setMenuVisible] = useState(false)
   const [loading, setLoading] = useState(false)
 
   return (
     <nav>
       <MenuList
-        showList={showList}
-        setShowList={setShowList}
+        menuVisible={menuVisible}
+        setMenuVisible={setMenuVisible}
         setLoading={setLoading}
       />
       <MenuIcon
-        showList={showList}
-        setShowList={setShowList}
+        menuVisible={menuVisible}
+        setMenuVisible={setMenuVisible}
         loading={loading}
       />
     </nav>
