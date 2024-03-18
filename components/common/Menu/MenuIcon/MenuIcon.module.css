@@ -6,7 +6,7 @@
 }
 
 .button {
-  background-color: var(--color-neutral-dark);
+  background-color: var(--color-neutral-grey);
   border-radius: 50%;
   box-shadow:
     0 1px 3px 0 rgb(0 0 0 / 20%),
@@ -19,5 +19,9 @@
   &.disabled {
     background-color: var(--color-neutral-light);
     cursor: not-allowed;
+  }
+
+  &.variant {
+    background-color: var(--color-star-light);
   }
 }

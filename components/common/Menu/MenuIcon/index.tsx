@@ -6,16 +6,29 @@ import Loader from '../../Loader'
 import HamburgerIcon from './HamburgerIcon'
 import styles from './MenuIcon.module.css'
 
+import { buildBooleanClassNameList } from '@/utils/styles'
+
 interface Props {
   setMenuVisible: Dispatch<SetStateAction<boolean>>
   menuVisible: boolean
   loading: boolean
+  variant?: boolean
 }
 
-const MenuIcon = ({ setMenuVisible, menuVisible, loading }: Props) => {
+const MenuIcon = ({
+  setMenuVisible,
+  menuVisible,
+  loading,
+  variant = false,
+}: Props) => {
   const toggleClass = () => {
     setMenuVisible(!menuVisible)
   }
+
+  const classNameList = buildBooleanClassNameList(styles, {
+    loading,
+    variant,
+  })
 
   return (
     <FlexWrapper
@@ -24,7 +37,7 @@ const MenuIcon = ({ setMenuVisible, menuVisible, loading }: Props) => {
       justifyContent="center"
     >
       <button
-        className={`${styles.button} ${loading ? styles.disabled : ''}`}
+        className={`${styles.button} ${classNameList}`}
         onClick={toggleClass}
         disabled={loading}
         aria-controls="menu"

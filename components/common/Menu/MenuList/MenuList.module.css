@@ -12,6 +12,10 @@
   &.hide {
     animation: hide-menu 0.25s ease-in forwards;
   }
+
+  &.variant {
+    background-color: var(--color-neutral-light);
+  }
 }
 
 .list {
@@ -24,10 +28,6 @@
 }
 
 .item {
-  align-items: baseline;
-  color: var(--color-neutral-light);
-  display: flex;
-  gap: 0.5rem;
   text-align: center;
 }
 

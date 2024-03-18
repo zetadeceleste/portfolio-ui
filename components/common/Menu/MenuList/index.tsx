@@ -8,6 +8,7 @@ interface Props {
   menuVisible: boolean
   setMenuVisible: Dispatch<SetStateAction<boolean>>
   setLoading: Dispatch<SetStateAction<boolean>>
+  variant?: boolean
 }
 
 const WEBSITE_PAGES = [
@@ -34,13 +35,21 @@ const WEBSITE_PAGES = [
   { link: '/contact', text: <>contact</> },
 ]
 
-const MenuList = ({ menuVisible, setMenuVisible, setLoading }: Props) => {
+const MenuList = ({
+  menuVisible,
+  setMenuVisible,
+  setLoading,
+  variant = false,
+}: Props) => {
   const router = useRouter()
 
   const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, path: string) => {
     e.preventDefault()
+
     setLoading(true)
+
     router.push(path)
+
     router.events.on('routeChangeComplete', () => {
       setMenuVisible(false)
       setLoading(false)
@@ -49,17 +58,17 @@ const MenuList = ({ menuVisible, setMenuVisible, setLoading }: Props) => {
 
   return (
     <div
-      className={`${styles.menu} ${menuVisible ? styles.show : styles.hide}`}
+      className={`${styles.menu} ${menuVisible ? styles.show : styles.hide} ${variant ? styles.variant : ''}`}
     >
       <ul className={styles.list}>
         {WEBSITE_PAGES.map(({ text, link }, index) => (
-          <ol key={index}>
+          <ol className={styles.item} key={index}>
             <Link href={link} passHref legacyBehavior>
               <a
-                className={styles.item}
+                className={`${variant ? '' : 'variant'}`}
                 onClick={(e) => handleLinkClick(e, link)}
               >
-                <span className="number">0{index + 1}.</span>
+                <span className="number">0{index + 1}</span>
                 <p className="big-text">{text}</p>
               </a>
             </Link>
