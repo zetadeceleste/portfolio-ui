@@ -1,10 +1,14 @@
 .spinner {
   animation: rotate 2s linear infinite;
+}
 
-  .path {
-    animation: dash 1.5s ease-in-out infinite;
-    stroke: var(--color-neutral-dark);
-    stroke-linecap: round;
+.path {
+  animation: dash 1.5s ease-in-out infinite;
+  stroke: var(--color-neutral-dark);
+  stroke-linecap: round;
+
+  &.variant {
+    stroke: var(--color-neutral-light);
   }
 }
 

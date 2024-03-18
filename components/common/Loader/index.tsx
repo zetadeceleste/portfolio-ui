@@ -1,6 +1,10 @@
 import styles from './Loader.module.css'
 
-const Loader = () => (
+interface Props {
+  variant?: boolean
+}
+
+const Loader = ({ variant = false }: Props) => (
   <svg
     className={styles.spinner}
     viewBox="0 0 50 50"
@@ -9,7 +13,7 @@ const Loader = () => (
     aria-hidden="true"
   >
     <circle
-      className={styles.path}
+      className={`${styles.path} ${variant ? styles.variant : ''}`}
       cx="25"
       cy="25"
       r="20"
