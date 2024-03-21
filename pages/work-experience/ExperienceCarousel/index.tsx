@@ -1,10 +1,14 @@
-import styles from './ExperienceCarousel.module.css'
 import ExperienceItem from './ExperienceItem'
 
+import FlexWrapper from '@/components/common/FlexWrapper'
+
 const ExperienceCarousel = () => (
-  <div className={styles.carousel}>
+  <FlexWrapper gap="medium">
     <ExperienceItem />
-  </div>
+    <ExperienceItem />
+    <ExperienceItem />
+    <ExperienceItem />
+  </FlexWrapper>
 )
 
 export default ExperienceCarousel

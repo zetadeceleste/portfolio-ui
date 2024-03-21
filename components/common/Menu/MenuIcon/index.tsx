@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, useState, useEffect } from 'react'
 
 import FlexWrapper from '../../FlexWrapper'
 import Loader from '../../Loader'
@@ -13,13 +13,23 @@ interface Props {
 }
 
 const MenuIcon = ({ setMenuVisible, menuVisible, loading }: Props) => {
+  const [showIcon, setShowIcon] = useState(false)
+
   const toggleClass = () => {
     setMenuVisible(!menuVisible)
   }
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIcon(true)
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <FlexWrapper
-      className={styles.wrapper}
+      className={`${styles.wrapper} ${showIcon ? styles.show : ''}`}
       alignItems="center"
       justifyContent="center"
     >

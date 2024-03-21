@@ -8,8 +8,8 @@ const Loader = ({ variant = false }: Props) => (
   <svg
     className={styles.spinner}
     viewBox="0 0 50 50"
-    height="100%"
-    width="100%"
+    height={32}
+    width={32}
     aria-hidden="true"
   >
     <circle

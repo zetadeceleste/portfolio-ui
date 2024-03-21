@@ -11,7 +11,15 @@ class MyDocument extends Document {
           />
           <meta name="theme-color" content="#000000" />
           <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" href="/logo192.png" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link
+            rel="android-chrome-192x192"
+            href="/android-chrome-192x192.png"
+          />
+          <link
+            rel="android-chrome-512x512"
+            href="/android-chrome-512x512.png"
+          />
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body className="body">

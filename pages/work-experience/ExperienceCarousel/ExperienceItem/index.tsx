@@ -6,7 +6,7 @@ import FlexWrapper from '@/components/common/FlexWrapper'
 import List from '@/components/common/List'
 
 const ExperienceItem = () => (
-  <FlexWrapper gap="medium">
+  <FlexWrapper gap="medium" className={styles.item}>
     <FlexWrapper justifyContent="space-between">
       <FlexWrapper className={styles.number}>
         <span className="number">1/5</span>

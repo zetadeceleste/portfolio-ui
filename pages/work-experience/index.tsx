@@ -13,15 +13,7 @@ const WorkExperiencePage = () => (
     </Head>
     <Container variant>
       <FlexWrapper alignSelf="start" gap="medium">
-        <Headline
-          title={
-            <>
-              work <br /> experience
-            </>
-          }
-          highlighted
-          variant
-        />
+        <Headline title={<>work experience</>} highlighted variant />
         <ExperienceCarousel />
       </FlexWrapper>
     </Container>

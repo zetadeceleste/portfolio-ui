@@ -1,4 +1,8 @@
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
+
+import FlexWrapper from '../FlexWrapper'
+import Loader from '../Loader'
 
 import styles from './ImageBySize.module.css'
 
@@ -13,43 +17,60 @@ const ImageBySize = ({ images }: Props) => {
   const { name, description, desktop, tablet } = images
   const { width } = useWindowSize()
 
-  const getImageProps = () => {
+  const [imageProps, setImageProps] = useState({
+    path: '',
+    imageHeight: 0,
+    imageWidth: 0,
+    imageMobile: false,
+  })
+
+  useEffect(() => {
     if (width < 768) {
-      return {
+      setImageProps({
         path: `/images/${name}-mobile.webp`,
+        imageHeight: 0,
+        imageWidth: 0,
         imageMobile: true,
-      }
+      })
     }
 
     if (width >= 768 && width <= 1024 && tablet) {
-      return {
+      setImageProps({
         path: `/images/${name}-tablet.webp`,
         imageHeight: tablet.height,
         imageWidth: tablet.width,
-      }
+        imageMobile: false,
+      })
     }
 
-    // Fallback to desktop
-    return {
-      path: `/images/${name}-desktop.webp`,
-      imageHeight: desktop.height,
-      imageWidth: desktop.width,
+    if (width > 1024 && desktop) {
+      setImageProps({
+        path: `/images/${name}-desktop.webp`,
+        imageHeight: desktop.height,
+        imageWidth: desktop.width,
+        imageMobile: false,
+      })
     }
-  }
-
-  const { path, imageHeight, imageWidth, imageMobile } = getImageProps()
+  }, [width])
 
   return (
-    <Image
-      src={path}
-      alt={description}
-      height={imageMobile ? 0 : imageHeight}
-      width={imageMobile ? 0 : imageWidth}
-      className={imageMobile ? styles.mobile : styles.image}
-      loading={imageMobile ? 'eager' : 'lazy'}
-      priority={imageMobile ? true : false}
-      sizes="100vw"
-    />
+    <>
+      {width === 0 ? (
+        <FlexWrapper alignItems="center" justifyContent="center">
+          <Loader />
+        </FlexWrapper>
+      ) : (
+        <Image
+          src={imageProps.path}
+          alt={description}
+          height={imageProps.imageHeight}
+          width={imageProps.imageWidth}
+          className={imageProps.imageMobile ? styles.mobile : styles.image}
+          priority={true}
+          sizes="100vw"
+        />
+      )}
+    </>
   )
 }
 
