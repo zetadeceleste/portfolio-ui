@@ -1,20 +1,17 @@
 .menu {
   background-color: var(--color-neutral-dark);
-  display: none;
   inset: 0;
-  opacity: 0;
   position: fixed;
   z-index: 1;
 
-  &.show {
+  /* &.show {
     animation: fade-in 0.25s ease-in forwards;
     display: block;
   }
 
   &.hide {
     animation: fade-out 0.25s ease-in forwards;
-    display: block;
-  }
+  } */
 
   &.variant {
     background-color: var(--color-neutral-light);
@@ -27,10 +24,11 @@
   flex-direction: column;
   gap: 1.5rem;
   height: 100%;
-  padding: 5rem 1rem;
+  justify-content: center;
+  padding: 1.5rem 1rem;
 
   @media (min-width >= 768px) {
-    justify-content: center;
+    padding: 5rem 1rem;
   }
 }
 
@@ -38,7 +36,7 @@
   text-align: center;
 }
 
-@keyframes fade-in {
+/* @keyframes fade-in {
   from {
     opacity: 0;
     visibility: hidden;
@@ -60,4 +58,4 @@
     opacity: 0;
     visibility: hidden;
   }
-}
+} */

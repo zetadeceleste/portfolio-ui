@@ -23,11 +23,6 @@
   cursor: pointer;
   height: 3rem;
   width: 3rem;
-
-  &.disabled {
-    background-color: var(--color-neutral-dark);
-    cursor: not-allowed;
-  }
 }
 
 @keyframes fade-in {

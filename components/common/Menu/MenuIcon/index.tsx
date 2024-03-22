@@ -1,23 +1,17 @@
-import { Dispatch, SetStateAction, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 import FlexWrapper from '../../FlexWrapper'
-import Loader from '../../Loader'
 
 import HamburgerIcon from './HamburgerIcon'
 import styles from './MenuIcon.module.css'
 
 interface Props {
-  setMenuVisible: Dispatch<SetStateAction<boolean>>
-  menuVisible: boolean
-  loading: boolean
+  onClick: () => void
+  active: boolean
 }
 
-const MenuIcon = ({ setMenuVisible, menuVisible, loading }: Props) => {
+const MenuIcon = ({ onClick, active }: Props) => {
   const [showIcon, setShowIcon] = useState(false)
-
-  const toggleClass = () => {
-    setMenuVisible(!menuVisible)
-  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,14 +28,13 @@ const MenuIcon = ({ setMenuVisible, menuVisible, loading }: Props) => {
       justifyContent="center"
     >
       <button
-        className={`${styles.button} ${loading ? styles.disabled : ''}`}
-        onClick={toggleClass}
-        disabled={loading}
+        className={styles.button}
+        onClick={onClick}
         aria-controls="menu"
-        aria-expanded={menuVisible ? 'true' : 'false'}
+        aria-expanded={active ? 'true' : 'false'}
         aria-label="Toggle menu"
       >
-        {loading ? <Loader variant /> : <HamburgerIcon active={menuVisible} />}
+        <HamburgerIcon active={active} />
       </button>
     </FlexWrapper>
   )
