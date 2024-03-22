@@ -1,7 +1,9 @@
 .wrapper {
   bottom: 1.5rem;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
   position: fixed;
+  visibility: hidden;
   width: 100%;
   z-index: 2;
 
@@ -11,8 +13,10 @@
   }
 
   &.show {
-    animation: fade-in 0.25s ease-in forwards;
-    display: flex;
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.25s ease-in;
+    visibility: visible;
   }
 }
 
@@ -23,16 +27,4 @@
   cursor: pointer;
   height: 3rem;
   width: 3rem;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
 }

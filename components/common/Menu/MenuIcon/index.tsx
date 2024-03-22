@@ -7,16 +7,16 @@ import styles from './MenuIcon.module.css'
 
 interface Props {
   onClick: () => void
-  active: boolean
+  menuVisible: boolean
 }
 
-const MenuIcon = ({ onClick, active }: Props) => {
+const MenuIcon = ({ onClick, menuVisible }: Props) => {
   const [showIcon, setShowIcon] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIcon(true)
-    }, 500)
+    }, 250)
 
     return () => clearTimeout(timer)
   }, [])
@@ -31,10 +31,10 @@ const MenuIcon = ({ onClick, active }: Props) => {
         className={styles.button}
         onClick={onClick}
         aria-controls="menu"
-        aria-expanded={active ? 'true' : 'false'}
+        aria-expanded={menuVisible ? 'true' : 'false'}
         aria-label="Toggle menu"
       >
-        <HamburgerIcon active={active} />
+        <HamburgerIcon active={menuVisible} />
       </button>
     </FlexWrapper>
   )
