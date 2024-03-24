@@ -4,6 +4,7 @@ import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
 import List from '@/components/common/List'
+import { SKILL_LIST } from '@/constants/skillList'
 
 const SkillsPage = () => (
   <>
@@ -14,38 +15,7 @@ const SkillsPage = () => (
       <FlexWrapper gap="medium">
         <Headline title={<>skills</>} highlighted />
         <FlexWrapper flexDirection="column-to-row">
-          <List
-            data={[
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-              { text: 'React.js' },
-            ]}
-            divided
-          />
+          <List data={SKILL_LIST} divided />
         </FlexWrapper>
       </FlexWrapper>
     </Container>

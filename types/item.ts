@@ -1,4 +1,4 @@
-import { IconName } from '@/types'
+import { IconName } from './icon'
 
 export type ItemType = {
   text: string

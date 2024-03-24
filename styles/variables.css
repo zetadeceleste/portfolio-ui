@@ -5,7 +5,8 @@
   --color-accent: #333;
   --color-accent-hover: #4d4d4d;
   --color-neutral-dark: #201f1f;
-  --color-neutral-grey: #585755;
+  --color-neutral-grey-100: #aeaba8;
+  --color-neutral-grey-200: #6c6a69;
   --color-neutral-light: #f9faf4;
   --color-star: #ed4b4f;
   --color-star-light: #c1665a;
@@ -15,7 +16,7 @@
   --color-text: var(--color-neutral-dark);
   --color-text-variant: var(--color-neutral-light);
   --color-headline: var(--color-star);
-  --color-headline-variant: var(--color-neutral-grey);
+  --color-headline-variant: var(--color-neutral-grey-200);
   --color-link: var(--color-accent);
   --color-link-hover: var(--color-accent-hover);
   --color-link-variant: var(--color-star-light);

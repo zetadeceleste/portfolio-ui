@@ -1,5 +1,5 @@
 .wrapper {
-  bottom: 1.5rem;
+  bottom: 24px;
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -8,7 +8,7 @@
   z-index: 2;
 
   @media (width >= 768px) {
-    inset: 1.5rem 1.5rem auto auto;
+    inset: 48px 24px auto auto;
     width: auto;
   }
 
@@ -21,7 +21,7 @@
 }
 
 .button {
-  background-color: var(--color-neutral-grey);
+  background-color: var(--color-neutral-grey-200);
   border-radius: 50%;
   box-shadow: var(--box-shadow);
   cursor: pointer;

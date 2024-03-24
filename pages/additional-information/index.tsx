@@ -40,7 +40,10 @@ const AdditionalInformationPage = () => (
             title="Volunteering"
             data={[
               { text: 'Django Girls', label: '2019 [Mendoza, Argentina]' },
-              { text: 'Django Girls', label: '2019 [Mendoza, Argentina]' },
+              {
+                text: 'AMDE (Asociación Mendocina de Deportes Electrónicos)',
+                label: '2018 - 2019 [Mendoza, Argentina]',
+              },
             ]}
           />
         </FlexWrapper>

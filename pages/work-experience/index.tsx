@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import ExperienceCarousel from './ExperienceCarousel'
+import ExperienceWrapper from './ExperienceWrapper'
 
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
@@ -14,7 +14,7 @@ const WorkExperiencePage = () => (
     <Container variant>
       <FlexWrapper alignSelf="start" gap="medium">
         <Headline title={<>work experience</>} highlighted variant />
-        <ExperienceCarousel />
+        <ExperienceWrapper />
       </FlexWrapper>
     </Container>
   </>

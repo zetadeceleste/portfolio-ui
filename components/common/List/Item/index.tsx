@@ -2,9 +2,10 @@ import { memo } from 'react'
 
 import FlexWrapper from '../../FlexWrapper'
 import Icon from '../../Icon'
-import { ItemType } from '../types'
 
 import styles from './Item.module.css'
+
+import { ItemType } from '@/types/item'
 
 const ItemInner = ({
   text,

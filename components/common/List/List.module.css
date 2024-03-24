@@ -1,18 +1,18 @@
 .list {
   display: flex;
   flex-direction: column;
-  row-gap: 0.5rem;
+  gap: 0.5rem;
 
   &.divided {
     flex-flow: row wrap;
 
     .item {
-      flex-basis: 50%;
-      max-width: 50%;
+      flex-basis: calc(50% - 0.5rem);
+      max-width: calc(50% - 0.5rem);
 
       @media all and (width >= 768px) {
-        flex-basis: 33.333%;
-        max-width: 33.333%;
+        flex-basis: calc(33.333% - 0.5rem);
+        max-width: calc(33.333% - 0.5rem);
       }
     }
   }

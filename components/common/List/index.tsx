@@ -4,7 +4,8 @@ import FlexWrapper from '../FlexWrapper'
 
 import Item from './Item'
 import styles from './List.module.css'
-import { ItemType } from './types'
+
+import { ItemType } from '@/types/item'
 
 interface Props {
   data: ItemType[]
