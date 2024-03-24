@@ -14,16 +14,16 @@ interface Props {
 
 const ExperienceItem = ({ order, total, experience }: Props) => {
   const {
-    role,
-    company,
-    companyWebsite,
-    companyLocation,
-    companyType,
-    dateFrom,
-    dateTo,
-    responsibilities,
-    accomplishments,
-    mainTechStack,
+    role = '',
+    company = '',
+    companyWebsite = '',
+    companyLocation = '',
+    companyType = '',
+    dateFrom = '',
+    dateTo = '',
+    responsibilities = [],
+    accomplishments = [],
+    mainTechStack = [],
     current = false,
   } = experience
   return (

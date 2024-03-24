@@ -1,4 +1,7 @@
-import CrossIcon from '../../../public/images/icons/cross.svg'
+import EmailIcon from '../../../public/images/icons/email.svg'
+import GithubIcon from '../../../public/images/icons/github.svg'
+import LinkedinIcon from '../../../public/images/icons/linkedin.svg'
+import StarIcon from '../../../public/images/icons/star.svg'
 import FlexWrapper from '../FlexWrapper'
 
 import { IconName } from '@/types'
@@ -10,14 +13,14 @@ interface Props {
 
 const getIcon = (iconName: IconName, variant?: boolean) => {
   switch (iconName) {
+    case 'email':
+      return variant ? <EmailIcon /> : <EmailIcon />
     case 'github':
-      return variant ? <CrossIcon /> : <CrossIcon />
-    case 'mail':
-      return variant ? <CrossIcon /> : <CrossIcon />
+      return variant ? <GithubIcon /> : <GithubIcon />
     case 'linkedin':
-      return variant ? <CrossIcon /> : <CrossIcon />
-    case 'start':
-      return variant ? <CrossIcon /> : <CrossIcon />
+      return variant ? <LinkedinIcon /> : <LinkedinIcon />
+    case 'star':
+      return variant ? <StarIcon /> : <StarIcon />
     default:
       return null
   }
