@@ -12,49 +12,55 @@ interface Props {
   experience: ExperienceType
 }
 
-const ExperienceItem = ({ order, total, experience }: Props) => (
-  <FlexWrapper gap="medium" className={styles.item}>
-    <FlexWrapper justifyContent="space-between">
-      <FlexWrapper className={styles.number}>
-        <span className="number">
-          {order}/{total}
-        </span>
-      </FlexWrapper>
-      <FlexWrapper>
-        <h2>
-          {experience.role} at{' '}
-          <Link
-            className="variant"
-            href={experience.companyWebsite || '/'}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {experience.company}
-          </Link>
-        </h2>
-        <FlexWrapper flexDirection="column-to-row">
-          <span>
-            [{experience.dateFrom} -{' '}
-            {`${experience.current ? 'PRESENT' : experience.dateTo}`}]
+const ExperienceItem = ({ order, total, experience }: Props) => {
+  const {
+    role,
+    company,
+    companyWebsite,
+    companyLocation,
+    companyType,
+    dateFrom,
+    responsibilities = [],
+    accomplishments = [],
+    mainTechStack = [],
+    dateTo = false,
+    current = false,
+  } = experience
+
+  return (
+    <FlexWrapper gap="medium" className={styles.item}>
+      <FlexWrapper justifyContent="space-between">
+        <FlexWrapper className={styles.number}>
+          <span className="number">
+            {order}/{total}
           </span>
-          <span>[{experience.companyLocation}]</span>
-          <span>[{experience.companyType}]</span>
+        </FlexWrapper>
+        <FlexWrapper>
+          <h2>
+            {role} at{' '}
+            <Link
+              className="variant"
+              href={companyWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {company}
+            </Link>
+          </h2>
+          <FlexWrapper flexDirection="column-to-row">
+            <span>
+              [{dateFrom} - {`${current ? 'PRESENT' : dateTo}`}]
+            </span>
+            <span>[{companyLocation}]</span>
+            <span>[{companyType}]</span>
+          </FlexWrapper>
         </FlexWrapper>
       </FlexWrapper>
+      <List title="RESPONSABILITIES" data={responsibilities} variant />
+      <List title="KEY ACCOMPLISHMENTS" data={accomplishments} variant />
+      <List title="MAIN TECH STACK" data={mainTechStack} variant divided />
     </FlexWrapper>
-    <List title="RESPONSABILITIES" data={experience.responsibilities} variant />
-    <List
-      title="KEY ACCOMPLISHMENTS"
-      data={experience.accomplishments}
-      variant
-    />
-    <List
-      title="MAIN TECH STACK"
-      data={experience.mainTechStack}
-      variant
-      divided
-    />
-  </FlexWrapper>
-)
+  )
+}
 
 export default ExperienceItem
