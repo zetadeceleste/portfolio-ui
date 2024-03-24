@@ -25,7 +25,7 @@ const ExperienceItem = ({ order, total, experience }: Props) => (
           {experience.role} at{' '}
           <Link
             className="variant"
-            href={experience.companyWebsite}
+            href={experience.companyWebsite || '/'}
             target="_blank"
             rel="noopener noreferrer"
           >
