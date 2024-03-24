@@ -14,18 +14,19 @@ interface Props {
 
 const ExperienceItem = ({ order, total, experience }: Props) => {
   const {
-    role,
-    company,
-    companyWebsite,
-    companyLocation,
-    companyType,
-    dateFrom,
+    role = '',
+    company = '',
+    companyWebsite = '',
+    companyLocation = '',
+    companyType = '',
+    dateFrom = '',
     responsibilities = [],
     accomplishments = [],
     mainTechStack = [],
     dateTo = false,
     current = false,
   } = experience
+
   return (
     <FlexWrapper gap="medium" className={styles.item}>
       <FlexWrapper justifyContent="space-between">
