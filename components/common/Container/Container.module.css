@@ -11,7 +11,7 @@
 
 .wrapper {
   display: grid;
-  gap: 3rem;
+  gap: 48px;
   margin: 0 auto;
   max-width: var(--breakpoint-width);
   min-height: 100vh;

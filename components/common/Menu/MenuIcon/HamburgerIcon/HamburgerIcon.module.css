@@ -1,5 +1,5 @@
 .hamburger {
-  height: 3rem;
+  height: 48px;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   user-select: none;

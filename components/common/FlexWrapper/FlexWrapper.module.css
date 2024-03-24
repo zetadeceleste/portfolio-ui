@@ -22,19 +22,19 @@
   }
 
   &.gap-extra-small {
-    gap: 0.5rem;
+    gap: 8px;
   }
 
   &.gap-small {
-    gap: 1rem;
+    gap: 16px;
   }
 
   &.gap-medium {
-    gap: 1.5rem;
+    gap: 24px;
   }
 
   &.gap-large {
-    gap: 2rem;
+    gap: 32px;
   }
 
   &.align-items-start {
