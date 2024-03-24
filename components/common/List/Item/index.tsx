@@ -10,7 +10,7 @@ import { ItemType } from '@/types/item'
 const ItemInner = ({
   text,
   label,
-  iconName = 'start',
+  iconName = 'star',
   variant = false,
 }: ItemType) => (
   <FlexWrapper flexDirection="row" alignItems="center">
