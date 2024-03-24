@@ -6,7 +6,7 @@ const SocialLinks = () => (
       {
         text: 'zdceleste@gmail.com',
         link: 'mailto:zdceleste@gmail.com',
-        iconName: 'mail',
+        iconName: 'email',
       },
       {
         text: 'github.com/zetadeceleste',
