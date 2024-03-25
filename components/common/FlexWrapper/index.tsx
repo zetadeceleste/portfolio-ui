@@ -4,7 +4,7 @@ import { buildClassNameList } from '@/utils/styles'
 
 interface Props {
   children: React.ReactNode
-  flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-to-row'
+  flexDirection?: 'row' | 'row-reverse' | 'column' | 'col-to-row'
   gap?: 'extra-small' | 'small' | 'medium' | 'large'
   alignItems?: 'start' | 'center' | 'end'
   alignSelf?: 'start' | 'center' | 'end'

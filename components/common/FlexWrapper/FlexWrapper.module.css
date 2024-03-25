@@ -13,7 +13,7 @@
     flex-direction: column;
   }
 
-  &.flex-direction-column-to-row {
+  &.flex-direction-col-to-row {
     flex-direction: column;
 
     @media (width >= 768px) {

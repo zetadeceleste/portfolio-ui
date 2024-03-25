@@ -15,7 +15,7 @@ const ItemInner = ({
 }: ItemType) => (
   <FlexWrapper flexDirection="row" alignItems="center">
     <Icon name={iconName} variant={variant} />
-    <FlexWrapper className={styles.wrapper} flexDirection="column-to-row">
+    <FlexWrapper className={styles.wrapper} flexDirection="col-to-row">
       <p>{text}</p>
       {label && <span>{label}</span>}
     </FlexWrapper>

@@ -38,7 +38,7 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
                   {experience.company}
                 </Link>
               </h2>
-              <FlexWrapper flexDirection="column-to-row">
+              <FlexWrapper flexDirection="col-to-row">
                 <span className="variant">
                   [{experience.dateFrom} -{' '}
                   {`${experience.current ? 'PRESENT' : experience.dateTo}`}]

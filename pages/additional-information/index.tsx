@@ -11,7 +11,7 @@ const AdditionalInformationPage = () => (
       <title>Celeste Zapata | Education, languages & volunteering</title>
     </Head>
     <Container>
-      <FlexWrapper flexDirection="column" gap="medium">
+      <FlexWrapper gap="medium">
         <Headline
           title={
             <>
@@ -27,7 +27,7 @@ const AdditionalInformationPage = () => (
               Associate Degree in Programming at Universidad Tecnológica
               Nacional
             </p>
-            <FlexWrapper flexDirection="column-to-row">
+            <FlexWrapper flexDirection="col-to-row">
               <span>AUG 2017 - FEB 2020</span>
               <span>[Mendoza, Argentina]</span>
             </FlexWrapper>

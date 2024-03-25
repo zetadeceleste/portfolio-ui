@@ -12,9 +12,9 @@ const SkillsPage = () => (
       <title>Celeste Zapata | My skills</title>
     </Head>
     <Container>
-      <FlexWrapper flexDirection="column" gap="medium">
+      <FlexWrapper gap="medium">
         <Headline title={<>skills</>} highlighted />
-        <FlexWrapper flexDirection="column-to-row">
+        <FlexWrapper flexDirection="col-to-row">
           <List data={SKILL_LIST} divided />
         </FlexWrapper>
       </FlexWrapper>

@@ -13,7 +13,7 @@ const AboutPage = () => (
       <title>Celeste Zapata | About me</title>
     </Head>
     <Container>
-      <FlexWrapper flexDirection="column" gap="medium">
+      <FlexWrapper gap="medium">
         <Headline title={<>hello!</>} highlighted />
         <FlexWrapper gap="small">
           <p>
