@@ -7,11 +7,7 @@ const Custom404Page = () => {
   const router = useRouter()
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push('/')
-    }, 5000)
-
-    return () => clearTimeout(timer)
+    router.push('/')
   }, [router])
 
   return <Loader />
