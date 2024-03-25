@@ -1,22 +1,36 @@
 .body {
-  --color-black-100: rgb(0 0 0 / 10%);
-  --color-blue-100: #428bca;
-  --color-blue-200: #2a6496;
-  --color-blue-300: #268296;
-  --color-blue-400: #405574;
-  --color-blue-500: #002c54;
-  --color-green-100: #35b577;
-  --color-grey-100: #b0b0b0;
-  --color-grey-200: #f1f1f1;
-  --color-grey-300: #c4c4c4;
-  --color-orange-100: #f6a300;
-  --color-purple-100: #ad618f;
-  --color-red-100: #da2037;
-  --color-red-200: #cb3737;
-  --color-yellow-100: #c5c900;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --border-radius: 0.5rem;
-  --desktop-width: 1024px;
-  --foreground-rgb: 0, 0, 0;
+  /* COLORS */
+
+  /* Principal Colors */
+  --color-accent: #201f1f;
+  --color-accent-hover: #686868;
+  --color-neutral-dark: #333;
+  --color-neutral-grey-100: #aeaba8;
+  --color-neutral-grey-200: #6c6a69;
+  --color-neutral-light: #f9faf4;
+  --color-star: #ed4b4f;
+  --color-star-light: #c1665a;
+  --color-star-light-hover: #c98178;
+
+  /* Text Color */
+  --color-text: var(--color-neutral-dark);
+  --color-text-variant: var(--color-neutral-light);
+  --color-headline: var(--color-star);
+  --color-headline-variant: var(--color-neutral-grey-200);
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+  --color-link-variant: var(--color-star-light);
+  --color-link-variant-hover: var(--color-star-light-hover);
+
+  /* Elements Colors */
+  --color-background: var(--color-neutral-light);
+  --color-background-variant: var(--color-neutral-dark);
+  --color-highlighted: var(--color-neutral-dark);
+  --color-highlighted-variant: var(--color-neutral-light);
+
+  /* SIZES */
+  --border-radius: 8px; /* 8px */
+  --box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
+    0 1px 18px 0 rgb(0 0 0 / 12%);
+  --breakpoint-width: 1100px;
 }

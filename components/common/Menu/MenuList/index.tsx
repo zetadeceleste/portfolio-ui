@@ -1,0 +1,29 @@
+import Link from 'next/link'
+
+import styles from './MenuList.module.css'
+
+import { WEBSITE_PAGES } from '@/constants/websitePages'
+
+interface Props {
+  onClick: () => void
+  menuVisible: boolean
+}
+
+const MenuList = ({ onClick, menuVisible }: Props) => (
+  <div className={`${styles.menu} ${menuVisible ? styles.show : styles.hide}`}>
+    <ul className={styles.list}>
+      {WEBSITE_PAGES.map(({ text, link }, index) => (
+        <ol className={styles.item} key={index}>
+          <Link href={link} passHref legacyBehavior>
+            <a className="variant" onClick={onClick}>
+              <span className="number">0{index + 1}</span>
+              <p className="big-text">{text}</p>
+            </a>
+          </Link>
+        </ol>
+      ))}
+    </ul>
+  </div>
+)
+
+export default MenuList

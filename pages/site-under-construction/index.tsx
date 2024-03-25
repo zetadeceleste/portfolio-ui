@@ -1,14 +1,31 @@
-import styles from "./site-under-construction.module.css";
+import Head from 'next/head'
 
-const SiteUnderConstructionPage: React.FC = () => (
-  <div className={styles.container}>
-    <div className={styles.description}>
-      <h1>Site under construction</h1>
-      <h2>
-        Follow me on <a href="https://github.com/zetadeceleste">Github</a> ;-)
-      </h2>
-    </div>
-  </div>
-);
+import Container from '@/components/common/Container'
+import FlexWrapper from '@/components/common/FlexWrapper'
+import Headline from '@/components/common/Headline'
+import SocialLinks from '@/components/common/SocialLinks'
 
-export default SiteUnderConstructionPage;
+const SiteUnderConstructionPage = () => (
+  <>
+    <Head>
+      <title>Celeste Zapata | Site under construction</title>
+    </Head>
+    <Container>
+      <FlexWrapper justifyContent="center" gap="medium">
+        <Headline
+          title={
+            <>
+              site under
+              <br />
+              <span className="black">construction</span>
+            </>
+          }
+          subtitle="Feel free to visit my social media!"
+        />
+        <SocialLinks />
+      </FlexWrapper>
+    </Container>
+  </>
+)
+
+export default SiteUnderConstructionPage

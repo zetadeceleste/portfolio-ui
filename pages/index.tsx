@@ -1,16 +1,5 @@
-import Head from "next/head";
+import HomePage from './home'
 
-import SiteUnderConstructionPage from "./site-under-construction";
+const MainPage = () => <HomePage />
 
-// TODO: Add a real homepage
-const HomePage: React.FC = () => (
-  <>
-    <Head>
-      <title>Celeste Zapata | Developer</title>
-      <meta name="description" content="Portfolio Web" />
-    </Head>
-    <SiteUnderConstructionPage />
-  </>
-);
-
-export default HomePage;
+export default MainPage

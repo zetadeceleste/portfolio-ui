@@ -1,0 +1,7 @@
+.wrapper {
+  align-items: flex-start;
+
+  @media all and (width >= 768px) {
+    align-items: flex-end;
+  }
+}
