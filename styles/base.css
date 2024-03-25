@@ -1,3 +1,7 @@
+main {
+  height: 100vh;
+}
+
 a {
   color: var(--color-link);
 
@@ -16,6 +20,10 @@ a {
 
 span {
   color: var(--color-neutral-grey-200);
+
+  &.variant {
+    color: var(--color-neutral-grey-100);
+  }
 }
 
 .black {

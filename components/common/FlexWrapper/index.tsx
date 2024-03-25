@@ -33,7 +33,7 @@ const FlexWrapper = ({
   })
 
   return (
-    <div className={`${styles.wrapper} ${classNameList} ${className}`}>
+    <div className={`${className} ${styles.wrapper} ${classNameList}`}>
       {children}
     </div>
   )

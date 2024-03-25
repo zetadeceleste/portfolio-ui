@@ -28,8 +28,8 @@ h1 {
     line-height: 4.75rem;
 
     @media all and (width >= 768px) {
-      font-size: 6.5rem;
-      line-height: 5.5rem;
+      font-size: 6rem;
+      line-height: 5rem;
     }
 
     @media all and (width >= 1024px) {

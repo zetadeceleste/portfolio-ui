@@ -17,14 +17,12 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
   return (
     <>
       {experience === undefined ? (
-        <FlexWrapper alignItems="center" justifyContent="center">
-          <Loader />
-        </FlexWrapper>
+        <Loader />
       ) : (
         <FlexWrapper gap="medium" className={styles.item}>
           <FlexWrapper justifyContent="space-between">
-            <FlexWrapper className={styles.number}>
-              <span className="number">
+            <FlexWrapper justifyContent="end" className={styles.number}>
+              <span className="variant number">
                 {order}/{total}
               </span>
             </FlexWrapper>
@@ -41,12 +39,12 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
                 </Link>
               </h2>
               <FlexWrapper flexDirection="column-to-row">
-                <span>
+                <span className="variant">
                   [{experience.dateFrom} -{' '}
                   {`${experience.current ? 'PRESENT' : experience.dateTo}`}]
                 </span>
-                <span>[{experience.companyLocation}]</span>
-                <span>[{experience.companyType}]</span>
+                <span className="variant">[{experience.companyLocation}]</span>
+                <span className="variant">[{experience.companyType}]</span>
               </FlexWrapper>
             </FlexWrapper>
           </FlexWrapper>

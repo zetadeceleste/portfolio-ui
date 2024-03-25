@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
-import FlexWrapper from '../FlexWrapper'
 import Loader from '../Loader'
 
 import styles from './ImageBySize.module.css'
@@ -22,6 +21,7 @@ const ImageBySize = ({ images }: Props) => {
     imageHeight: 0,
     imageWidth: 0,
     imageMobile: false,
+    sizes: '',
   })
 
   useEffect(() => {
@@ -31,6 +31,7 @@ const ImageBySize = ({ images }: Props) => {
         imageHeight: 0,
         imageWidth: 0,
         imageMobile: true,
+        sizes: '100vw',
       })
     }
 
@@ -40,6 +41,7 @@ const ImageBySize = ({ images }: Props) => {
         imageHeight: tablet.height,
         imageWidth: tablet.width,
         imageMobile: false,
+        sizes: '50vw',
       })
     }
 
@@ -49,6 +51,7 @@ const ImageBySize = ({ images }: Props) => {
         imageHeight: desktop.height,
         imageWidth: desktop.width,
         imageMobile: false,
+        sizes: '70vw',
       })
     }
   }, [width])
@@ -56,9 +59,7 @@ const ImageBySize = ({ images }: Props) => {
   return (
     <>
       {width === 0 ? (
-        <FlexWrapper alignItems="center" justifyContent="center">
-          <Loader />
-        </FlexWrapper>
+        <Loader />
       ) : (
         <Image
           src={imageProps.path}
@@ -67,7 +68,7 @@ const ImageBySize = ({ images }: Props) => {
           width={imageProps.imageWidth}
           className={imageProps.imageMobile ? styles.mobile : styles.image}
           priority={imageProps.imageMobile ? true : false}
-          sizes="100vw"
+          sizes={imageProps.sizes}
           placeholder="blur"
           blurDataURL={imageProps.path}
         />
