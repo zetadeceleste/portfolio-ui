@@ -66,8 +66,10 @@ const ImageBySize = ({ images }: Props) => {
           height={imageProps.imageHeight}
           width={imageProps.imageWidth}
           className={imageProps.imageMobile ? styles.mobile : styles.image}
-          priority={true}
+          priority={imageProps.imageMobile ? true : false}
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={imageProps.path}
         />
       )}
     </>

@@ -2,6 +2,7 @@
   grid-template-rows: auto 1fr;
 
   @media (width >= 768px) {
+    gap: 0;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding-right: 16px;
