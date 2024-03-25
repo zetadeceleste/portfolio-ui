@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -21,6 +22,7 @@ class MyDocument extends Document {
             href="/android-chrome-512x512.png"
           />
           <link rel="manifest" href="/manifest.json" />
+          <GoogleTagManager gtmId="GTM-5CPV4PGM" />
         </Head>
         <body className="body">
           <Main />

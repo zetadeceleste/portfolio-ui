@@ -11,7 +11,8 @@
     "lint:css": "stylelint '**/*.css' --fix"
   },
   "dependencies": {
-    "next": "14.1.0",
+    "@next/third-parties": "^14.1.4",
+    "next": "^14.1.4",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.2"
