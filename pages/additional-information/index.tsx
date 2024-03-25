@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import styles from './additional-information.module.css'
+
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
@@ -27,7 +29,7 @@ const AdditionalInformationPage = () => (
               Associate Degree in Programming at Universidad Tecnológica
               Nacional
             </p>
-            <FlexWrapper flexDirection="col-to-row">
+            <FlexWrapper className={styles.wrapper}>
               <span>AUG 2017 - FEB 2020</span>
               <span>[Mendoza, Argentina]</span>
             </FlexWrapper>

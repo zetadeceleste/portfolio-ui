@@ -14,14 +14,6 @@
   flex-direction: column;
 }
 
-.flex-direction-col-to-row {
-  flex-direction: column;
-
-  @media (width >= 768px) {
-    flex-direction: row;
-  }
-}
-
 .gap-extra-small {
   gap: 8px;
 }

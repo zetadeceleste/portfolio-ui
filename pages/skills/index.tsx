@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import styles from './skills.module.css'
+
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
@@ -14,7 +16,7 @@ const SkillsPage = () => (
     <Container>
       <FlexWrapper gap="medium">
         <Headline title={<>skills</>} highlighted />
-        <FlexWrapper flexDirection="col-to-row">
+        <FlexWrapper className={styles.wrapper}>
           <List data={SKILL_LIST} divided />
         </FlexWrapper>
       </FlexWrapper>
