@@ -2,16 +2,21 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 import Loader from '@/components/common/Loader'
+import { pages } from '@/constants/pages'
 
-const Custom404Page = () => {
+interface Props {
+  isUnderConstruction?: boolean
+}
+
+const Custom404Page = ({ isUnderConstruction }: Props) => {
   const router = useRouter()
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push('/')
-    }, 5000)
-
-    return () => clearTimeout(timer)
+    if (isUnderConstruction) {
+      router.push(pages.SITE_UNDER_CONSTRUCTION)
+    } else {
+      router.push(pages.HOME)
+    }
   }, [router])
 
   return <Loader />
