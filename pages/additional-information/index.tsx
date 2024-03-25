@@ -11,7 +11,7 @@ const AdditionalInformationPage = () => (
       <title>Celeste Zapata | Education, languages & volunteering</title>
     </Head>
     <Container>
-      <FlexWrapper gap="medium">
+      <FlexWrapper flexDirection="column" gap="medium">
         <Headline
           title={
             <>
