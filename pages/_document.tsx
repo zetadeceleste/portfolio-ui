@@ -22,12 +22,12 @@ class MyDocument extends Document {
             href="/android-chrome-512x512.png"
           />
           <link rel="manifest" href="/manifest.json" />
-          <GoogleTagManager gtmId="GTM-5CPV4PGM" />
         </Head>
         <body className="body">
           <Main />
           <NextScript />
         </body>
+        <GoogleTagManager gtmId="GTM-5CPV4PGM" />
       </Html>
     )
   }
