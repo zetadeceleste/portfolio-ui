@@ -11,7 +11,7 @@ const ContactPage = () => (
       <title>Celeste Zapata | Let´s work together!</title>
     </Head>
     <Container>
-      <FlexWrapper alignItems="center" gap="medium">
+      <FlexWrapper alignItems="center" flexDirection="column" gap="medium">
         <Headline
           title={
             <>

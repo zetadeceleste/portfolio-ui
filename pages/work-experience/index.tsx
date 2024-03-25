@@ -12,7 +12,7 @@ const WorkExperiencePage = () => (
       <title>Celeste Zapata | Work experience</title>
     </Head>
     <Container variant>
-      <FlexWrapper alignSelf="start" gap="medium">
+      <FlexWrapper alignSelf="start" flexDirection="column" gap="medium">
         <Headline title={<>work experience</>} highlighted variant />
         <ExperienceWrapper />
       </FlexWrapper>
