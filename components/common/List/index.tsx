@@ -11,13 +11,22 @@ interface Props {
   data: ItemType[]
   title?: string
   variant?: boolean
+  rounded?: boolean
   divided?: boolean
 }
 
-const List = ({ data, title, variant = false, divided = false }: Props) => (
+const List = ({
+  data,
+  title,
+  variant = false,
+  rounded = false,
+  divided = false,
+}: Props) => (
   <FlexWrapper gap="small">
     {title && <h3>{title}</h3>}
-    <ul className={`${styles.list} ${divided ? styles.divided : ''}`}>
+    <ul
+      className={`${styles.list} ${divided ? styles.divided : ''} ${rounded ? styles.rounded : ''}`}
+    >
       {data.map(({ text, link, label, iconName }, index) => (
         <li className={styles.item} key={index}>
           {link ? (

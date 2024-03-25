@@ -62,6 +62,7 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
             title="MAIN TECH STACK"
             data={experience.mainTechStack}
             variant
+            rounded
             divided
           />
         </FlexWrapper>

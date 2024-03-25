@@ -16,4 +16,13 @@
       }
     }
   }
+
+  &.rounded {
+    .item {
+      border: 2px solid var(--color-neutral-grey-200);
+      border-radius: 32px;
+      flex-basis: auto;
+      padding: 8px 16px;
+    }
+  }
 }
