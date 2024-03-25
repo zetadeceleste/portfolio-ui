@@ -27,22 +27,29 @@ const List = ({
     <ul
       className={`${styles.list} ${divided ? styles.divided : ''} ${rounded ? styles.rounded : ''}`}
     >
-      {data.map(({ text, link, label, iconName }, index) => (
-        <li className={styles.item} key={index}>
-          {link ? (
-            <Link href={link} target="_blank" rel="noopener noreferrer">
-              <Item text={text} iconName={iconName} variant={variant} />
-            </Link>
-          ) : (
-            <Item
-              text={text}
-              label={label}
-              iconName={iconName}
-              variant={variant}
-            />
-          )}
-        </li>
-      ))}
+      {data.map(
+        ({ text, link, label, iconName, isDownloadable = false }, index) => (
+          <li className={styles.item} key={index}>
+            {link ? (
+              <Link
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                download={isDownloadable}
+              >
+                <Item text={text} iconName={iconName} variant={variant} />
+              </Link>
+            ) : (
+              <Item
+                text={text}
+                label={label}
+                iconName={iconName}
+                variant={variant}
+              />
+            )}
+          </li>
+        ),
+      )}
     </ul>
   </FlexWrapper>
 )

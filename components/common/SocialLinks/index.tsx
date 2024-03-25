@@ -18,6 +18,11 @@ const SocialLinks = () => (
         link: 'https://www.linkedin.com/in/zetadeceleste/',
         iconName: 'linkedin',
       },
+      {
+        text: 'Get my resume!',
+        link: '/assets/celesteZapataResume.pdf',
+        isDownloadable: true,
+      },
     ]}
   />
 )

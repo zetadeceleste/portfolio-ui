@@ -8,7 +8,7 @@ import SocialLinks from '@/components/common/SocialLinks'
 const ContactPage = () => (
   <>
     <Head>
-      <title>Celeste Zapata | Contact me</title>
+      <title>Celeste Zapata | Let´s work together!</title>
     </Head>
     <Container>
       <FlexWrapper alignItems="center" gap="medium">
