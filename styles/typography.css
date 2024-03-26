@@ -1,17 +1,18 @@
-.body {
+body {
   --font-headline: 'Limelight', arial, helvetica, sans-serif;
   --font-text: 'RobotoMono', arial, helvetica, sans-serif;
-}
 
-body {
   font-family: var(--font-text);
   font-size: 1rem; /* 1rem = 16px */
-  hyphens: auto;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 2.5rem;
+
+  @media all and (width >= 500px) {
+    font-size: 4rem;
+  }
 
   @media all and (width >= 768px) {
     font-size: 5.25rem;
@@ -24,8 +25,13 @@ h1 {
   }
 
   &.bigger {
-    font-size: 5.5rem;
-    line-height: 4.75rem;
+    font-size: 4.75rem;
+    line-height: 4rem;
+
+    @media all and (width >= 500px) {
+      font-size: 5.5rem;
+      line-height: 4.75rem;
+    }
 
     @media all and (width >= 768px) {
       font-size: 6rem;
@@ -54,7 +60,11 @@ h1,
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+
+  @media all and (width >= 500px) {
+    font-size: 1.5rem;
+  }
 
   @media all and (width >= 1024px) {
     font-size: 1.75rem;
@@ -70,11 +80,19 @@ h2 {
 h3,
 p,
 .number {
-  font-size: 1.125rem;
+  font-size: 1rem;
+
+  @media all and (width >= 500px) {
+    font-size: 1.125rem;
+  }
 }
 
 li p {
-  font-size: 1rem;
+  font-size: 0.9rem;
+
+  @media all and (width >= 500px) {
+    font-size: 1rem;
+  }
 }
 
 h2,

@@ -15,10 +15,10 @@
 
 .wrapper {
   align-items: center;
-  place-self: start center;
+  place-self: flex-start center;
 
   @media (width >= 768px) {
-    align-items: start;
+    align-items: flex-start;
     place-self: center start;
   }
 }
