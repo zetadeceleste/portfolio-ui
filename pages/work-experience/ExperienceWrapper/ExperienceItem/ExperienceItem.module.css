@@ -7,7 +7,7 @@
 }
 
 .number {
-  align-self: start;
+  align-self: flex-start;
 
   @media (width >= 768px) {
     align-self: end;

@@ -15,7 +15,7 @@
   margin: 0 auto;
   max-width: var(--breakpoint-width);
   min-height: 100vh;
-  padding: 48px 24px;
+  padding: 48px 24px 80px;
   width: 100%;
 
   @media (width >= 768px) {

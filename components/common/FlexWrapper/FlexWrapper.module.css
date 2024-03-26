@@ -43,7 +43,7 @@
 }
 
 .align-self-start {
-  align-self: start;
+  align-self: flex-start;
 }
 
 .align-self-center {
@@ -75,7 +75,7 @@
 }
 
 .justify-self-start {
-  justify-self: start;
+  justify-self: flex-start;
 }
 
 .justify-self-end {

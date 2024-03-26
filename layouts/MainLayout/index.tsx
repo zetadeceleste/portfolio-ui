@@ -6,7 +6,7 @@ interface Props {
   isUnderConstruction?: boolean
 }
 
-const MainLayout = ({ children, isUnderConstruction }: Props) => {
+const MainLayout = ({ children, isUnderConstruction = false }: Props) => {
   if (isUnderConstruction) {
     return <SiteUnderConstructionPage />
   }
