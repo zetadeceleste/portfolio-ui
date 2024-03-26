@@ -1,8 +1,11 @@
+import getConfig from 'next/config'
 import Link from 'next/link'
 
 import styles from './MenuList.module.css'
 
 import { WEBSITE_PAGES } from '@/constants/websitePages'
+
+const { publicRuntimeConfig } = getConfig()
 
 interface Props {
   onClick: () => void
@@ -23,6 +26,7 @@ const MenuList = ({ onClick, menuVisible }: Props) => (
         </ol>
       ))}
     </ul>
+    <small className={styles.version}>v{publicRuntimeConfig.version}</small>
   </div>
 )
 

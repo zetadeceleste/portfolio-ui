@@ -1,3 +1,4 @@
+import Footer from '@/components/common/Footer'
 import Menu from '@/components/common/Menu'
 import SiteUnderConstructionPage from '@/pages/site-under-construction'
 
@@ -15,6 +16,7 @@ const MainLayout = ({ children, isUnderConstruction = false }: Props) => {
     <main>
       {children}
       <Menu />
+      <Footer />
     </main>
   )
 }

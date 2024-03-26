@@ -32,15 +32,18 @@
   overflow-y: auto;
   padding: 48px 16px 80px;
 
-  @media (height <= 750px) {
-    justify-content: center;
-  }
-
   @media (width >= 768px) {
-    padding: 32px 16px;
+    justify-content: center;
+    padding: 48px 24px;
   }
 }
 
 .item {
   text-align: center;
+}
+
+.version {
+  color: var(--color-neutral-light);
+  position: absolute;
+  inset: auto auto 32px 24px;
 }

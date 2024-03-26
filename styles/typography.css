@@ -45,14 +45,6 @@ h1 {
   }
 }
 
-.big-text {
-  font-size: 2.5rem;
-
-  @media all and (width >= 1024px) {
-    font-size: 2.75rem;
-  }
-}
-
 h1,
 .big-text {
   font-family: var(--font-headline);
@@ -87,12 +79,24 @@ p,
   }
 }
 
+.big-text {
+  font-size: 2.5rem;
+
+  @media all and (width >= 1024px) {
+    font-size: 2.75rem;
+  }
+}
+
 li p {
   font-size: 0.9rem;
 
   @media all and (width >= 500px) {
     font-size: 1rem;
   }
+}
+
+small {
+  font-size: 0.85rem;
 }
 
 h2,
