@@ -14,8 +14,8 @@ const Footer = () => {
 
   return (
     <footer className={`${styles.wrapper} ${variant ? styles.variant : ''}`}>
-      <p>Website handcrafted with 🤘😎</p>
-      <p>Marvelous illustration and icons made by Luz Zapata</p>
+      <p>Website handcrafted with 🤘😎.</p>
+      <p>Marvelous illustration and icons made by Luz Zapata.</p>
       <small>
         <em>Copyright © {currentYear} chikilabs. All rights reserved.</em>
       </small>
