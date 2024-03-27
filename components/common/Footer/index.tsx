@@ -1,7 +1,5 @@
 import { useRouter } from 'next/router'
 
-import FlexWrapper from '../FlexWrapper'
-
 import styles from './Footer.module.css'
 
 import { pages } from '@/constants/pages'
@@ -16,13 +14,11 @@ const Footer = () => {
 
   return (
     <footer className={`${styles.wrapper} ${variant ? styles.variant : ''}`}>
-      <FlexWrapper>
-        <p>Website handcrafted with 🤘😎</p>
-        <p>Marvelous illustration and icons made by Luz Zapata</p>
-        <small>
-          <em>Copyright © {currentYear} chikilabs. All rights reserved.</em>
-        </small>
-      </FlexWrapper>
+      <p>Website handcrafted with 🤘😎</p>
+      <p>Marvelous illustration and icons made by Luz Zapata</p>
+      <small>
+        <em>Copyright © {currentYear} chikilabs. All rights reserved.</em>
+      </small>
     </footer>
   )
 }

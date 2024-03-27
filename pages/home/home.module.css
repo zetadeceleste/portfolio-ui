@@ -19,6 +19,11 @@
 
   @media (width >= 768px) {
     align-items: flex-start;
-    place-self: center start;
+    place-self: center;
+  }
+
+  @media (width >= 1024px) {
+    align-items: flex-start;
+    place-self: center flex-start;
   }
 }
