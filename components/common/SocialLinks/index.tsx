@@ -5,7 +5,6 @@ const SocialLinks = () => (
     data={[
       {
         text: 'zdceleste@gmail.com',
-        link: 'mailto:zdceleste@gmail.com',
         iconName: 'email',
       },
       {
@@ -19,9 +18,8 @@ const SocialLinks = () => (
         iconName: 'linkedin',
       },
       {
-        text: 'Get my resume!',
+        text: 'My resume',
         link: '/assets/celesteZapataResume.pdf',
-        isDownloadable: true,
       },
     ]}
   />
