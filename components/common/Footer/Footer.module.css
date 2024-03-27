@@ -1,10 +1,10 @@
 .wrapper {
   background-color: var(--color-neutral-dark);
   color: var(--color-neutral-light);
-  padding: 24px 24px 80px;
+  padding: 48px 24px 96px;
 
-  @media (min-width: 768px) {
-    padding: 48px 24px 80px;
+  @media (width >= 768px) {
+    padding: 48px 24px;
   }
 }
 
