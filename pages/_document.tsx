@@ -9,7 +9,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Celeste Zapata is a professional developer based in Mendoza, Argentina."
+            content="Developer focused in Growth Engineering && Frontend Development."
           />
           <meta name="theme-color" content="#000000" />
           <link rel="icon" href="/favicon.ico" />
@@ -32,7 +32,7 @@ class MyDocument extends Document {
                   script.src = 'https://www.googletagmanager.com/gtm.js?id=${GOOGLE_TAG_MANAGER_ID}';
                   script.async = true;
                   script.onload = function() {
-                    console.log('GTM script loaded correctly, window.dataLayer has been populated');
+                    console.log('GTM script loaded correctly, window.dataLayer has been populated.');
                   };
                   document.head.appendChild(script);
                 });`,
