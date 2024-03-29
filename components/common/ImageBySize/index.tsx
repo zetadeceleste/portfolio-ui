@@ -14,12 +14,12 @@ const ImageBySize = ({ images }: Props) => {
   return (
     <picture className={styles.wrapper}>
       <source
-        media="(width >= 1024px)"
+        media="(min-width: 1024px)"
         srcSet={`/images/${name}-desktop.webp`}
         type="image/webp"
       />
       <source
-        media="(width >= 768px)"
+        media="(min-width: 768px)"
         srcSet={`/images/${name}-tablet.webp`}
         type="image/webp"
       />
@@ -30,7 +30,7 @@ const ImageBySize = ({ images }: Props) => {
         alt={description}
         quality={100}
         className={styles.image}
-        priority
+        sizes="(min-width: 1024px) 70vw, (min-width: 768px) 50vw, 100vw"
       />
     </picture>
   )

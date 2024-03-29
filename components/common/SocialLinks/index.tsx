@@ -18,7 +18,7 @@ const SocialLinks = () => (
         iconName: 'linkedin',
       },
       {
-        text: 'My resume',
+        text: 'Get my resume!',
         link: '/assets/celesteZapataResume.pdf',
       },
     ]}

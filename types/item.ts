@@ -6,5 +6,4 @@ export type ItemType = {
   label?: string
   iconName?: IconName
   variant?: boolean
-  isDownloadable?: boolean
 }

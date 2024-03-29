@@ -1,6 +1,9 @@
 .wrapper {
   background-color: var(--color-neutral-dark);
   color: var(--color-neutral-light);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 48px 24px 96px;
 
   @media (width >= 768px) {

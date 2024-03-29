@@ -11,18 +11,11 @@ import { buildBooleanClassNameList } from '@/utils/styles'
 interface Props {
   data: ItemType[]
   title?: string
-  variant?: boolean
   rounded?: boolean
   divided?: boolean
 }
 
-const List = ({
-  data,
-  title,
-  variant = false,
-  rounded = false,
-  divided = false,
-}: Props) => {
+const List = ({ data, title, rounded = false, divided = false }: Props) => {
   const classNameList = buildBooleanClassNameList(styles, {
     divided,
     rounded,
@@ -32,29 +25,17 @@ const List = ({
     <FlexWrapper gap="small">
       {title && <h3>{title}</h3>}
       <ul className={`${styles.list} ${classNameList}`}>
-        {data.map(
-          ({ text, link, label, iconName, isDownloadable = false }, index) => (
-            <li className={styles.item} key={index}>
-              {link ? (
-                <Link
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download={isDownloadable}
-                >
-                  <Item text={text} iconName={iconName} variant={variant} />
-                </Link>
-              ) : (
-                <Item
-                  text={text}
-                  label={label}
-                  iconName={iconName}
-                  variant={variant}
-                />
-              )}
-            </li>
-          ),
-        )}
+        {data.map(({ text, link, label, iconName }, index) => (
+          <li className={styles.item} key={index}>
+            {link ? (
+              <Link href={link} target="_blank" rel="noopener noreferrer">
+                <Item text={text} iconName={iconName} />
+              </Link>
+            ) : (
+              <Item text={text} label={label} iconName={iconName} />
+            )}
+          </li>
+        ))}
       </ul>
     </FlexWrapper>
   )

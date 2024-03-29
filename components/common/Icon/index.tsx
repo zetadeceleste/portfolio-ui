@@ -8,26 +8,23 @@ import { IconName } from '@/types'
 
 interface Props {
   name: IconName
-  variant?: boolean
 }
 
-const getIcon = (iconName: IconName, variant?: boolean) => {
+const getIcon = (iconName: IconName) => {
   switch (iconName) {
     case 'email':
-      return variant ? <EmailIcon /> : <EmailIcon />
+      return <EmailIcon />
     case 'github':
-      return variant ? <GithubIcon /> : <GithubIcon />
+      return <GithubIcon />
     case 'linkedin':
-      return variant ? <LinkedinIcon /> : <LinkedinIcon />
+      return <LinkedinIcon />
     case 'star':
-      return variant ? <StarIcon /> : <StarIcon />
+      return <StarIcon />
     default:
       return null
   }
 }
 
-const Icon = ({ name, variant }: Props) => (
-  <FlexWrapper>{getIcon(name, variant)}</FlexWrapper>
-)
+const Icon = ({ name }: Props) => <FlexWrapper>{getIcon(name)}</FlexWrapper>
 
 export default Icon

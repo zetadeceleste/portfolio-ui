@@ -48,20 +48,11 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
               </FlexWrapper>
             </FlexWrapper>
           </FlexWrapper>
-          <List
-            title="RESPONSABILITIES"
-            data={experience.responsibilities}
-            variant
-          />
-          <List
-            title="KEY ACCOMPLISHMENTS"
-            data={experience.accomplishments}
-            variant
-          />
+          <List title="RESPONSABILITIES" data={experience.responsibilities} />
+          <List title="KEY ACCOMPLISHMENTS" data={experience.accomplishments} />
           <List
             title="MAIN TECH STACK"
             data={experience.mainTechStack}
-            variant
             rounded
             divided
           />

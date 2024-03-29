@@ -19,7 +19,8 @@ const AboutPage = () => (
           <p>
             I´m <strong className={styles.name}>Celes</strong>, a developer with
             an Associate Degree in Computer Programming, focused in{' '}
-            <strong>Growth Engineering</strong> &&{' '}
+            <strong>Growth Engineering</strong>{' '}
+            <span title='yup, the "&&" is totally on purpose'>&&</span>{' '}
             <strong>Frontend Development</strong>.
           </p>
           <p>
