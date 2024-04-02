@@ -30,7 +30,7 @@ const ImageBySize = ({ images }: Props) => {
         alt={description}
         quality={100}
         className={styles.image}
-        sizes="(min-width: 1024px) 70vw, (min-width: 768px) 50vw, 100vw"
+        sizes="(min-width: 1024px) 60vw, (min-width: 768px) 50vw, 100vw"
         priority
       />
     </picture>

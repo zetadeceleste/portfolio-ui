@@ -9,17 +9,17 @@
     opacity 0.25s ease-in;
   visibility: hidden;
   z-index: 1;
+}
 
-  &.show {
-    opacity: 1;
-    pointer-events: all;
-    transition: opacity 0.25s ease-in;
-    visibility: visible;
-  }
+.show {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.25s ease-in;
+  visibility: visible;
+}
 
-  &.hide {
-    opacity: 0;
-  }
+.hide {
+  opacity: 0;
 }
 
 .list {

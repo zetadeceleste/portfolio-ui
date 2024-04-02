@@ -11,13 +11,13 @@
     inset: 48px 24px auto auto;
     width: auto;
   }
+}
 
-  &.show {
-    opacity: 1;
-    pointer-events: all;
-    transition: opacity 0.25s ease-in;
-    visibility: visible;
-  }
+.show {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.25s ease-in;
+  visibility: visible;
 }
 
 .button {

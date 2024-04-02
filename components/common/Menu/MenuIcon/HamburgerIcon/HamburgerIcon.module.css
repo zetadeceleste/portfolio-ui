@@ -11,15 +11,15 @@
   .bottom {
     stroke-dasharray: 40 180;
   }
+}
 
-  &.active {
-    .top {
-      stroke-dashoffset: -98px;
-    }
+.active {
+  .top {
+    stroke-dashoffset: -98px;
+  }
 
-    .bottom {
-      stroke-dashoffset: -138px;
-    }
+  .bottom {
+    stroke-dashoffset: -138px;
   }
 }
 
