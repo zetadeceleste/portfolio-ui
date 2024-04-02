@@ -1,29 +1,25 @@
-main {
-  height: 100vh;
-}
-
 a {
   color: var(--color-link);
 
   &:hover {
     color: var(--color-link-hover);
   }
+}
 
-  &.variant {
-    color: var(--color-link-variant);
+a.variant {
+  color: var(--color-link-variant);
 
-    &:hover {
-      color: var(--color-link-variant-hover);
-    }
+  &:hover {
+    color: var(--color-link-variant-hover);
   }
 }
 
 span {
   color: var(--color-neutral-grey-200);
+}
 
-  &.variant {
-    color: var(--color-neutral-grey-100);
-  }
+span.variant {
+  color: var(--color-neutral-grey-100);
 }
 
 .black {

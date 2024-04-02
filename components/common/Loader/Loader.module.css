@@ -10,10 +10,10 @@
   animation: dash 1.5s ease-in-out infinite;
   stroke: var(--color-neutral-dark);
   stroke-linecap: round;
+}
 
-  &.variant {
-    stroke: var(--color-neutral-light);
-  }
+.variant {
+  stroke: var(--color-neutral-light);
 }
 
 @keyframes rotate {

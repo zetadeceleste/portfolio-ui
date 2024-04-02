@@ -10,29 +10,29 @@
   .subtitle {
     padding: 0 16px;
   }
+}
 
-  &.center {
-    align-items: center;
-    text-align: center;
-  }
+.center {
+  align-items: center;
+  text-align: center;
+}
 
-  &.highlighted {
-    .title {
-      background-color: var(--color-highlighted);
-      padding: 5px 15px 5px 2.5px;
+.highlighted {
+  .title {
+    background-color: var(--color-highlighted);
+    padding: 5px 15px 5px 2.5px;
 
-      @media all and (width >= 768px) {
-        padding: 5px 1ch 5px 0;
-        width: fit-content;
-      }
+    @media all and (width >= 768px) {
+      padding: 5px 1ch 5px 0;
+      width: fit-content;
     }
   }
+}
 
-  &.variant {
-    .title,
-    .subtitle {
-      background-color: var(--color-highlighted-variant);
-      color: var(--color-headline-variant);
-    }
+.variant {
+  .title,
+  .subtitle {
+    background-color: var(--color-highlighted-variant);
+    color: var(--color-headline-variant);
   }
 }

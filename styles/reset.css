@@ -6,6 +6,14 @@
 
 html,
 body,
+main {
+  height: 100%;
+}
+
+html,
+body,
+picture,
+source,
 div,
 span,
 object,
