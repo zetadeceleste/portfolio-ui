@@ -1,5 +1,5 @@
 .menu {
-  background-color: var(--color-neutral-dark);
+  background-color: var(--color-background-variant);
   inset: 0;
   opacity: 0;
   pointer-events: none;
@@ -43,7 +43,7 @@
 }
 
 .version {
-  color: var(--color-neutral-light);
+  color: var(--color-text-variant);
   inset: auto auto 32px 24px;
   position: absolute;
 }

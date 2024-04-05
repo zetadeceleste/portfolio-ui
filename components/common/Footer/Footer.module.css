@@ -1,6 +1,6 @@
 .wrapper {
-  background-color: var(--color-neutral-dark);
-  color: var(--color-neutral-light);
+  background-color: var(--color-background-variant);
+  color: var(--color-text-variant);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -12,6 +12,6 @@
 }
 
 .variant {
-  background-color: var(--color-neutral-light);
-  color: var(--color-neutral-dark);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }

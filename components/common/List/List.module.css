@@ -20,7 +20,7 @@
 
 .rounded {
   .item {
-    border: 2px solid var(--color-neutral-grey-200);
+    border: 2px solid var(--color-border);
     border-radius: 32px;
     flex-basis: auto;
     max-width: inherit;
