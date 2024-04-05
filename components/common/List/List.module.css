@@ -1,7 +1,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--gap-small);
 }
 
 .divided {

@@ -11,7 +11,7 @@ const SiteUnderConstructionPage = () => (
       <title>Celeste Zapata | Site under construction</title>
     </Head>
     <Container>
-      <FlexWrapper justifyContent="center" gap="medium">
+      <FlexWrapper justifyContent="center" gap="large">
         <Headline
           title={
             <>

@@ -15,7 +15,7 @@ const Container = ({
 }: Props) => (
   <section className={`${styles.container} ${variant ? styles.variant : ''}`}>
     <div
-      className={`${className} ${styles.wrapper} ${full ? styles.full : ''}`}
+      className={`${styles.wrapper} ${full ? styles.full : ''} ${className}`}
     >
       {children}
     </div>

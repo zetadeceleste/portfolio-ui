@@ -13,9 +13,9 @@ const AboutPage = () => (
       <title>Celeste Zapata | About me</title>
     </Head>
     <Container>
-      <FlexWrapper gap="medium">
+      <FlexWrapper gap="large">
         <Headline title={<>howdy!</>} highlighted />
-        <FlexWrapper gap="small">
+        <FlexWrapper gap="medium">
           <p>
             I´m <strong className={styles.name}>Celes</strong>, a developer with
             an Associate Degree in Computer Programming, focused in{' '}
