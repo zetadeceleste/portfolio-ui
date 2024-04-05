@@ -21,7 +21,7 @@
 }
 
 .button {
-  background-color: var(--color-neutral-grey-200);
+  background-color: var(--color-icon-background);
   border-radius: 50%;
   box-shadow: var(--box-shadow);
   cursor: pointer;

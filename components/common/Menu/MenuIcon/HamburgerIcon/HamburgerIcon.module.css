@@ -29,7 +29,7 @@
 
 .line {
   fill: none;
-  stroke: var(--color-neutral-light);
+  stroke: var(--color-icon-variant);
   stroke-linecap: round;
   stroke-width: 5.5;
   transition:
