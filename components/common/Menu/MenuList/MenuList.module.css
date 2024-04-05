@@ -26,7 +26,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--gap-large);
   height: 100%;
   justify-content: flex-start;
   overflow-y: auto;

@@ -22,7 +22,7 @@ const List = ({ data, title, rounded = false, divided = false }: Props) => {
   })
 
   return (
-    <FlexWrapper gap="small">
+    <FlexWrapper gap="medium">
       {title && <h3>{title}</h3>}
       <ul className={`${styles.list} ${classNameList}`}>
         {data.map(({ text, link, label, iconName }, index) => (

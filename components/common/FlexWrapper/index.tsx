@@ -5,7 +5,7 @@ import { buildClassNameList } from '@/utils/styles'
 interface Props {
   children: React.ReactNode
   flexDirection?: 'row' | 'row-reverse' | 'column'
-  gap?: 'extra-small' | 'small' | 'medium' | 'large'
+  gap?: 'small' | 'medium' | 'large' | 'extra-large'
   alignItems?: 'start' | 'center' | 'end'
   alignSelf?: 'start' | 'center' | 'end'
   justifyContent?: 'start' | 'center' | 'space-between' | 'end'
@@ -16,7 +16,7 @@ interface Props {
 const FlexWrapper = ({
   children,
   flexDirection = 'column',
-  gap = 'extra-small',
+  gap = 'small',
   alignItems,
   alignSelf,
   justifyContent,
@@ -33,7 +33,7 @@ const FlexWrapper = ({
   })
 
   return (
-    <div className={`${className} ${styles.wrapper} ${classNameList}`}>
+    <div className={`${styles.wrapper} ${classNameList} ${className}`}>
       {children}
     </div>
   )

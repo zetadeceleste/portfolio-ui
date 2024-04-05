@@ -14,7 +14,7 @@ const SkillsPage = () => (
       <title>Celeste Zapata | My skills</title>
     </Head>
     <Container>
-      <FlexWrapper gap="medium">
+      <FlexWrapper gap="large">
         <Headline title={<>skills</>} highlighted />
         <FlexWrapper className={styles.wrapper}>
           <List data={SKILL_LIST} divided />

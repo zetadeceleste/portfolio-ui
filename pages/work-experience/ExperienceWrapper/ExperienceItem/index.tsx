@@ -19,7 +19,7 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
       {experience === undefined ? (
         <Loader />
       ) : (
-        <FlexWrapper gap="medium" className={styles.item}>
+        <FlexWrapper gap="large" className={styles.item}>
           <FlexWrapper justifyContent="space-between">
             <FlexWrapper justifyContent="end" className={styles.number}>
               <span className="variant number">

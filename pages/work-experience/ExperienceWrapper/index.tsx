@@ -5,7 +5,7 @@ import { EXPERIENCE_LIST } from '@/constants/experienceList'
 
 const ExperienceWrapper = () => {
   return (
-    <FlexWrapper gap="medium">
+    <FlexWrapper gap="large">
       {EXPERIENCE_LIST.map((experience, index) => (
         <ExperienceItem
           key={index}

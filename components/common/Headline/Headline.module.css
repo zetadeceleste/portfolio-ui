@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap-medium);
 
   .title {
     color: var(--color-headline);

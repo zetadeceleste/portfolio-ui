@@ -10,7 +10,7 @@
 
 .wrapper {
   display: grid;
-  gap: 48px;
+  gap: var(--gap-extra-large);
   margin: 0 auto;
   max-width: var(--breakpoint-width);
   min-height: 100vh;
