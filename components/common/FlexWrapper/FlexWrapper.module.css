@@ -1,83 +1,83 @@
 .wrapper {
   display: flex;
-}
 
-.flex-direction-row {
-  flex-direction: row;
-}
+  &.flex-direction-row {
+    flex-direction: row;
+  }
 
-.flex-direction-row-reverse {
-  flex-direction: row-reverse;
-}
+  &.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+  }
 
-.flex-direction-column {
-  flex-direction: column;
-}
+  &.flex-direction-column {
+    flex-direction: column;
+  }
 
-.gap-small {
-  gap: var(--gap-small);
-}
+  &.gap-small {
+    gap: var(--gap-small);
+  }
 
-.gap-medium {
-  gap: var(--gap-medium);
-}
+  &.gap-medium {
+    gap: var(--gap-medium);
+  }
 
-.gap-large {
-  gap: var(--gap-large);
-}
+  &.gap-large {
+    gap: var(--gap-large);
+  }
 
-.gap-extra-large {
-  gap: var(--gap-extra-large);
-}
+  &.gap-extra-large {
+    gap: var(--gap-extra-large);
+  }
 
-.align-items-start {
-  align-items: flex-start;
-}
+  &.align-items-start {
+    align-items: flex-start;
+  }
 
-.align-items-center {
-  align-items: center;
-}
+  &.align-items-center {
+    align-items: center;
+  }
 
-.align-items-end {
-  align-items: flex-end;
-}
+  &.align-items-end {
+    align-items: flex-end;
+  }
 
-.align-self-start {
-  align-self: flex-start;
-}
+  &.align-self-start {
+    align-self: flex-start;
+  }
 
-.align-self-center {
-  align-self: center;
-}
+  &.align-self-center {
+    align-self: center;
+  }
 
-.align-self-end {
-  align-self: flex-end;
-}
+  &.align-self-end {
+    align-self: flex-end;
+  }
 
-.justify-content-start {
-  justify-content: flex-start;
-}
+  &.justify-content-start {
+    justify-content: flex-start;
+  }
 
-.justify-content-center {
-  justify-content: center;
-}
+  &.justify-content-center {
+    justify-content: center;
+  }
 
-.justify-content-space-between {
-  justify-content: space-between;
-}
+  &.justify-content-space-between {
+    justify-content: space-between;
+  }
 
-.justify-content-end {
-  justify-content: flex-end;
-}
+  &.justify-content-end {
+    justify-content: flex-end;
+  }
 
-.justify-self-center {
-  justify-self: center;
-}
+  &.justify-self-center {
+    justify-self: center;
+  }
 
-.justify-self-start {
-  justify-self: flex-start;
-}
+  &.justify-self-start {
+    justify-self: flex-start;
+  }
 
-.justify-self-end {
-  justify-self: flex-end;
+  &.justify-self-end {
+    justify-self: flex-end;
+  }
 }
