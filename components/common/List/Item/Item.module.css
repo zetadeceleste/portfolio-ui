@@ -3,7 +3,6 @@
   flex-direction: column;
 
   @media all and (width >= 768px) {
-    align-items: flex-end;
     flex-direction: row;
   }
 }

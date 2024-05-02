@@ -9,9 +9,9 @@
   @media (width >= 768px) {
     padding: 48px 24px;
   }
-}
 
-.variant {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  &.variant {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
 }

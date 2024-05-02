@@ -1,7 +1,5 @@
 import Head from 'next/head'
 
-import styles from './additional-information.module.css'
-
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
@@ -25,13 +23,12 @@ const AdditionalInformationPage = () => (
         <FlexWrapper gap="large">
           <FlexWrapper gap="medium">
             <h3>Education</h3>
-            <p>
-              Associate Degree in Programming at Universidad Tecnológica
-              Nacional
-            </p>
-            <FlexWrapper className={styles.wrapper}>
-              <span>AUG 2017 - FEB 2020</span>
-              <span>[Mendoza, Argentina]</span>
+            <FlexWrapper>
+              <p>
+                Associate Degree in Programming at Universidad Tecnológica
+                Nacional
+              </p>
+              <span>AUG 2017 - FEB 2020 [Mendoza, Argentina]</span>
             </FlexWrapper>
           </FlexWrapper>
           <FlexWrapper gap="medium">
