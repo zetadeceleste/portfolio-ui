@@ -48,8 +48,8 @@ const ExperienceItem = ({ order, total, experience }: Props) => (
                 [{experience.dateFrom} -{' '}
                 {`${experience.current ? 'PRESENT' : experience.dateTo}`}]
               </span>
-              {location && (
-                <span className="variant">[{experience.location}]</span>
+              {experience.jobLocation && (
+                <span className="variant">[{experience.jobLocation}]</span>
               )}
               {experience.companyType && (
                 <span className="variant">[{experience.companyType}]</span>

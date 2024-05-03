@@ -4,7 +4,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   {
     role: 'Frontend Developer',
     dateFrom: 'APR 2020',
-    location: 'Worldwide',
+    jobLocation: 'Worldwide',
     responsibilities: [
       {
         text: 'Develop and maintain websites.',
@@ -25,7 +25,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   {
     company: 'Slang',
     companyWebsite: 'https://slangapp.com/',
-    location: 'Boston, USA',
+    jobLocation: 'Boston, USA',
     companyType: 'EdTech, B2B2C',
     role: 'Growth Engineer',
     dateFrom: 'AGO 2022',
@@ -80,7 +80,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   {
     company: 'Hexos Renewals',
     companyWebsite: 'https://hexosip.com/',
-    location: 'North Carolina, USA',
+    jobLocation: 'North Carolina, USA',
     companyType: 'E-commerce, B2C',
     role: 'Frontend Developer',
     dateFrom: 'DEC 2021',
@@ -107,7 +107,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   {
     company: 'MediLine',
     companyWebsite: 'https://mediline.com.ar/',
-    location: 'Mendoza, Argentina',
+    jobLocation: 'Mendoza, Argentina',
     companyType: 'Healthcare, B2C',
     role: 'Frontend Developer',
     dateFrom: 'NOV 2020',
@@ -134,7 +134,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   {
     company: 'Vaypol',
     companyWebsite: 'https://www.vaypol.com.ar/',
-    location: 'Mendoza, Argentina',
+    jobLocation: 'Mendoza, Argentina',
     companyType: 'E-commerce, B2C',
     role: 'Fullstack Developer',
     dateFrom: 'APR 2019',
@@ -176,7 +176,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   {
     company: 'R1 Group',
     companyWebsite: 'https://www.r1group.ar/',
-    location: 'Mendoza, Argentina',
+    jobLocation: 'Mendoza, Argentina',
     companyType: 'IT Solutions, B2B',
     role: 'Frontend Developer',
     dateFrom: 'DIC 2018',
@@ -187,7 +187,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   {
     company: 'Zamphyr',
     companyWebsite: 'https://zamphyr.com/',
-    location: 'Tallinn, Estonia',
+    jobLocation: 'Tallinn, Estonia',
     companyType: 'EdTech, B2C',
     role: 'Frontend Developer',
     dateFrom: 'ENE 2018',

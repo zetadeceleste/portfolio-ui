@@ -4,7 +4,7 @@ export type ExperienceType = {
   role: string
   dateFrom: string
   mainTechStack: ItemType[]
-  location: string
+  jobLocation: string
   company?: string
   companyWebsite?: string
   companyType?: string
