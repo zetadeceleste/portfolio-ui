@@ -2,21 +2,24 @@ body {
   /* COLORS */
 
   /* Principal Colors */
+  --color-accent: #000;
+  --color-accent-hover: #515151;
   --color-neutral-dark-100: #201f1f;
   --color-neutral-dark-200: #333;
   --color-neutral-grey-100: #807e7b;
   --color-neutral-grey-200: #9a9999;
   --color-neutral-light: #f9faf4;
   --color-star: #ed4b4f;
-  --color-star-light: #c1665a;
-  --color-star-light-hover: #c98178;
+  --color-star-light: #af6b62;
+  --color-star-light-hover: #c7989b;
 
   /* Second Tier Colors */
   --color-background: var(--color-neutral-light);
   --color-background-variant: var(--color-neutral-dark-100);
   --color-border: var(--color-neutral-dark-100);
+  --color-border-variant: var(--color-neutral-grey-100);
   --color-headline: var(--color-star);
-  --color-headline-variant: var(--color-neutral-grey-100);
+  --color-headline-variant: var(--color-star-light);
   --color-highlighted: var(--color-neutral-dark-200);
   --color-highlighted-variant: var(--color-neutral-light);
   --color-icon: var(--color-neutral-dark-200);

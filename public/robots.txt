@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /site-under-construction
+
+Sitemap: https:/zetadeceleste.dev/sitemap.xml

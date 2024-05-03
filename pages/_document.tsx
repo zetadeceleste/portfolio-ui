@@ -9,8 +9,16 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Developer focused in Growth Engineering && Frontend Development."
+            content="Developer focused in Growth Engineering & Frontend Development."
           />
+          <meta name="author" content="Celeste Zapata" />
+          <meta
+            name="keywords"
+            content="Celeste Zapata, Developer, Web Developer, Frontend, Front-End, Growth Engineer"
+          />
+          <meta property="og:image" content="/home-page-mobile.webp" />
+          <meta name="robots" content="index, follow" />
+          <meta name="google" content="notranslate" />
           <meta name="theme-color" content="#000000" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
