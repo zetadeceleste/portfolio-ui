@@ -1,6 +1,6 @@
-import EmailIcon from '../../../public/images/icons/email.svg'
 import GithubIcon from '../../../public/images/icons/github.svg'
 import LinkedinIcon from '../../../public/images/icons/linkedin.svg'
+import MailIcon from '../../../public/images/icons/mail.svg'
 import StarIcon from '../../../public/images/icons/star.svg'
 import FlexWrapper from '../FlexWrapper'
 
@@ -12,8 +12,8 @@ interface Props {
 
 const getIcon = (iconName: IconName) => {
   switch (iconName) {
-    case 'email':
-      return <EmailIcon />
+    case 'mail':
+      return <MailIcon />
     case 'github':
       return <GithubIcon />
     case 'linkedin':

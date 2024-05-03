@@ -5,7 +5,7 @@ const SocialLinks = () => (
     data={[
       {
         text: 'zdceleste@gmail.com',
-        iconName: 'email',
+        iconName: 'mail',
       },
       {
         text: 'github.com/zetadeceleste',
