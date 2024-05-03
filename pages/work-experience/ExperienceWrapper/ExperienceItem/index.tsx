@@ -69,10 +69,10 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
             </FlexWrapper>
           </FlexWrapper>
         </FlexWrapper>
-        {responsibilities && (
+        {responsibilities.length > 0 && (
           <List title="RESPONSABILITIES" data={responsibilities} />
         )}
-        {accomplishments && (
+        {accomplishments.length > 0 && (
           <List title="KEY ACCOMPLISHMENTS" data={accomplishments} />
         )}
         <List title="MAIN TECH STACK" data={mainTechStack} rounded divided />
