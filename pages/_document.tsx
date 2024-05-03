@@ -9,14 +9,14 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Developer focused in Growth Engineering & Frontend Development."
+            content="Howdy! I'm Celeste Zapata. Developer focused in Growth Engineering & Frontend Development. With over 5 years of cross-industry experience, I have closely collaborated with designers, marketers, and analysts."
           />
           <meta name="author" content="Celeste Zapata" />
           <meta
             name="keywords"
-            content="Celeste Zapata, Developer, Web Developer, Frontend, Front-End, Growth Engineer"
+            content="Celeste Zapata, Developer, Web Developer, Frontend, Front-End, Growth Engineer, Development, Engineering, React, ReactJS, React.js, Next.js, JavaScript, TypeScript, SEO, Ruby on Rails, Web Accessibility, Quality Score, Portfolio, Resume"
           />
-          <meta property="og:image" content="/home-page-mobile.webp" />
+          <meta property="og:image" content="/images/home-page-mobile.webp" />
           <meta name="robots" content="index, follow" />
           <meta name="google" content="notranslate" />
           <meta name="theme-color" content="#000000" />
