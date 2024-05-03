@@ -13,71 +13,66 @@ interface Props {
   experience: ExperienceType
 }
 
-const ExperienceItem = ({ order, total, experience }: Props) => {
-  return (
-    <>
-      {experience === undefined ? (
-        <Loader />
-      ) : (
-        <FlexWrapper gap="large" className={styles.item}>
-          <FlexWrapper justifyContent="space-between">
-            <FlexWrapper justifyContent="end" className={styles.number}>
-              <span className="variant number">
-                {order}/{total}
+const ExperienceItem = ({ order, total, experience }: Props) => (
+  <>
+    {experience === undefined ? (
+      <Loader />
+    ) : (
+      <FlexWrapper gap="large" className={styles.item}>
+        <FlexWrapper justifyContent="space-between">
+          <FlexWrapper justifyContent="end" className={styles.number}>
+            <span className="variant number">
+              {order}/{total}
+            </span>
+          </FlexWrapper>
+          <FlexWrapper>
+            <h2>
+              {experience.role}
+              {experience.companyWebsite && experience.company && (
+                <>
+                  {' '}
+                  at{' '}
+                  <Link
+                    className="variant"
+                    href={experience.companyWebsite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {experience.company}
+                  </Link>
+                </>
+              )}
+            </h2>
+            <FlexWrapper className={styles.wrapper}>
+              <span className="variant">
+                [{experience.dateFrom} -{' '}
+                {`${experience.current ? 'PRESENT' : experience.dateTo}`}]
               </span>
-            </FlexWrapper>
-            <FlexWrapper>
-              <h2>
-                {experience?.role}
-                {experience.companyWebsite && experience.company && (
-                  <>
-                    {' '}
-                    at{' '}
-                    <Link
-                      className="variant"
-                      href={experience?.companyWebsite}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {experience?.company}
-                    </Link>
-                  </>
-                )}
-              </h2>
-              <FlexWrapper className={styles.wrapper}>
-                <span className="variant">
-                  [{experience?.dateFrom} -{' '}
-                  {`${experience?.current ? 'PRESENT' : experience?.dateTo}`}]
-                </span>
-                {location && (
-                  <span className="variant">[{experience?.location}]</span>
-                )}
-                {experience?.companyType && (
-                  <span className="variant">[{experience?.companyType}]</span>
-                )}
-                <span className="variant">[{experience?.jobType}]</span>
-              </FlexWrapper>
+              {location && (
+                <span className="variant">[{experience.location}]</span>
+              )}
+              {experience.companyType && (
+                <span className="variant">[{experience.companyType}]</span>
+              )}
+              <span className="variant">[{experience.jobType}]</span>
             </FlexWrapper>
           </FlexWrapper>
-          {experience?.responsibilities && (
-            <List title="RESPONSABILITIES" data={experience.responsibilities} />
-          )}
-          {experience?.accomplishments && (
-            <List
-              title="KEY ACCOMPLISHMENTS"
-              data={experience.accomplishments}
-            />
-          )}
-          <List
-            title="MAIN TECH STACK"
-            data={experience?.mainTechStack}
-            rounded
-            divided
-          />
         </FlexWrapper>
-      )}
-    </>
-  )
-}
+        {experience.responsibilities && (
+          <List title="RESPONSABILITIES" data={experience.responsibilities} />
+        )}
+        {experience.accomplishments && (
+          <List title="KEY ACCOMPLISHMENTS" data={experience.accomplishments} />
+        )}
+        <List
+          title="MAIN TECH STACK"
+          data={experience.mainTechStack}
+          rounded
+          divided
+        />
+      </FlexWrapper>
+    )}
+  </>
+)
 
 export default ExperienceItem
