@@ -14,21 +14,6 @@ interface Props {
 }
 
 const ExperienceItem = ({ order, total, experience }: Props) => {
-  const {
-    role,
-    dateFrom,
-    mainTechStack,
-    jobType,
-    company = '',
-    companyWebsite = '',
-    location = '',
-    companyType = '',
-    responsibilities = [],
-    accomplishments = [],
-    dateTo = '',
-    current = false,
-  } = experience
-
   return (
     <>
       {experience === undefined ? (
@@ -43,41 +28,52 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
             </FlexWrapper>
             <FlexWrapper>
               <h2>
-                {role}
-                {companyWebsite && company && (
+                {experience?.role}
+                {experience.companyWebsite && experience.company && (
                   <>
                     {' '}
                     at{' '}
                     <Link
                       className="variant"
-                      href={companyWebsite}
+                      href={experience?.companyWebsite}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {company}
+                      {experience?.company}
                     </Link>
                   </>
                 )}
               </h2>
               <FlexWrapper className={styles.wrapper}>
                 <span className="variant">
-                  [{dateFrom} - {`${current ? 'PRESENT' : dateTo}`}]
+                  [{experience?.dateFrom} -{' '}
+                  {`${experience?.current ? 'PRESENT' : experience?.dateTo}`}]
                 </span>
-                {location && <span className="variant">[{location}]</span>}
-                {companyType && (
-                  <span className="variant">[{companyType}]</span>
+                {location && (
+                  <span className="variant">[{experience?.location}]</span>
                 )}
-                <span className="variant">[{jobType}]</span>
+                {experience?.companyType && (
+                  <span className="variant">[{experience?.companyType}]</span>
+                )}
+                <span className="variant">[{experience?.jobType}]</span>
               </FlexWrapper>
             </FlexWrapper>
           </FlexWrapper>
-          {!!responsibilities.length && (
-            <List title="RESPONSABILITIES" data={responsibilities} />
+          {experience?.responsibilities && (
+            <List title="RESPONSABILITIES" data={experience.responsibilities} />
           )}
-          {!!accomplishments.length && (
-            <List title="KEY ACCOMPLISHMENTS" data={accomplishments} />
+          {experience?.accomplishments && (
+            <List
+              title="KEY ACCOMPLISHMENTS"
+              data={experience.accomplishments}
+            />
           )}
-          <List title="MAIN TECH STACK" data={mainTechStack} rounded divided />
+          <List
+            title="MAIN TECH STACK"
+            data={experience?.mainTechStack}
+            rounded
+            divided
+          />
         </FlexWrapper>
       )}
     </>
