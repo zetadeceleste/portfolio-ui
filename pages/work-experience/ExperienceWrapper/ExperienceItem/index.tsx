@@ -13,19 +13,23 @@ interface Props {
 }
 
 const ExperienceItem = ({ order, total, experience }: Props) => {
+  if (!experience) {
+    return null
+  }
+
   const {
     role,
-    company,
-    companyWebsite,
     dateFrom,
-    dateTo,
-    current,
-    jobLocation,
-    companyType,
-    jobType,
-    responsibilities,
-    accomplishments,
     mainTechStack,
+    jobLocation,
+    companyWebsite,
+    company,
+    dateTo = '',
+    current = false,
+    companyType = '',
+    jobType = '',
+    responsibilities = [],
+    accomplishments = [],
   } = experience
 
   return (
