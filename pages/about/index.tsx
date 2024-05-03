@@ -19,7 +19,12 @@ const AboutPage = () => (
           <p>
             I´m <strong className={styles.name}>Celes</strong>, a developer
             focused in <strong>Growth Engineering</strong>{' '}
-            <span title='the "&&" is totally on purpose'>&&</span>{' '}
+            <span
+              className={styles['on-purpose']}
+              title='yup, the "&&" is totally on purpose'
+            >
+              &&
+            </span>{' '}
             <strong>Frontend Development</strong>.
           </p>
           <p>
