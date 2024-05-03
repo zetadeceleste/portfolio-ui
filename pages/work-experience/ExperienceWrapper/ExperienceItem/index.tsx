@@ -4,7 +4,6 @@ import styles from './ExperienceItem.module.css'
 
 import FlexWrapper from '@/components/common/FlexWrapper'
 import List from '@/components/common/List'
-import Loader from '@/components/common/Loader'
 import { ExperienceType } from '@/types/experience'
 
 interface Props {
@@ -13,11 +12,28 @@ interface Props {
   experience: ExperienceType
 }
 
-const ExperienceItem = ({ order, total, experience }: Props) => (
-  <>
-    {experience === undefined ? (
-      <Loader />
-    ) : (
+const ExperienceItem = ({ order, total, experience }: Props) => {
+  if (!experience) {
+    return null
+  }
+
+  const {
+    role,
+    dateFrom,
+    mainTechStack,
+    jobLocation,
+    companyWebsite,
+    company,
+    dateTo = '',
+    current = false,
+    companyType = '',
+    jobType = '',
+    responsibilities = [],
+    accomplishments = [],
+  } = experience
+
+  return (
+    <>
       <FlexWrapper gap="large" className={styles.item}>
         <FlexWrapper justifyContent="space-between">
           <FlexWrapper justifyContent="end" className={styles.number}>
@@ -27,52 +43,42 @@ const ExperienceItem = ({ order, total, experience }: Props) => (
           </FlexWrapper>
           <FlexWrapper>
             <h2>
-              {experience.role}
-              {experience.companyWebsite && experience.company && (
+              {role}
+              {companyWebsite && company && (
                 <>
                   {' '}
                   at{' '}
                   <Link
                     className="variant"
-                    href={experience.companyWebsite}
+                    href={companyWebsite}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {experience.company}
+                    {company}
                   </Link>
                 </>
               )}
             </h2>
             <FlexWrapper className={styles.wrapper}>
               <span className="variant">
-                [{experience.dateFrom} -{' '}
-                {`${experience.current ? 'PRESENT' : experience.dateTo}`}]
+                [{dateFrom} - {`${current ? 'PRESENT' : dateTo}`}]
               </span>
-              {experience.jobLocation && (
-                <span className="variant">[{experience.jobLocation}]</span>
-              )}
-              {experience.companyType && (
-                <span className="variant">[{experience.companyType}]</span>
-              )}
-              <span className="variant">[{experience.jobType}]</span>
+              {jobLocation && <span className="variant">[{jobLocation}]</span>}
+              {companyType && <span className="variant">[{companyType}]</span>}
+              <span className="variant">[{jobType}]</span>
             </FlexWrapper>
           </FlexWrapper>
         </FlexWrapper>
-        {experience.responsibilities && (
-          <List title="RESPONSABILITIES" data={experience.responsibilities} />
+        {responsibilities && (
+          <List title="RESPONSABILITIES" data={responsibilities} />
         )}
-        {experience.accomplishments && (
-          <List title="KEY ACCOMPLISHMENTS" data={experience.accomplishments} />
+        {accomplishments && (
+          <List title="KEY ACCOMPLISHMENTS" data={accomplishments} />
         )}
-        <List
-          title="MAIN TECH STACK"
-          data={experience.mainTechStack}
-          rounded
-          divided
-        />
+        <List title="MAIN TECH STACK" data={mainTechStack} rounded divided />
       </FlexWrapper>
-    )}
-  </>
-)
+    </>
+  )
+}
 
 export default ExperienceItem

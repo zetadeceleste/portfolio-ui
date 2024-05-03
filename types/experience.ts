@@ -5,12 +5,12 @@ export type ExperienceType = {
   dateFrom: string
   mainTechStack: ItemType[]
   jobLocation: string
-  company?: string
   companyWebsite?: string
-  companyType?: string
-  responsibilities?: ItemType[]
-  accomplishments?: ItemType[]
+  company?: string
   dateTo?: string
   current?: boolean
+  companyType?: string
   jobType?: 'freelance' | 'full-time' | 'part-time' | 'internship'
+  responsibilities?: ItemType[]
+  accomplishments?: ItemType[]
 }
