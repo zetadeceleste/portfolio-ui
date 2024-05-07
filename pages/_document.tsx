@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
+import MainMetaTags from './mainMetaTags'
+
 import { GOOGLE_TAG_MANAGER_ID } from '@/config'
 
 class MyDocument extends Document {
@@ -7,30 +9,32 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta
-            name="description"
-            content="Howdy! I'm Celeste Zapata. Developer focused in Growth Engineering & Frontend Development. With over 5 years of cross-industry experience, I have closely collaborated with designers, marketers, and analysts."
+          <MainMetaTags />
+          {/* Schema.org markup */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'http://schema.org',
+                '@type': 'Person',
+                name: 'Celeste Zapata',
+                description:
+                  'Developer focused in Growth Engineering & Frontend Development',
+                datePublished: '2024-02-19',
+                publisher: {
+                  '@type': 'Organization',
+                  name: 'chikilabs',
+                },
+                jobTitle: 'Developer',
+                url: 'https://zetadeceleste.dev',
+                sameAs: [
+                  'https://twitter.com/zetadeceleste',
+                  'https://www.linkedin.com/in/zetadeceleste/',
+                  'https://github.com/zetadeceleste',
+                ],
+              }),
+            }}
           />
-          <meta name="author" content="Celeste Zapata" />
-          <meta
-            name="keywords"
-            content="Celeste Zapata, Developer, Web Developer, Frontend, Front-End, Growth Engineer, Development, Engineering, React, ReactJS, React.js, Next.js, JavaScript, TypeScript, SEO, Ruby on Rails, Web Accessibility, Quality Score, Portfolio, Resume"
-          />
-          <meta property="og:image" content="/images/home-page-mobile.webp" />
-          <meta name="robots" content="index, follow" />
-          <meta name="google" content="notranslate" />
-          <meta name="theme-color" content="#000000" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-          <link
-            rel="android-chrome-192x192"
-            href="/android-chrome-192x192.png"
-          />
-          <link
-            rel="android-chrome-512x512"
-            href="/android-chrome-512x512.png"
-          />
-          <link rel="manifest" href="/manifest.json" />
           {GOOGLE_TAG_MANAGER_ID && (
             <script
               dangerouslySetInnerHTML={{
