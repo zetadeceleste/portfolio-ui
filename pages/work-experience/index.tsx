@@ -10,6 +10,22 @@ const WorkExperiencePage = () => (
   <>
     <Head>
       <title>Celeste Zapata | Work experience</title>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'http://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Work experience',
+            url: 'https://zetadeceleste.dev/work-experience/',
+            about: 'A collection of job experiences of Celeste Zapata',
+            author: {
+              '@type': 'Person',
+              name: 'Celeste Zapata',
+            },
+          }),
+        }}
+      />
     </Head>
     <Container variant>
       <FlexWrapper alignSelf="start" gap="large">
