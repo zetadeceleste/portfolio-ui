@@ -4,7 +4,7 @@ const MainMetaTags = () => (
   <>
     <meta
       name="description"
-      content="Howdy! I'm Celeste Zapata. Developer focused in Growth Engineering & Frontend Development. With over 5 years of cross-industry experience, I have closely collaborated with designers, marketers, and analysts."
+      content="Hi! I'm Celeste Zapata, a Developer specializing in Growth Engineering & Frontend Development. With 5+ years' experience collaborating across industries."
     />
     <meta name="author" content="Celeste Zapata" />
     <meta
@@ -21,16 +21,22 @@ const MainMetaTags = () => (
     <link rel="manifest" href="/manifest.json" />
     <link rel="canonical" href="https://zetadeceleste.dev" />
     {/* Open Graph tags */}
-    <meta property="og:title" content="Título para Open Graph" />
-    <meta property="og:description" content="Descripción para Open Graph." />
+    <meta property="og:title" content="Celeste Zapata | Work experience" />
+    <meta
+      property="og:description"
+      content="Hi! I'm Celeste Zapata, a Developer specializing in Growth Engineering & Frontend Development. With 5+ years' experience collaborating across industries."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zetadeceleste.dev" />
     <meta property="og:image" content="/images/home-page-mobile.webp" />
     {/* Twitter Card tags */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@zetadeceleste" />
-    <meta name="twitter:title" content="Título para Twitter Card" />
-    <meta name="twitter:description" content="Descripción para Twitter Card." />
+    <meta name="twitter:title" content="Celeste Zapata | Work experience" />
+    <meta
+      name="twitter:description"
+      content="Hi! I'm Celeste Zapata, a Developer specializing in Growth Engineering & Frontend Development. With 5+ years' experience collaborating across industries."
+    />
     <meta name="twitter:image" content="/images/home-page-mobile.webp" />
     <meta name="twitter:creator" content="@zetadeceleste" />
     <meta name="twitter:url" content="https://twitter.com/zetadeceleste" />
