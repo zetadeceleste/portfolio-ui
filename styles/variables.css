@@ -16,15 +16,15 @@ body {
   /* Second Tier Colors */
   --color-background: var(--color-neutral-light);
   --color-background-variant: var(--color-neutral-dark-100);
-  --color-border: var(--color-neutral-dark-100);
-  --color-border-variant: var(--color-neutral-grey-100);
+  --color-border: var(--color-neutral-dark-200);
+  --color-border-variant: var(--color-neutral-light);
   --color-headline: var(--color-star);
   --color-headline-variant: var(--color-star-light);
   --color-highlighted: var(--color-neutral-dark-200);
   --color-highlighted-variant: var(--color-neutral-light);
   --color-icon: var(--color-neutral-dark-200);
   --color-icon-variant: var(--color-neutral-light);
-  --color-icon-background: var(--color-neutral-grey-100);
+  --color-icon-background: var(--color-neutral-grey-200);
   --color-link: var(--color-accent);
   --color-link-hover: var(--color-accent-hover);
   --color-link-variant: var(--color-star-light);
@@ -36,7 +36,7 @@ body {
   --color-text-star: var(--color-star);
 
   /* SIZES */
-  --breakpoint-width: 1100px;
+  --breakpoint-width: 1200px;
   --border-radius: 8px; /* 8px */
   --box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
     0 1px 18px 0 rgb(0 0 0 / 12%);
@@ -44,4 +44,5 @@ body {
   --gap-medium: 16px;
   --gap-large: 24px;
   --gap-extra-large: 42px;
+  --header-height: 50px;
 }

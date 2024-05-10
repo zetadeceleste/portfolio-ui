@@ -8,7 +8,7 @@
   z-index: 2;
 
   @media (width >= 768px) {
-    inset: 48px 24px auto auto;
+    inset: 64px 32px auto auto;
     width: auto;
   }
 }

@@ -5,7 +5,7 @@ import FlexWrapper from '../FlexWrapper'
 import Item from './Item'
 import styles from './List.module.css'
 
-import { ItemType } from '@/types/item'
+import { ItemType } from '@/types'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
 interface Props {
