@@ -1,6 +1,9 @@
-import Footer from '@/components/common/Footer'
-import Menu from '@/components/common/Menu'
+import Header from '../Header'
+
+import Footer from '@/layouts/Footer'
+import Menu from '@/layouts/Menu'
 import SiteUnderConstructionPage from '@/pages/site-under-construction'
+import { useWindowSize } from '@/utils/window'
 
 interface Props {
   children: React.ReactNode
@@ -8,14 +11,17 @@ interface Props {
 }
 
 const MainLayout = ({ children, isUnderConstruction = false }: Props) => {
+  const { width } = useWindowSize()
+  const isDesktop = width >= 1024
+
   if (isUnderConstruction) {
     return <SiteUnderConstructionPage />
   }
 
   return (
     <main>
+      {isDesktop ? <Header /> : <Menu />}
       {children}
-      <Menu />
       <Footer />
     </main>
   )

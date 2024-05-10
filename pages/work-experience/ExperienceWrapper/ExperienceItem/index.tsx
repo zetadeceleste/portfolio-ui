@@ -4,7 +4,7 @@ import styles from './ExperienceItem.module.css'
 
 import FlexWrapper from '@/components/common/FlexWrapper'
 import List from '@/components/common/List'
-import { ExperienceType } from '@/types/experience'
+import { ExperienceType } from '@/types'
 
 interface Props {
   order: number

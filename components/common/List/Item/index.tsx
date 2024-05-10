@@ -5,7 +5,7 @@ import Icon from '../../Icon'
 
 import styles from './Item.module.css'
 
-import { ItemType } from '@/types/item'
+import { ItemType } from '@/types'
 
 const ItemInner = ({ text, label, iconName = 'star' }: ItemType) => (
   <FlexWrapper flexDirection="row" alignItems="center">

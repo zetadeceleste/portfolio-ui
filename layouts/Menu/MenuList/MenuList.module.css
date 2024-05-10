@@ -44,6 +44,6 @@
 
 .version {
   color: var(--color-text-variant);
-  inset: auto auto 32px 24px;
+  inset: auto auto 64px 32px;
   position: absolute;
 }

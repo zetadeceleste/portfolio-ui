@@ -15,15 +15,15 @@ interface Props {
 const MenuList = ({ onClick, menuVisible }: Props) => (
   <div className={`${styles.menu} ${menuVisible ? styles.show : styles.hide}`}>
     <ul className={styles.list}>
-      {WEBSITE_PAGES.map(({ text, link }, index) => (
-        <ol className={styles.item} key={index}>
+      {WEBSITE_PAGES.map(({ textTag, link }, index) => (
+        <li className={styles.item} key={index}>
           <Link href={link} passHref legacyBehavior>
             <a className="variant" onClick={onClick}>
               <span className="number">0{index + 1}</span>
-              <p className="big-text">{text}</p>
+              <p className="big-text">{textTag}</p>
             </a>
           </Link>
-        </ol>
+        </li>
       ))}
     </ul>
     <small className={styles.version}>v{publicRuntimeConfig.version}</small>

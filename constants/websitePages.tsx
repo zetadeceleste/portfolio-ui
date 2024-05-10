@@ -1,26 +1,31 @@
 import { pages } from './pages'
 
-export const WEBSITE_PAGES = [
-  { link: pages.HOME, text: <>home</> },
-  { link: pages.ABOUT, text: <>about</> },
+import { WebsitePageType } from '@/types'
+
+export const WEBSITE_PAGES: WebsitePageType[] = [
+  { link: pages.HOME, text: 'home', textTag: <>home</> },
+  { link: pages.ABOUT, text: 'about', textTag: <>about</> },
   {
     link: pages.WORK_EXPERIENCE,
-    text: (
+    text: 'work experience',
+    textTag: (
       <>
         work <br />
         experience
       </>
     ),
   },
-  { link: pages.SKILLS, text: <>skills</> },
+  { link: pages.SKILLS, text: 'skills', textTag: <>skills</>, optional: true },
   {
     link: pages.ADDITIONAL_INFORMATION,
-    text: (
+    text: 'additional information',
+    textTag: (
       <>
         additional <br />
         information
       </>
     ),
+    optional: true,
   },
-  { link: pages.CONTACT, text: <>contact</> },
+  { link: pages.CONTACT, text: 'contact', textTag: <>contact</> },
 ]

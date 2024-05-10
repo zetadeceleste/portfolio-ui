@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import FlexWrapper from '../../FlexWrapper'
+import FlexWrapper from '../../../components/common/FlexWrapper'
 
 import HamburgerIcon from './HamburgerIcon'
 import styles from './MenuIcon.module.css'
