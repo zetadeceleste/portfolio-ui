@@ -22,6 +22,7 @@
   opacity: 0;
 }
 
+/* TODO: Change this to FlexWrapper */
 .list {
   align-items: center;
   display: flex;
@@ -40,10 +41,4 @@
 
 .item {
   text-align: center;
-}
-
-.version {
-  color: var(--color-text-variant);
-  inset: auto auto 64px 32px;
-  position: absolute;
 }

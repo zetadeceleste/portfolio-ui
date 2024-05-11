@@ -3,14 +3,12 @@ import { memo } from 'react'
 import FlexWrapper from '../../FlexWrapper'
 import Icon from '../../Icon'
 
-import styles from './Item.module.css'
-
 import { ItemType } from '@/types'
 
 const ItemInner = ({ text, label, iconName = 'star' }: ItemType) => (
   <FlexWrapper flexDirection="row" alignItems="center">
     <Icon name={iconName} />
-    <FlexWrapper className={styles.wrapper}>
+    <FlexWrapper flexDirection="column-to-row" alignItems="start-to-end">
       <p>{text}</p>
       {label && <span>{label}</span>}
     </FlexWrapper>

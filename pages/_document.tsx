@@ -35,6 +35,7 @@ class MyDocument extends Document {
               }),
             }}
           />
+          {/* Google Tag Manager */}
           {GOOGLE_TAG_MANAGER_ID && (
             <script
               dangerouslySetInnerHTML={{
@@ -53,6 +54,7 @@ class MyDocument extends Document {
           )}
         </Head>
         <body>
+          {/* Google Tag Manager (noscript) */}
           {GOOGLE_TAG_MANAGER_ID && (
             <noscript
               dangerouslySetInnerHTML={{

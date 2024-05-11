@@ -1,3 +1,4 @@
+import getConfig from 'next/config'
 import { useRouter } from 'next/router'
 
 import FlexWrapper from '../../components/common/FlexWrapper'
@@ -5,6 +6,8 @@ import FlexWrapper from '../../components/common/FlexWrapper'
 import styles from './Footer.module.css'
 
 import { pages } from '@/constants/pages'
+
+const { publicRuntimeConfig } = getConfig()
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -21,9 +24,15 @@ const Footer = () => {
           <p>Website handcrafted with 🤘😎.</p>
           <p>Marvelous illustration and icons made by Luz Zapata.</p>
         </FlexWrapper>
-        <small>
-          <em>Copyright © {currentYear} chikilabs. All rights reserved.</em>
-        </small>
+        <FlexWrapper
+          flexDirection="column-to-row"
+          justifyContent="space-between"
+        >
+          <small>
+            Copyright © {currentYear} chikilabs. All rights reserved.
+          </small>
+          <small>v{publicRuntimeConfig.version}</small>
+        </FlexWrapper>
       </div>
     </footer>
   )

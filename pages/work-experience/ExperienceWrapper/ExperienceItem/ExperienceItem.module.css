@@ -6,18 +6,11 @@
   padding: 32px 24px;
 }
 
+/* TODO: Change this to FlexWrapper */
 .number {
   align-self: flex-start;
 
   @media (width >= 768px) {
     align-self: end;
-  }
-}
-
-.wrapper {
-  flex-direction: column;
-
-  @media (width >= 768px) {
-    flex-direction: row;
   }
 }

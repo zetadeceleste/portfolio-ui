@@ -10,6 +10,7 @@
     z-index: 1;
   }
 
+  /* TODO: Change this to FlexWrapper */
   .list {
     align-items: center;
     display: flex;
