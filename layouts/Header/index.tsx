@@ -20,10 +20,8 @@ const Header = () => {
   return (
     <nav className={`${styles.navbar} ${classNameList}`}>
       <ul className={styles.list}>
-        {WEBSITE_PAGES.map(({ text, link, optional }, index) => {
+        {WEBSITE_PAGES.map(({ text, link }, index) => {
           const isActive = pathname === link
-
-          if (optional) return null
 
           return (
             <li

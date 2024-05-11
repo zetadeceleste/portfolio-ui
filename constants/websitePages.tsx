@@ -15,17 +15,11 @@ export const WEBSITE_PAGES: WebsitePageType[] = [
       </>
     ),
   },
-  { link: pages.SKILLS, text: 'skills', textTag: <>skills</>, optional: true },
+  { link: pages.SKILLS, text: 'skills', textTag: <>skills</> },
   {
     link: pages.ADDITIONAL_INFORMATION,
-    text: 'additional information',
-    textTag: (
-      <>
-        additional <br />
-        information
-      </>
-    ),
-    optional: true,
+    text: '+info',
+    textTag: <>+info</>,
   },
   { link: pages.CONTACT, text: 'contact', textTag: <>contact</> },
 ]
