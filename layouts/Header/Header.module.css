@@ -44,10 +44,9 @@
     }
   }
 
-  .text {
-    &:hover {
-      color: var(--color-text);
-    }
+  .text,
+  .text:hover {
+    color: var(--color-text);
   }
 
   &.variant {
