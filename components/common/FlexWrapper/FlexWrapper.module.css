@@ -1,4 +1,4 @@
-.wrapper {
+.flex-wrapper {
   display: flex;
 
   &.flex-direction-row {
@@ -75,6 +75,14 @@
 
   &.align-self-end {
     align-self: flex-end;
+  }
+
+  &.align-self-start-to-end {
+    align-self: flex-start;
+
+    @media (width >= 1024px) {
+      align-self: flex-end;
+    }
   }
 
   &.justify-content-start {

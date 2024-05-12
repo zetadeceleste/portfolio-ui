@@ -19,7 +19,7 @@ const Footer = () => {
 
   return (
     <footer className={`${styles.footer} ${variant ? styles.variant : ''}`}>
-      <div className={styles.wrapper}>
+      <FlexWrapper className={styles.wrapper}>
         <FlexWrapper>
           <p>Website handcrafted with 🤘😎.</p>
           <p>Marvelous illustration and icons made by Luz Zapata.</p>
@@ -33,7 +33,7 @@ const Footer = () => {
           </small>
           <small>v{publicRuntimeConfig.version}</small>
         </FlexWrapper>
-      </div>
+      </FlexWrapper>
     </footer>
   )
 }

@@ -26,7 +26,7 @@ const Headline = ({
   })
 
   return (
-    <hgroup className={`${styles.wrapper} ${classNameList}`}>
+    <hgroup className={`${styles.headline} ${classNameList}`}>
       <h1 className={`${styles.title} ${bigTitles ? 'bigger' : ''}`}>
         {title}
       </h1>

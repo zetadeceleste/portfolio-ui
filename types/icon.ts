@@ -1,1 +1,1 @@
-export type IconName = 'mail' | 'github' | 'linkedin' | 'star'
+export type IconName = 'github' | 'mail' | 'linkedin' | 'logo' | 'star'

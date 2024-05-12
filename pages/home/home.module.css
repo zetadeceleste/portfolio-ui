@@ -10,19 +10,19 @@
   @media (width >= 1024px) {
     grid-template-columns: 1.5fr 1fr;
   }
-}
 
-.wrapper {
-  align-items: center;
-  place-self: flex-start center;
+  .wrapper {
+    align-items: center;
+    place-self: flex-start center;
 
-  @media (width >= 768px) {
-    align-items: flex-start;
-    place-self: center;
-  }
+    @media (width >= 768px) {
+      align-items: flex-start;
+      place-self: center;
+    }
 
-  @media (width >= 1024px) {
-    align-items: flex-start;
-    place-self: center flex-start;
+    @media (width >= 1024px) {
+      align-items: flex-start;
+      place-self: center flex-start;
+    }
   }
 }

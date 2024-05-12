@@ -1,19 +1,19 @@
 .wrapper {
   height: 100%;
-}
 
-.spinner {
-  animation: rotate 2s linear infinite;
-}
+  .spinner {
+    animation: rotate 2s linear infinite;
 
-.path {
-  animation: dash 1.5s ease-in-out infinite;
-  stroke: var(--color-icon);
-  stroke-linecap: round;
-}
+    .path {
+      animation: dash 1.5s ease-in-out infinite;
+      stroke: var(--color-icon);
+      stroke-linecap: round;
 
-.variant {
-  stroke: var(--color-icon-variant);
+      &.variant {
+        stroke: var(--color-icon-variant);
+      }
+    }
+  }
 }
 
 @keyframes rotate {

@@ -1,5 +1,7 @@
 import GithubIcon from '../../../public/images/icons/github.svg'
 import LinkedinIcon from '../../../public/images/icons/linkedin.svg'
+import LogoVariantIcon from '../../../public/images/icons/logo--variant.svg'
+import LogoIcon from '../../../public/images/icons/logo.svg'
 import MailIcon from '../../../public/images/icons/mail.svg'
 import StarIcon from '../../../public/images/icons/star.svg'
 import FlexWrapper from '../FlexWrapper'
@@ -8,10 +10,13 @@ import { IconName } from '@/types'
 
 interface Props {
   name: IconName
+  variant?: boolean
 }
 
-const getIcon = (iconName: IconName) => {
+const getIcon = (iconName: IconName, variant: boolean) => {
   switch (iconName) {
+    case 'logo':
+      return variant ? <LogoVariantIcon /> : <LogoIcon />
     case 'mail':
       return <MailIcon />
     case 'github':
@@ -25,6 +30,8 @@ const getIcon = (iconName: IconName) => {
   }
 }
 
-const Icon = ({ name }: Props) => <FlexWrapper>{getIcon(name)}</FlexWrapper>
+const Icon = ({ name, variant = false }: Props) => (
+  <FlexWrapper>{getIcon(name, variant)}</FlexWrapper>
+)
 
 export default Icon

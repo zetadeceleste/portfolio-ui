@@ -3,7 +3,7 @@ import { pages } from './pages'
 import { WebsitePageType } from '@/types'
 
 export const WEBSITE_PAGES: WebsitePageType[] = [
-  { link: pages.HOME, text: 'home', textTag: <>home</> },
+  { link: pages.HOME, text: 'home', textTag: <>home</>, optional: true },
   { link: pages.ABOUT, text: 'about', textTag: <>about</> },
   {
     link: pages.WORK_EXPERIENCE,

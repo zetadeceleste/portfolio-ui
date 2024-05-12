@@ -34,9 +34,9 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
 
   return (
     <>
-      <FlexWrapper gap="large" className={styles.item}>
+      <FlexWrapper gap="large" className={styles.wrapper}>
         <FlexWrapper justifyContent="space-between">
-          <FlexWrapper justifyContent="end" className={styles.number}>
+          <FlexWrapper justifyContent="end" alignSelf="start-to-end">
             <span className="variant number">
               {order}/{total}
             </span>
