@@ -1,63 +1,84 @@
-.navbar {
+/* This header has flex styles for semantic purpose: to preserve the <header> tag. */
+.header {
+  align-items: center;
   background-color: var(--color-background);
-  min-height: var(--header-height);
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
   width: 100%;
 
-  &.transparent {
+  .wrapper {
+    margin: 0 auto;
+    max-width: var(--breakpoint-width);
+    opacity: 0;
+    padding: 12px 16px;
+    visibility: hidden;
+    width: 100%;
+
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity 0.25s ease-in;
+      visibility: visible;
+    }
+
+    /* This list has flex styles for semantic purpose: to preserve the <ul> tag. */
+    .list {
+      align-items: center;
+      display: flex;
+      gap: var(--gap-large);
+      justify-content: flex-end;
+      width: 100%;
+
+      .item {
+        color: var(--color-text);
+
+        .text {
+          &:hover,
+          &:active {
+            color: var(--color-text);
+          }
+        }
+
+        &::after {
+          border-bottom: solid 1.5px var(--color-border);
+          content: '';
+          display: block;
+          transform: scaleX(0);
+          transform-origin: 0 50%;
+          transition: transform 250ms ease-in-out;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+        }
+
+        &.active {
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+
+        &.variant {
+          &::after {
+            border-color: var(--color-border-variant);
+          }
+
+          .text {
+            color: var(--color-text-variant);
+          }
+        }
+      }
+    }
+  }
+
+  &.home {
     background-color: transparent;
-    inset: 0;
     position: absolute;
     z-index: 1;
   }
 
-  .list {
-    align-items: center;
-    display: flex;
-    gap: var(--gap-large);
-    justify-content: flex-end;
-    margin: 0 auto;
-    max-width: var(--breakpoint-width);
-    padding: 12px 16px;
-  }
-
-  .item {
-    color: var(--color-text);
-
-    &::after {
-      border-bottom: solid 1.5px var(--color-border);
-      content: '';
-      display: block;
-      transform: scaleX(0);
-      transform-origin: 0 50%;
-      transition: transform 250ms ease-in-out;
-    }
-
-    &:hover::after {
-      transform: scaleX(1);
-    }
-  }
-
-  .active {
-    &::after {
-      transform: scaleX(1);
-    }
-  }
-
-  .text {
-    &:hover {
-      color: var(--color-text);
-    }
-  }
-
   &.variant {
     background-color: var(--color-background-variant);
-
-    .item::after {
-      border-color: var(--color-border-variant);
-    }
-
-    .text {
-      color: var(--color-text-variant);
-    }
   }
 }

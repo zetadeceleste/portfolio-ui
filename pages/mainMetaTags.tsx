@@ -21,7 +21,7 @@ const MainMetaTags = () => (
     <link rel="manifest" href="/manifest.json" />
     <link rel="canonical" href="https://zetadeceleste.dev" />
     {/* Open Graph tags */}
-    <meta property="og:title" content="Celeste Zapata | Work experience" />
+    <meta property="og:title" content="Celeste Zapata | Developer" />
     <meta
       property="og:description"
       content="Hi! I'm Celeste Zapata, a Developer specializing in Growth Engineering & Frontend Development. With 5+ years' experience collaborating across industries."
@@ -32,7 +32,7 @@ const MainMetaTags = () => (
     {/* Twitter Card tags */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@zetadeceleste" />
-    <meta name="twitter:title" content="Celeste Zapata | Work experience" />
+    <meta name="twitter:title" content="Celeste Zapata | Developer" />
     <meta
       name="twitter:description"
       content="Hi! I'm Celeste Zapata, a Developer specializing in Growth Engineering & Frontend Development. With 5+ years' experience collaborating across industries."

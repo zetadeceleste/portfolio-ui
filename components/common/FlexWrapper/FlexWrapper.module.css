@@ -1,4 +1,4 @@
-.wrapper {
+.flex-wrapper {
   display: flex;
 
   &.flex-direction-row {
@@ -11,6 +11,22 @@
 
   &.flex-direction-column {
     flex-direction: column;
+  }
+
+  &.flex-direction-column-to-row {
+    flex-direction: column;
+
+    @media (width >= 1024px) {
+      flex-direction: row;
+    }
+  }
+
+  &.flex-direction-row-to-column {
+    flex-direction: row;
+
+    @media (width >= 1024px) {
+      flex-direction: column;
+    }
   }
 
   &.gap-small {
@@ -41,6 +57,14 @@
     align-items: flex-end;
   }
 
+  &.align-items-start-to-end {
+    align-items: flex-start;
+
+    @media (width >= 1024px) {
+      align-items: flex-end;
+    }
+  }
+
   &.align-self-start {
     align-self: flex-start;
   }
@@ -51,6 +75,14 @@
 
   &.align-self-end {
     align-self: flex-end;
+  }
+
+  &.align-self-start-to-end {
+    align-self: flex-start;
+
+    @media (width >= 1024px) {
+      align-self: flex-end;
+    }
   }
 
   &.justify-content-start {

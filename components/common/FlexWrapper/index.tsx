@@ -4,10 +4,15 @@ import { buildClassNameList } from '@/utils/styles'
 
 interface Props {
   children: React.ReactNode
-  flexDirection?: 'row' | 'row-reverse' | 'column'
+  flexDirection?:
+    | 'row'
+    | 'row-reverse'
+    | 'column'
+    | 'column-to-row'
+    | 'row-to-column'
   gap?: 'small' | 'medium' | 'large' | 'extra-large'
-  alignItems?: 'start' | 'center' | 'end'
-  alignSelf?: 'start' | 'center' | 'end'
+  alignItems?: 'start' | 'center' | 'end' | 'start-to-end'
+  alignSelf?: 'start' | 'center' | 'end' | 'start-to-end'
   justifyContent?: 'start' | 'center' | 'space-between' | 'end'
   justifySelf?: 'start' | 'center' | 'end'
   className?: string
@@ -33,7 +38,7 @@ const FlexWrapper = ({
   })
 
   return (
-    <div className={`${styles.wrapper} ${classNameList} ${className}`}>
+    <div className={`${styles['flex-wrapper']} ${classNameList} ${className}`}>
       {children}
     </div>
   )

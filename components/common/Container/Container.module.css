@@ -8,12 +8,12 @@
   }
 }
 
-.wrapper {
+.grid-wrapper {
   display: grid;
   gap: var(--gap-extra-large);
   margin: 0 auto;
   max-width: var(--breakpoint-width);
-  min-height: calc(100vh - var(--header-height));
+  min-height: 100vh;
   padding: 48px 24px 96px;
   width: 100%;
 
@@ -23,6 +23,7 @@
   }
 
   @media (width >= 1024px) {
+    min-height: calc(100vh - var(--header-height));
     padding: 64px 16px;
   }
 

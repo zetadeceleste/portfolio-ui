@@ -11,20 +11,20 @@
     inset: 64px 32px auto auto;
     width: auto;
   }
-}
 
-.show {
-  opacity: 1;
-  pointer-events: all;
-  transition: opacity 0.25s ease-in;
-  visibility: visible;
-}
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.25s ease-in;
+    visibility: visible;
+  }
 
-.button {
-  background-color: var(--color-icon-background);
-  border-radius: 50%;
-  box-shadow: var(--box-shadow);
-  cursor: pointer;
-  height: 48px;
-  width: 48px;
+  .button {
+    background-color: var(--color-icon-background);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+  }
 }

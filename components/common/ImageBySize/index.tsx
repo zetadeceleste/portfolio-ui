@@ -12,7 +12,7 @@ const ImageBySize = ({ images }: Props) => {
   const { name, description, height, witdth } = images
 
   return (
-    <picture className={styles.wrapper}>
+    <picture className={styles.picture}>
       <source
         media="(min-width: 1024px)"
         srcSet={`/images/${name}-desktop.webp`}
