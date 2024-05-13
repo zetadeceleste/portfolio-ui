@@ -1,15 +1,43 @@
 import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 
 import styles from './ImageBySize.module.css'
 
 import { ImageSet } from '@/types'
+import { useWindowSize } from '@/utils/window'
 
 interface Props {
   images: ImageSet
 }
 
 const ImageBySize = ({ images }: Props) => {
-  const { name, description, height, witdth } = images
+  const { name, description, height, width } = images
+  const [, setSource] = useState(`/images/${name}-mobile.webp`)
+  const { width: windowWidth } = useWindowSize()
+
+  useEffect(() => {
+    const handleSourceChange = () => {
+      if (windowWidth >= 1024) {
+        setSource(`/images/${name}-desktop.webp`)
+      } else if (windowWidth >= 768) {
+        setSource(`/images/${name}-tablet.webp`)
+      } else {
+        setSource(`/images/${name}-mobile.webp`)
+      }
+    }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleSourceChange)
+
+      handleSourceChange()
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleSourceChange)
+      }
+    }
+  }, [name])
 
   return (
     <picture className={styles.picture}>
@@ -25,7 +53,7 @@ const ImageBySize = ({ images }: Props) => {
       />
       <Image
         src={`/images/${name}-mobile.webp`}
-        width={witdth}
+        width={width}
         height={height}
         alt={description}
         quality={100}

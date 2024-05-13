@@ -17,23 +17,27 @@
   padding: 48px 24px 96px;
   width: 100%;
 
-  @media (width >= 768px) {
-    padding: 64px 32px;
-    place-items: center;
-  }
-
-  @media (width >= 1024px) {
-    min-height: calc(100vh - var(--header-height));
-    padding: 64px 16px;
-  }
-
   &.full {
     margin: 0;
     max-width: 100%;
     padding: 0;
+  }
+}
 
-    @media (width >= 768px) {
+@media (width >= 768px) {
+  .grid-wrapper {
+    padding: 64px 32px;
+    place-items: center;
+
+    &.full {
       place-items: center;
     }
+  }
+}
+
+@media (width >= 1024px) {
+  .grid-wrapper {
+    min-height: calc(100vh - var(--header-height));
+    padding: 64px 16px;
   }
 }

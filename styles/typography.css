@@ -9,85 +9,29 @@ h1 {
   font-size: 3.5rem;
   line-height: 2.5rem;
 
-  @media (width >= 500px) {
-    font-size: 4rem;
-  }
-
-  @media (width >= 768px) {
-    font-size: 5.25rem;
-    line-height: 3.75rem;
-  }
-
-  @media (width >= 1024px) {
-    font-size: 6rem;
+  &.bigger {
+    font-size: 4.75rem;
     line-height: 4rem;
-  }
-}
-
-h1.bigger {
-  font-size: 4.75rem;
-  line-height: 4rem;
-
-  @media (width >= 500px) {
-    font-size: 5.5rem;
-    line-height: 4.75rem;
-  }
-
-  @media (width >= 768px) {
-    font-size: 6rem;
-    line-height: 5rem;
-  }
-
-  @media (width >= 1024px) {
-    font-size: 7rem;
-    line-height: 5.75rem;
   }
 }
 
 h2 {
   font-size: 1.25rem;
-
-  @media (width >= 500px) {
-    font-size: 1.5rem;
-  }
-
-  @media (width >= 1024px) {
-    font-size: 1.75rem;
-  }
-}
-
-h2.bigger {
-  @media (width >= 1024px) {
-    font-size: 2rem;
-  }
 }
 
 h3,
 p,
 .number {
   font-size: 1rem;
-
-  @media (width >= 500px) {
-    font-size: 1.125rem;
-  }
 }
 
 li p,
 ol p {
   font-size: 0.9rem;
 
-  @media (width >= 500px) {
-    font-size: 1rem;
-  }
-}
-
-li p.big-text,
-ol p.big-text {
-  font-size: 2.5rem;
-  line-height: 2rem;
-
-  @media (width >= 1024px) {
-    font-size: 2.75rem;
+  &.big-text {
+    font-size: 2.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -111,4 +55,67 @@ strong,
 
 em {
   font-style: italic;
+}
+
+@media (width >= 500px) {
+  h1 {
+    font-size: 4rem;
+
+    &.bigger {
+      font-size: 5.5rem;
+      line-height: 4.75rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3,
+  p,
+  .number {
+    font-size: 1.125rem;
+  }
+
+  li p,
+  ol p {
+    font-size: 1rem;
+  }
+}
+
+@media (width >= 768px) {
+  h1 {
+    font-size: 5.25rem;
+    line-height: 3.75rem;
+
+    &.bigger {
+      font-size: 6rem;
+      line-height: 5rem;
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  h1 {
+    font-size: 6rem;
+    line-height: 4rem;
+
+    &.bigger {
+      font-size: 7rem;
+      line-height: 5.75rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.75rem;
+
+    &.bigger {
+      font-size: 2rem;
+    }
+  }
+
+  li p.big-text,
+  ol p.big-text {
+    font-size: 2.75rem;
+  }
 }
