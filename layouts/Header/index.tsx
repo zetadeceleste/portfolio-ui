@@ -19,7 +19,7 @@ const Header = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowHeader(true)
-    }, 250)
+    }, 200)
 
     return () => clearTimeout(timer)
   }, [])
