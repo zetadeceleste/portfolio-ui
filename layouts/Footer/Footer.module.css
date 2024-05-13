@@ -12,12 +12,20 @@
     max-width: var(--breakpoint-width);
     padding: 48px 24px 96px;
 
-    @media (width >= 768px) {
-      padding: 48px 32px;
-    }
-
     @media (width >= 1024px) {
       padding: 48px 16px;
     }
+  }
+}
+
+@media (width >= 768px) {
+  .footer .wrapper {
+    padding: 48px 32px;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer .wrapper {
+    padding: 48px 16px;
   }
 }

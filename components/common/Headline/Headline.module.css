@@ -21,11 +21,6 @@
     .title {
       background-color: var(--color-highlighted);
       padding: 5px 15px 5px 2.5px;
-
-      @media (width >= 768px) {
-        padding: 5px 1ch 5px 0;
-        width: fit-content;
-      }
     }
   }
 
@@ -34,6 +29,15 @@
     .subtitle {
       background-color: var(--color-highlighted-variant);
       color: var(--color-headline-variant);
+    }
+  }
+}
+
+@media (width >= 768px) {
+  .headline.highlighted {
+    .title {
+      padding: 5px 1ch 5px 0;
+      width: fit-content;
     }
   }
 }

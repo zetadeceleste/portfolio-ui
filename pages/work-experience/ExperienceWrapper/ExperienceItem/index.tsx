@@ -75,7 +75,7 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
         {accomplishments.length > 0 && (
           <List title="KEY ACCOMPLISHMENTS" data={accomplishments} />
         )}
-        <List title="MAIN TECH STACK" data={mainTechStack} rounded divided />
+        <List title="MAIN TECH STACK" data={mainTechStack} rounded />
       </FlexWrapper>
     </>
   )
