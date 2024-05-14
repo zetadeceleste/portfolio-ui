@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 import MainMetaTags from './mainMetaTags'
 
-import { GOOGLE_TAG_MANAGER_ID } from '@/config'
+import { googleTagManagerId } from '@/config'
 
 class MyDocument extends Document {
   render() {
@@ -36,13 +36,13 @@ class MyDocument extends Document {
             }}
           />
           {/* Google Tag Manager */}
-          {GOOGLE_TAG_MANAGER_ID && (
+          {googleTagManagerId && (
             <script
               dangerouslySetInnerHTML={{
                 __html: `
                 window.addEventListener('load', function() {
                   var script = document.createElement('script');
-                  script.src = 'https://www.googletagmanager.com/gtm.js?id=${GOOGLE_TAG_MANAGER_ID}';
+                  script.src = 'https://www.googletagmanager.com/gtm.js?id=${googleTagManagerId}';
                   script.async = true;
                   script.onload = function() {
                     console.log('GTM script loaded correctly, window.dataLayer has been populated.');
@@ -55,11 +55,11 @@ class MyDocument extends Document {
         </Head>
         <body>
           {/* Google Tag Manager (noscript) */}
-          {GOOGLE_TAG_MANAGER_ID && (
+          {googleTagManagerId && (
             <noscript
               dangerouslySetInnerHTML={{
                 __html: `
-              <iframe src="https://www.googletagmanager.com/ns.html?id=${GOOGLE_TAG_MANAGER_ID}"
+              <iframe src="https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
               }}
             />

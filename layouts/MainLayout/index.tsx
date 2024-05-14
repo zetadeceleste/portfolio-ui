@@ -14,16 +14,14 @@ const MainLayout = ({ children, isUnderConstruction = false }: Props) => {
   const { width } = useWindowSize()
   const isDesktop = width >= 1024
 
-  if (isUnderConstruction) {
-    return <SiteUnderConstructionPage />
-  }
+  if (isUnderConstruction) return <SiteUnderConstructionPage />
 
   return (
-    <main>
+    <>
       {isDesktop ? <Header /> : <Menu />}
       {children}
       <Footer />
-    </main>
+    </>
   )
 }
 
