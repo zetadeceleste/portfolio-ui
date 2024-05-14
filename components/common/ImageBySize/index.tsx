@@ -9,19 +9,24 @@ interface Props {
 }
 
 const ImageBySize = ({ images }: Props) => {
-  const { name, description } = images
+  const { name, description, heigth, width } = images
 
   return (
     <picture className={styles.picture}>
       <source
+        media="(width >= 1024px)"
+        srcSet={`/images/${name}--desktop.svg`}
+        type="image/svg+xml"
+      />
+      <source
         media="(width >= 768px)"
-        srcSet={`/images/${name}-desktop.svg`}
+        srcSet={`/images/${name}--tablet.svg`}
         type="image/svg+xml"
       />
       <Image
-        src={`/images/${name}-mobile.svg`}
-        width={100}
-        height={100}
+        src={`/images/${name}--mobile.svg`}
+        height={heigth}
+        width={width}
         alt={description}
         quality={100}
         className={styles.image}
