@@ -16,6 +16,7 @@
 
   .button {
     background-color: var(--color-icon-background);
+    border: 1px solid var(--color-border);
     border-radius: 50%;
     box-shadow: var(--box-shadow);
     cursor: pointer;
@@ -26,7 +27,7 @@
 
 @media (width >= 768px) {
   .wrapper {
-    inset: 64px 32px auto auto;
+    inset: 12px 16px auto auto;
     width: auto;
   }
 }

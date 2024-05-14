@@ -30,7 +30,7 @@ const Header = () => {
   })
 
   return (
-    <nav className={`${styles.header} ${classNameListHeader}`}>
+    <header className={`${styles.header} ${classNameListHeader}`}>
       <FlexWrapper
         flexDirection="row"
         justifyContent="space-between"
@@ -41,28 +41,33 @@ const Header = () => {
             <Icon name="logo" variant={variant} />
           </Link>
         )}
-        <ul className={styles.list}>
-          {WEBSITE_PAGES.map(({ text, link, optional }, index) => {
-            const isActive = pathname === link
+        <nav className={styles.navbar}>
+          <ul className={styles.list}>
+            {WEBSITE_PAGES.map(({ text, link, optional }, index) => {
+              const isActive = pathname === link
 
-            const classNameListItem = buildBooleanClassNameList(styles, {
-              active: isActive,
-              variant,
-            })
+              const classNameListItem = buildBooleanClassNameList(styles, {
+                active: isActive,
+                variant,
+              })
 
-            if (optional) return null
+              if (optional) return null
 
-            return (
-              <li className={`${styles.item} ${classNameListItem}`} key={index}>
-                <Link href={link} passHref>
-                  <p className={`bold ${styles.text}`}>{text}</p>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+              return (
+                <li
+                  className={`${styles.item} ${classNameListItem}`}
+                  key={index}
+                >
+                  <Link href={link} passHref>
+                    <p className={`bold ${styles.text}`}>{text}</p>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
       </FlexWrapper>
-    </nav>
+    </header>
   )
 }
 
