@@ -39,5 +39,9 @@
   .grid-wrapper {
     min-height: calc(100vh - var(--header-height));
     padding: 64px 16px;
+
+    &.full {
+      min-height: 100vh;
+    }
   }
 }

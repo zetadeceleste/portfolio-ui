@@ -1,39 +1,46 @@
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 import styles from './ImageBySize.module.css'
 
 import { ImageSet } from '@/types'
+import { useWindowSize } from '@/utils/window'
 
 interface Props {
   images: ImageSet
 }
 
 const ImageBySize = ({ images }: Props) => {
-  const { name, description, heigth, width } = images
+  const { name, description } = images
+  const [src, setSrc] = useState('')
+  const { width: windowWidth } = useWindowSize()
+
+  useEffect(() => {
+    if (windowWidth < 768 && windowWidth > 0) {
+      setSrc(`/images/${name}--mobile.svg`)
+    } else if (windowWidth >= 768 && windowWidth <= 1024) {
+      setSrc(`/images/${name}--tablet.svg`)
+    } else {
+      setSrc(`/images/${name}--desktop.svg`)
+    }
+  }, [windowWidth])
 
   return (
-    <picture className={styles.picture}>
-      <source
-        media="(width >= 1024px)"
-        srcSet={`/images/${name}--desktop.svg`}
-        type="image/svg+xml"
-      />
-      <source
-        media="(width >= 768px)"
-        srcSet={`/images/${name}--tablet.svg`}
-        type="image/svg+xml"
-      />
-      <Image
-        src={`/images/${name}--mobile.svg`}
-        height={heigth}
-        width={width}
-        alt={description}
-        quality={100}
-        className={styles.image}
-        sizes="(width >= 1024px) 60vw, (width >= 768px) 50vw, 100vw"
-        priority
-      />
-    </picture>
+    src !== '' && (
+      <picture className={styles.picture}>
+        <Image
+          src={src}
+          height={0}
+          width={0}
+          alt={description}
+          quality={100}
+          className={styles.image}
+          priority
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+        />
+      </picture>
+    )
   )
 }
 
