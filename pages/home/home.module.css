@@ -17,7 +17,12 @@
       align-items: center;
       justify-content: center;
       place-self: center flex-start;
-      width: calc(var(--breakpoint-width) / 2);
     }
+  }
+}
+
+@media (width >= 1024px) {
+  .container .wrapper {
+    width: calc(var(--breakpoint-width) / 2);
   }
 }
