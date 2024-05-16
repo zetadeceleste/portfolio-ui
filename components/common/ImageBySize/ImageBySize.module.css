@@ -1,9 +1,11 @@
 .picture {
   height: 100%;
+  overflow: hidden;
   width: 100%;
 
   .image {
     height: auto;
+    object-fit: cover;
     width: 100%;
   }
 }
