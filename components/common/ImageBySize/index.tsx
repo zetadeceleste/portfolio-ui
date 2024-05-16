@@ -36,8 +36,8 @@ const ImageBySize = ({ images }: Props) => {
   }, [windowWidth])
 
   return (
-    src !== '' && (
-      <picture className={styles.picture}>
+    <picture className={styles.picture}>
+      {src !== '' && (
         <Image
           src={src}
           width={imgWidth}
@@ -48,8 +48,8 @@ const ImageBySize = ({ images }: Props) => {
           quality={100}
           priority
         />
-      </picture>
-    )
+      )}
+    </picture>
   )
 }
 
