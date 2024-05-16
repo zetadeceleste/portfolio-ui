@@ -21,7 +21,7 @@
   }
 }
 
-@media (width >= 1024px) {
+@media (width >= 1400px) {
   .container .wrapper {
     width: calc(var(--breakpoint-width) / 2);
   }
