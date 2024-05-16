@@ -11,17 +11,27 @@ interface Props {
 }
 
 const ImageBySize = ({ images }: Props) => {
-  const { name, description } = images
+  const { name, description, sizes, mobile, tablet, desktop } = images
   const [src, setSrc] = useState('')
+  const [imgWidth, setImgWidth] = useState(0)
+  const [imgHeight, setImgHeight] = useState(0)
   const { width: windowWidth } = useWindowSize()
 
   useEffect(() => {
-    if (windowWidth < 768 && windowWidth > 0) {
-      setSrc(`/images/${name}--mobile.svg`)
-    } else if (windowWidth >= 768 && windowWidth <= 1024) {
-      setSrc(`/images/${name}--tablet.svg`)
+    if (windowWidth < 768 && windowWidth > 0 && mobile) {
+      setSrc(`/images/${name}--mobile.${mobile?.format}`)
+      setImgWidth(mobile?.width)
+      setImgHeight(mobile?.height || 0)
+    } else if (windowWidth >= 768 && windowWidth <= 1024 && tablet) {
+      setSrc(`/images/${name}--tablet.${tablet?.format}`)
+      setImgWidth(tablet?.width)
+      setImgHeight(tablet?.height || 0)
+    } else if (windowWidth > 1024 && desktop) {
+      setSrc(`/images/${name}--desktop.${desktop?.format}`)
+      setImgWidth(desktop?.width)
+      setImgHeight(desktop?.height || 0)
     } else {
-      setSrc(`/images/${name}--desktop.svg`)
+      setSrc('')
     }
   }, [windowWidth])
 
@@ -30,14 +40,13 @@ const ImageBySize = ({ images }: Props) => {
       <picture className={styles.picture}>
         <Image
           src={src}
-          height={0}
-          width={0}
+          width={imgWidth}
+          height={imgHeight}
           alt={description}
-          quality={100}
           className={styles.image}
+          sizes={sizes}
+          quality={100}
           priority
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
         />
       </picture>
     )
