@@ -3,14 +3,14 @@ import { ItemType } from './item'
 export type ExperienceType = {
   role: string
   dateFrom: string
-  mainTechStack: ItemType[]
+  company: string
+  companyWebsite: string
+  companyType: string
   jobLocation: string
-  companyWebsite?: string
-  company?: string
+  jobType: 'freelance' | 'full-time' | 'part-time' | 'internship'
   dateTo?: string
   current?: boolean
-  companyType?: string
-  jobType?: 'freelance' | 'full-time' | 'part-time' | 'internship'
   responsibilities?: ItemType[]
   accomplishments?: ItemType[]
+  mainTechStack?: ItemType[]
 }

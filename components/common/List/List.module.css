@@ -1,4 +1,4 @@
-/* This list has flex styles for semantic purpose: to preserve the <li> tag. */
+/* This list has flex styles for semantic purpose: to preserve the tag. */
 .list {
   display: flex;
   flex-direction: column;

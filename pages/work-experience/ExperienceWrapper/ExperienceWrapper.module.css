@@ -1,0 +1,17 @@
+/* This list has flex styles for semantic purpose: to preserve the tag. */
+.list {
+  column-count: 1;
+  column-gap: 1em;
+
+  .item {
+    display: inline-block;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .list {
+    column-count: 2;
+  }
+}

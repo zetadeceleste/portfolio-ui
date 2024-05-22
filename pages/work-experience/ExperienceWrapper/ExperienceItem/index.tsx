@@ -12,7 +12,7 @@ interface Props {
   experience: ExperienceType
 }
 
-const ExperienceItem = ({ order, total, experience }: Props) => {
+const ExperienceItem = ({ experience }: Props) => {
   if (!experience) {
     return null
   }
@@ -20,64 +20,62 @@ const ExperienceItem = ({ order, total, experience }: Props) => {
   const {
     role,
     dateFrom,
-    mainTechStack,
-    jobLocation,
-    companyWebsite,
     company,
+    companyWebsite,
+    companyType = '',
+    jobLocation,
+    jobType = '',
     dateTo = '',
     current = false,
-    companyType = '',
-    jobType = '',
     responsibilities = [],
     accomplishments = [],
+    mainTechStack = [],
   } = experience
 
   return (
-    <>
-      <FlexWrapper gap="large" className={styles.wrapper}>
-        <FlexWrapper justifyContent="space-between">
-          <FlexWrapper justifyContent="end" alignSelf="start-to-end">
-            <span className="variant number">
-              {order}/{total}
-            </span>
-          </FlexWrapper>
+    <FlexWrapper className={styles.wrapper} gap="large">
+      <FlexWrapper justifyContent="space-between">
+        <FlexWrapper>
+          <h2>
+            {role}
+            {companyWebsite && company && (
+              <>
+                {' '}
+                at{' '}
+                <Link
+                  className="variant"
+                  href={companyWebsite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {company}
+                </Link>
+              </>
+            )}
+          </h2>
           <FlexWrapper>
-            <h2>
-              {role}
-              {companyWebsite && company && (
-                <>
-                  {' '}
-                  at{' '}
-                  <Link
-                    className="variant"
-                    href={companyWebsite}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {company}
-                  </Link>
-                </>
-              )}
-            </h2>
-            <FlexWrapper flexDirection="column-to-row">
-              <span className="variant">
-                [{dateFrom} - {`${current ? 'PRESENT' : dateTo}`}]
-              </span>
-              {jobLocation && <span className="variant">[{jobLocation}]</span>}
-              {companyType && <span className="variant">[{companyType}]</span>}
-              <span className="variant">[{jobType}]</span>
-            </FlexWrapper>
+            <span className="variant">
+              [{dateFrom} - {`${current ? 'PRESENT' : dateTo}`}]
+            </span>
+            {jobLocation && <span className="variant">[{jobLocation}]</span>}
+            {companyType && <span className="variant">[{companyType}]</span>}
+            <span className="variant">[{jobType}]</span>
           </FlexWrapper>
         </FlexWrapper>
-        {responsibilities.length > 0 && (
-          <List title="RESPONSABILITIES" data={responsibilities} />
-        )}
-        {accomplishments.length > 0 && (
-          <List title="KEY ACCOMPLISHMENTS" data={accomplishments} />
-        )}
-        <List title="MAIN TECH STACK" data={mainTechStack} rounded />
       </FlexWrapper>
-    </>
+      {responsibilities.length > 0 && (
+        <List title="RESPONSABILITIES" data={responsibilities} />
+      )}
+      {accomplishments.length > 0 && (
+        <List title="KEY ACCOMPLISHMENTS" data={accomplishments} />
+      )}
+      {mainTechStack.length > 0 && (
+        <>
+          <hr />
+          <List data={mainTechStack} rounded />
+        </>
+      )}
+    </FlexWrapper>
   )
 }
 
