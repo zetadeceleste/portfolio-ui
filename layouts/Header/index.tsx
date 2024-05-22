@@ -33,11 +33,12 @@ const Header = () => {
     <header className={`${styles.header} ${classNameListHeader}`}>
       <FlexWrapper
         flexDirection="row"
+        alignItems="center"
         justifyContent="space-between"
         className={`${styles.wrapper} ${showHeader ? styles.show : ''}`}
       >
         {!isHome && (
-          <Link href={pages.HOME} passHref>
+          <Link href={pages.HOME} aria-label="Link to Home" passHref>
             <Icon name="logo" variant={variant} />
           </Link>
         )}
@@ -58,7 +59,7 @@ const Header = () => {
                   className={`${styles.item} ${classNameListItem}`}
                   key={index}
                 >
-                  <Link href={link} passHref>
+                  <Link href={link} aria-label={text} passHref>
                     <p className={`bold ${styles.text}`}>{text}</p>
                   </Link>
                 </li>

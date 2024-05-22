@@ -28,7 +28,12 @@ const List = ({ data, title, rounded = false, divided = false }: Props) => {
         {data.map(({ text, link, label, iconName }, index) => (
           <li className={styles.item} key={index}>
             {link ? (
-              <Link href={link} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={text}
+              >
                 <Item text={text} iconName={iconName} />
               </Link>
             ) : (
