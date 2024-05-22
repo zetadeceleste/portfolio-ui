@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import ExperienceItem from './ExperienceItem'
+import styles from './ExperienceWrapper.module.css'
 
-import FlexWrapper from '@/components/common/FlexWrapper'
 import Loader from '@/components/common/Loader'
 import { EXPERIENCE_LIST } from '@/constants/experienceList'
 
@@ -20,16 +20,17 @@ const ExperienceWrapper = () => {
   }
 
   return (
-    <FlexWrapper gap="large">
+    <ol className={styles.list}>
       {EXPERIENCE_LIST.map((experience, index) => (
-        <ExperienceItem
-          key={index}
-          order={index + 1}
-          total={EXPERIENCE_LIST.length}
-          experience={experience}
-        />
+        <li className={styles.item} key={index}>
+          <ExperienceItem
+            order={index + 1}
+            total={EXPERIENCE_LIST.length}
+            experience={experience}
+          />
+        </li>
       ))}
-    </FlexWrapper>
+    </ol>
   )
 }
 

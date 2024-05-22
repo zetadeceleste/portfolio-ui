@@ -14,7 +14,7 @@ export const SKILL_LIST: ItemType[] = [
   { text: 'Figma' },
   { text: 'Responsive web design' },
   { text: 'Digital marketing tools integration' },
-  { text: 'Web accessibility optimization' },
+  { text: 'WCAG 3' },
   { text: 'Teamwork' },
   { text: 'Proactivity' },
   { text: 'Continuous learning' },

@@ -25,3 +25,9 @@ span.variant {
 .black {
   color: var(--color-text);
 }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
