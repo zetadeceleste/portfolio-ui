@@ -1,3 +1,5 @@
+export const WEBSITE_URL = 'https://zetadeceleste.dev'
+
 export enum pages {
   HOME = '/',
   ABOUT = '/about',
