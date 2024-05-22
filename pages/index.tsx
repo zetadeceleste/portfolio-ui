@@ -1,9 +1,5 @@
 import HomePage from './home'
 
-const MainPage = () => (
-  <main>
-    <HomePage />
-  </main>
-)
+const MainPage = () => <HomePage />
 
 export default MainPage

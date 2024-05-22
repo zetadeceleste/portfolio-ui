@@ -5,11 +5,17 @@ import ExperienceWrapper from './ExperienceWrapper'
 import Container from '@/components/common/Container'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
+import { pages, WEBSITE_URL } from '@/constants/pages'
 
 const WorkExperiencePage = () => (
   <>
     <Head>
       <title>Celeste Zapata | Work experience</title>
+      <link rel="canonical" href={`${WEBSITE_URL}${pages.WORK_EXPERIENCE}`} />
+      <meta
+        property="og:url"
+        content={`${WEBSITE_URL}${pages.WORK_EXPERIENCE}`}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
