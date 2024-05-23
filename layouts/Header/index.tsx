@@ -6,15 +6,15 @@ import styles from './Header.module.css'
 
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Icon from '@/components/common/Icon'
-import { pages } from '@/constants/pages'
+import { pagesPath } from '@/constants/pages'
 import { WEBSITE_PAGES } from '@/constants/websitePages'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false)
   const { pathname } = router
-  const isHome = pathname === pages.HOME
-  const variant = pathname === pages.WORK_EXPERIENCE
+  const isHome = pathname === pagesPath.HOME
+  const variant = pathname === pagesPath.WORK_EXPERIENCE
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -38,7 +38,7 @@ const Header = () => {
         className={`${styles.wrapper} ${showHeader ? styles.show : ''}`}
       >
         {!isHome && (
-          <Link href={pages.HOME} aria-label="Link to Home" passHref>
+          <Link href={pagesPath.HOME} aria-label="Link to Home" passHref>
             <Icon name="logo" variant={variant} />
           </Link>
         )}

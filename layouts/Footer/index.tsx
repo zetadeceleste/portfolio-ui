@@ -5,7 +5,7 @@ import FlexWrapper from '../../components/common/FlexWrapper'
 
 import styles from './Footer.module.css'
 
-import { pages } from '@/constants/pages'
+import { pagesPath } from '@/constants/pages'
 
 const { publicRuntimeConfig } = getConfig()
 
@@ -13,9 +13,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
   const router = useRouter()
   const { pathname } = router
-  const variant = pathname === pages.WORK_EXPERIENCE
+  const variant = pathname === pagesPath.WORK_EXPERIENCE
 
-  if (pathname === pages.HOME) return null
+  if (pathname === pagesPath.HOME) return null
 
   return (
     <footer className={`${styles.footer} ${variant ? styles.variant : ''}`}>

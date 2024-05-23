@@ -1,18 +1,13 @@
-import Head from 'next/head'
-
 import Container from '@/components/common/Container'
+import DynamicHead from '@/components/common/DynamicHead'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
 import SocialLinks from '@/components/common/SocialLinks'
-import { pages, WEBSITE_URL } from '@/constants/pages'
+import { Page } from '@/constants/pages'
 
 const ContactPage = () => (
   <>
-    <Head>
-      <title>Celeste Zapata | Let´s work together!</title>
-      <link rel="canonical" href={`${WEBSITE_URL}${pages.CONTACT}`} />
-      <meta property="og:url" content={`${WEBSITE_URL}${pages.CONTACT}`} />
-    </Head>
+    <DynamicHead page={Page.CONTACT} />
     <Container>
       <FlexWrapper alignItems="center" gap="large">
         <Headline
