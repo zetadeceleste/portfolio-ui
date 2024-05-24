@@ -1,24 +1,13 @@
-import Head from 'next/head'
-
 import Container from '@/components/common/Container'
+import DynamicHead from '@/components/common/DynamicHead'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
 import List from '@/components/common/List'
-import { pages, WEBSITE_URL } from '@/constants/pages'
+import { Page } from '@/constants/pages'
 
 const AdditionalInformationPage = () => (
   <>
-    <Head>
-      <title>Celeste Zapata | Education, languages & volunteering</title>
-      <link
-        rel="canonical"
-        href={`${WEBSITE_URL}${pages.ADDITIONAL_INFORMATION}`}
-      />
-      <meta
-        property="og:url"
-        content={`${WEBSITE_URL}${pages.ADDITIONAL_INFORMATION}`}
-      />
-    </Head>
+    <DynamicHead page={Page.ADDITIONAL_INFORMATION} />
     <Container>
       <FlexWrapper gap="large">
         <Headline

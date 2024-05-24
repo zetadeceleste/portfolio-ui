@@ -27,7 +27,6 @@ const ExperienceItem = ({ experience }: Props) => {
     jobType = '',
     dateTo = '',
     current = false,
-    responsibilities = [],
     accomplishments = [],
     mainTechStack = [],
   } = experience
@@ -63,12 +62,7 @@ const ExperienceItem = ({ experience }: Props) => {
           </FlexWrapper>
         </FlexWrapper>
       </FlexWrapper>
-      {responsibilities.length > 0 && (
-        <List title="RESPONSABILITIES" data={responsibilities} />
-      )}
-      {accomplishments.length > 0 && (
-        <List title="KEY ACCOMPLISHMENTS" data={accomplishments} />
-      )}
+      {accomplishments.length > 0 && <List data={accomplishments} />}
       {mainTechStack.length > 0 && (
         <>
           <hr />

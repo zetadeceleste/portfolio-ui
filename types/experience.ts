@@ -10,7 +10,6 @@ export type ExperienceType = {
   jobType: 'freelance' | 'full-time' | 'part-time' | 'internship'
   dateTo?: string
   current?: boolean
-  responsibilities?: ItemType[]
   accomplishments?: ItemType[]
   mainTechStack?: ItemType[]
 }

@@ -1,20 +1,15 @@
-import Head from 'next/head'
-
 import styles from './about.module.css'
 
 import Container from '@/components/common/Container'
+import DynamicHead from '@/components/common/DynamicHead'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
 import SocialLinks from '@/components/common/SocialLinks'
-import { pages, WEBSITE_URL } from '@/constants/pages'
+import { Page } from '@/constants/pages'
 
 const AboutPage = () => (
   <>
-    <Head>
-      <title>Celeste Zapata | About me</title>
-      <link rel="canonical" href={`${WEBSITE_URL}${pages.ABOUT}`} />
-      <meta property="og:url" content={`${WEBSITE_URL}${pages.ABOUT}`} />
-    </Head>
+    <DynamicHead page={Page.ABOUT} />
     <Container>
       <FlexWrapper gap="large">
         <Headline title={<>howdy!</>} highlighted />

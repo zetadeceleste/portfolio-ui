@@ -1,12 +1,12 @@
-import { pages } from './pages'
+import { pagesPath } from './pages'
 
 import { WebsitePageType } from '@/types'
 
 export const WEBSITE_PAGES: WebsitePageType[] = [
-  { link: pages.HOME, text: 'home', textTag: <>home</>, optional: true },
-  { link: pages.ABOUT, text: 'about', textTag: <>about</> },
+  { link: pagesPath.HOME, text: 'home', textTag: <>home</>, optional: true },
+  { link: pagesPath.ABOUT, text: 'about', textTag: <>about</> },
   {
-    link: pages.WORK_EXPERIENCE,
+    link: pagesPath.WORK_EXPERIENCE,
     text: 'work experience',
     textTag: (
       <>
@@ -15,11 +15,11 @@ export const WEBSITE_PAGES: WebsitePageType[] = [
       </>
     ),
   },
-  { link: pages.SKILLS, text: 'skills', textTag: <>skills</> },
+  { link: pagesPath.SKILLS, text: 'skills', textTag: <>skills</> },
   {
-    link: pages.ADDITIONAL_INFORMATION,
+    link: pagesPath.ADDITIONAL_INFORMATION,
     text: '+info',
     textTag: <>+info</>,
   },
-  { link: pages.CONTACT, text: 'contact', textTag: <>contact</> },
+  { link: pagesPath.CONTACT, text: 'contact', textTag: <>contact</> },
 ]
