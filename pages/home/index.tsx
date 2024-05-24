@@ -12,7 +12,7 @@ const HomePage = () => (
   <>
     <DynamicHead page={Page.HOME} />
     <Container className={styles.container} full>
-      <ImageBySize images={HOME_PAGE_IMAGES} />
+      <ImageBySize images={HOME_PAGE_IMAGES} className={styles.image} />
       <FlexWrapper className={styles.wrapper}>
         <Headline
           title={

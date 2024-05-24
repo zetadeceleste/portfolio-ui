@@ -39,7 +39,7 @@ const Header = () => {
       >
         {!isHome && (
           <Link href={pagesPath.HOME} aria-label="Link to Home" passHref>
-            <Icon name="logo" variant={variant} />
+            <Icon name="logo-variant" />
           </Link>
         )}
         <nav className={styles.navbar}>

@@ -20,7 +20,7 @@ export const pagesPath = {
   SITE_UNDER_CONSTRUCTION: '/site-under-construction',
   SKILLS: '/skills',
   WORK_EXPERIENCE: '/work-experience',
-}
+} as const
 
 export const pagesTitle = {
   HOME: 'Developer',
@@ -30,4 +30,4 @@ export const pagesTitle = {
   SITE_UNDER_CONSTRUCTION: 'Site under construction',
   SKILLS: 'Skills',
   WORK_EXPERIENCE: 'Work experience',
-}
+} as const

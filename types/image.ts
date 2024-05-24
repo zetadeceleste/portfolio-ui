@@ -1,7 +1,7 @@
 export type ImageSet = {
   name: string
   description: string
-  sizes: string
+  sizes?: string
   mobile?: Image
   tablet?: Image
   desktop?: Image

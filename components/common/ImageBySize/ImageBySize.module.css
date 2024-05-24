@@ -9,10 +9,3 @@
     width: 100%;
   }
 }
-
-@media (width >= 768px) {
-  .picture .image {
-    display: block;
-    min-height: 100vh;
-  }
-}

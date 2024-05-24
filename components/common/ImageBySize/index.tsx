@@ -8,9 +8,11 @@ import { useWindowSize } from '@/utils/window'
 
 interface Props {
   images: ImageSet
+  className?: string
 }
 
-const ImageBySize = ({ images }: Props) => {
+// This component is used to render a "same image" based on different resolutions: mobile, tablet and desktop.
+const ImageBySize = ({ images, className = '' }: Props) => {
   const { name, description, sizes, mobile, tablet, desktop } = images
   const [src, setSrc] = useState('')
   const [imgWidth, setImgWidth] = useState(0)
@@ -19,15 +21,15 @@ const ImageBySize = ({ images }: Props) => {
 
   useEffect(() => {
     if (windowWidth < 768 && windowWidth > 0 && mobile) {
-      setSrc(`/images/${name}--mobile.${mobile?.format}`)
+      setSrc(`/images/${name}-mobile.${mobile?.format}`)
       setImgWidth(mobile?.width)
       setImgHeight(mobile?.height || 0)
     } else if (windowWidth >= 768 && windowWidth <= 1024 && tablet) {
-      setSrc(`/images/${name}--tablet.${tablet?.format}`)
+      setSrc(`/images/${name}-tablet.${tablet?.format}`)
       setImgWidth(tablet?.width)
       setImgHeight(tablet?.height || 0)
     } else if (windowWidth > 1024 && desktop) {
-      setSrc(`/images/${name}--desktop.${desktop?.format}`)
+      setSrc(`/images/${name}-desktop.${desktop?.format}`)
       setImgWidth(desktop?.width)
       setImgHeight(desktop?.height || 0)
     } else {
@@ -43,7 +45,7 @@ const ImageBySize = ({ images }: Props) => {
           width={imgWidth}
           height={imgHeight}
           alt={description}
-          className={styles.image}
+          className={`${styles.image} ${className}`}
           sizes={sizes}
           quality={100}
           priority
