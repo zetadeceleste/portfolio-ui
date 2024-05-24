@@ -3,7 +3,7 @@ name: Update Package Version
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   update-version:
@@ -19,11 +19,19 @@ jobs:
 
       - name: Check for changes in package.json
         run: |
-          git diff --name-only HEAD^ HEAD | grep package.json
-          if [ $? -eq 0 ]; then
+          # Fetch the previous commit hash if it exists
+          PREV_COMMIT=$(git rev-parse HEAD^ || echo "")
+
+          if [ -z "$PREV_COMMIT" ]; then
+            echo "No previous commit found. Skipping version check."
+            exit 0
+          fi
+
+          # Check for changes in package.json
+          if git diff --name-only $PREV_COMMIT HEAD | grep -q package.json; then
             echo "Changes detected in package.json. Updating version..."
             npm version patch -m "Automatically updated version"
-            git push origin main --tags
+            git push origin develop --tags
           else
             echo "No changes detected in package.json."
           fi
