@@ -32,8 +32,12 @@
 }
 
 @media (width >= 768px) {
-  .headline.highlighted .title {
-    animation: fill-background 1.5s ease forwards;
+  .headline.highlighted {
+    width: 10ch;
+
+    .title {
+      animation: fill-background 1.5s ease forwards;
+    }
   }
 }
 
