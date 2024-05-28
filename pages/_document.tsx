@@ -64,9 +64,7 @@ class MyDocument extends Document {
               }}
             />
           )}
-          <main>
-            <Main />
-          </main>
+          <Main />
           <NextScript />
         </body>
       </Html>

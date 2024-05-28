@@ -10,8 +10,16 @@ const WorkExperiencePage = () => (
   <>
     <DynamicHead page={Page.WORK_EXPERIENCE} />
     <Container variant>
-      <FlexWrapper alignSelf="start" gap="large">
-        <Headline title={<>work experience</>} highlighted variant />
+      <FlexWrapper gap="large">
+        <Headline
+          title={
+            <>
+              work <br /> experience
+            </>
+          }
+          highlighted
+          variant
+        />
         <ExperienceWrapper />
       </FlexWrapper>
     </Container>

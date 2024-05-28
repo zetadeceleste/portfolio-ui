@@ -33,7 +33,7 @@
 
 @media (width >= 768px) {
   .headline.highlighted {
-    width: 10ch;
+    width: 100%;
 
     .title {
       animation: fill-background 1.5s ease forwards;
