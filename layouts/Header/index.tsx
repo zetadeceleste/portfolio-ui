@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import router from 'next/router'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import styles from './Header.module.css'
@@ -10,9 +10,12 @@ import { pagesPath } from '@/constants/pages'
 import { WEBSITE_PAGES } from '@/constants/websitePages'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
-const Header = () => {
+interface Props {
+  className?: string
+}
+const Header = ({ className }: Props) => {
   const [showHeader, setShowHeader] = useState(false)
-  const { pathname } = router
+  const pathname = usePathname()
   const isHome = pathname === pagesPath.HOME
   const variant = pathname === pagesPath.WORK_EXPERIENCE
 
@@ -30,7 +33,7 @@ const Header = () => {
   })
 
   return (
-    <header className={`${styles.header} ${classNameListHeader}`}>
+    <header className={`${styles.header} ${classNameListHeader} ${className}`}>
       <FlexWrapper
         flexDirection="row"
         alignItems="center"

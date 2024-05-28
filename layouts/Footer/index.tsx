@@ -1,5 +1,5 @@
 import getConfig from 'next/config'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 import FlexWrapper from '../../components/common/FlexWrapper'
 
@@ -11,11 +11,8 @@ const { publicRuntimeConfig } = getConfig()
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-  const router = useRouter()
-  const { pathname } = router
+  const pathname = usePathname()
   const variant = pathname === pagesPath.WORK_EXPERIENCE
-
-  if (pathname === pagesPath.HOME) return null
 
   return (
     <footer className={`${styles.footer} ${variant ? styles.variant : ''}`}>

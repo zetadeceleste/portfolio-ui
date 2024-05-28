@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Page } from '@/constants/pages'
 import { getHeadByPage } from '@/utils/head'
 
-type Props = {
+interface Props {
   page: Page
 }
 
