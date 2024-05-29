@@ -10,7 +10,7 @@ interface Props {
 }
 
 const MenuList = ({ onClick, menuVisible }: Props) => (
-  <div className={`${styles.menu} ${menuVisible ? styles.show : styles.hide}`}>
+  <nav className={`${styles.menu} ${menuVisible ? styles.show : styles.hide}`}>
     <ul className={styles.list}>
       {WEBSITE_PAGES.map(({ textTag, link }, index) => (
         <li className={styles.item} key={index}>
@@ -23,7 +23,7 @@ const MenuList = ({ onClick, menuVisible }: Props) => (
         </li>
       ))}
     </ul>
-  </div>
+  </nav>
 )
 
 export default MenuList

@@ -9,7 +9,7 @@ import { Page } from '@/constants/pages'
 const WorkExperiencePage = () => (
   <>
     <DynamicHead page={Page.WORK_EXPERIENCE} />
-    <Container variant>
+    <Container variant scroll>
       <FlexWrapper gap="large">
         <Headline
           title={

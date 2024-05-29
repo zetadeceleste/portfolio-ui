@@ -1,13 +1,10 @@
 import { useState } from 'react'
 
+import styles from './Menu.module.css'
 import MenuIcon from './MenuIcon'
 import MenuList from './MenuList'
 
-interface Props {
-  className?: string
-}
-
-const Menu = ({ className }: Props) => {
+const Menu = () => {
   const [menuVisible, setMenuVisible] = useState(false)
 
   const toggleMenuVisible = () => {
@@ -15,10 +12,10 @@ const Menu = ({ className }: Props) => {
   }
 
   return (
-    <nav className={className}>
-      <MenuList onClick={toggleMenuVisible} menuVisible={menuVisible} />
+    <header className={styles.header}>
       <MenuIcon onClick={toggleMenuVisible} menuVisible={menuVisible} />
-    </nav>
+      <MenuList onClick={toggleMenuVisible} menuVisible={menuVisible} />
+    </header>
   )
 }
 

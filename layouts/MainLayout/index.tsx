@@ -23,10 +23,10 @@ const MainLayout = ({ children, isUnderConstruction = false }: Props) => {
   // TODO: Context will be here for variant style, also for light / dark mode
   return (
     <main className={`${styles.layout} ${isHome ? styles.home : ''}`}>
-      <Header className={styles.header} />
-      <Menu className={styles.menu} />
+      <Header isHome={isHome} />
+      <Menu />
       {children}
-      {!isHome ? <Footer /> : null}
+      {!isHome && <Footer />}
     </main>
   )
 }
