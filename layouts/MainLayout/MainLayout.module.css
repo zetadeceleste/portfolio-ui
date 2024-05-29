@@ -6,26 +6,10 @@
   &.home {
     grid-template-rows: 1fr;
   }
-
-  .header {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
 }
 
 @media (width >= 1024px) {
   .layout {
     grid-template-rows: var(--header-height) 1fr auto;
-
-    .header {
-      display: block;
-    }
-
-    .menu {
-      display: none;
-    }
   }
 }

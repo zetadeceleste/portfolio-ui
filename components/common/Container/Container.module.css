@@ -2,11 +2,14 @@
   background-color: var(--color-background);
   color: var(--color-text);
   max-height: 100vh;
-  overflow: scroll;
 
   &.variant {
     background-color: var(--color-background-variant);
     color: var(--color-text-variant);
+  }
+
+  &.scroll {
+    overflow-y: scroll;
   }
 }
 

@@ -1,0 +1,9 @@
+.header {
+  display: block;
+}
+
+@media (width >= 1024px) {
+  .header {
+    display: none;
+  }
+}

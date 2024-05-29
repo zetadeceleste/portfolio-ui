@@ -11,12 +11,11 @@ import { WEBSITE_PAGES } from '@/constants/websitePages'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
 interface Props {
-  className?: string
+  isHome?: boolean
 }
-const Header = ({ className }: Props) => {
+const Header = ({ isHome = false }: Props) => {
   const [showHeader, setShowHeader] = useState(false)
   const pathname = usePathname()
-  const isHome = pathname === pagesPath.HOME
   const variant = pathname === pagesPath.WORK_EXPERIENCE
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const Header = ({ className }: Props) => {
   })
 
   return (
-    <header className={`${styles.header} ${classNameListHeader} ${className}`}>
+    <header className={`${styles.header} ${classNameListHeader}`}>
       <FlexWrapper
         flexDirection="row"
         alignItems="center"
