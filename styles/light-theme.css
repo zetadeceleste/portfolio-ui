@@ -1,0 +1,35 @@
+body .light-theme {
+  /* Principal Colors */
+  --color-accent: #000;
+  --color-accent-hover: #515151;
+  --color-neutral-dark-100: #201f1f;
+  --color-neutral-dark-200: #333;
+  --color-neutral-grey-100: #74716d;
+  --color-neutral-grey-200: #9a9999;
+  --color-neutral-light: #fafafa;
+  --color-star: #c34042;
+  --color-star-light: #af6b62;
+  --color-star-light-hover: #c7989b;
+
+  /* Second Tier Colors */
+  --color-background: var(--color-neutral-light);
+  --color-background-variant: var(--color-neutral-dark-100);
+  --color-border: var(--color-neutral-dark-200);
+  --color-border-variant: var(--color-neutral-light);
+  --color-headline: var(--color-star);
+  --color-headline-variant: var(--color-star-light);
+  --color-highlighted: var(--color-neutral-dark-100);
+  --color-highlighted-variant: var(--color-neutral-light);
+  --color-icon: var(--color-neutral-dark-200);
+  --color-icon-variant: var(--color-neutral-light);
+  --color-icon-background: var(--color-neutral-grey-200);
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+  --color-link-variant: var(--color-star-light);
+  --color-link-variant-hover: var(--color-star-light-hover);
+  --color-text: var(--color-neutral-dark-200);
+  --color-text-variant: var(--color-neutral-light);
+  --color-text-small: var(--color-neutral-grey-100);
+  --color-text-small-variant: var(--color-neutral-grey-200);
+  --color-text-star: var(--color-star);
+}

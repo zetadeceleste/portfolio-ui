@@ -3,7 +3,7 @@ import DynamicHead from '@/components/common/DynamicHead'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
 import List from '@/components/common/List'
-import { Page } from '@/constants/pages'
+import { Page } from '@/types'
 
 const AdditionalInformationPage = () => (
   <>

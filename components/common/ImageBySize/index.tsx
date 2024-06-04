@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react'
 
 import styles from './ImageBySize.module.css'
 
-import { ImageSet } from '@/types'
+import { ImageSetType } from '@/types'
 import { useWindowSize } from '@/utils/window'
 
 interface Props {
-  images: ImageSet
+  images: ImageSetType
   className?: string
 }
 

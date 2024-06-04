@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { ICON_DESCRIPTION_LIST } from '@/constants/iconDescriptionList'
+import { useTheme } from '@/context/ThemeContext'
 import { IconName } from '@/types'
 
 interface Props {
@@ -10,11 +11,11 @@ interface Props {
 
 const Icon = ({ name, variant }: Props) => {
   const description = ICON_DESCRIPTION_LIST[name]
-  const iconName = variant ? `${name}-variant` : name
+  const { theme } = useTheme()
 
   return (
     <Image
-      src={`/images/icons/${iconName}.svg`}
+      src={`/images/icons/${theme}/${name}${variant ? '-variant' : ''}.svg`}
       width={32}
       height={32}
       alt={description}

@@ -1,5 +1,6 @@
 import styles from './Headline.module.css'
 
+import { useTheme } from '@/context/ThemeContext'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
 interface Props {
@@ -16,9 +17,10 @@ const Headline = ({
   bigTitles = false,
   center = false,
   highlighted = false,
-  variant = false,
   subtitle = '',
 }: Props) => {
+  const { variant } = useTheme()
+
   const classNameList = buildBooleanClassNameList(styles, {
     center,
     highlighted,

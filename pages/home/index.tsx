@@ -5,8 +5,8 @@ import DynamicHead from '@/components/common/DynamicHead'
 import FlexWrapper from '@/components/common/FlexWrapper'
 import Headline from '@/components/common/Headline'
 import ImageBySize from '@/components/common/ImageBySize'
-import { HOME_PAGE_IMAGES } from '@/constants/imagePaths'
-import { Page } from '@/constants/pages'
+import { HOME_PAGE_IMAGES } from '@/constants/imagePathList'
+import { Page } from '@/types'
 
 const HomePage = () => (
   <>
@@ -17,7 +17,8 @@ const HomePage = () => (
         <Headline
           title={
             <>
-              port <br />
+              port
+              <br />
               folio
             </>
           }
