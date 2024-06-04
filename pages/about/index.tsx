@@ -5,6 +5,7 @@ import DynamicHead from '@/components/DynamicHead'
 import FlexWrapper from '@/components/FlexWrapper'
 import Headline from '@/components/Headline'
 import SocialLinks from '@/components/SocialLinks'
+import Tooltip from '@/components/Tooltip'
 import { Page } from '@/types'
 
 const AboutPage = () => (
@@ -17,12 +18,7 @@ const AboutPage = () => (
           <p>
             I´m <strong className={styles.name}>Celes</strong>, a developer
             focused in <strong>Growth Engineering</strong>{' '}
-            <span
-              className={styles['on-purpose']}
-              title='yup, the "&&" is totally on purpose'
-            >
-              &&
-            </span>{' '}
+            <Tooltip text="yup, the '&&' is totally on purpose">&&</Tooltip>{' '}
             <strong>Frontend Development</strong>.
           </p>
           <p>

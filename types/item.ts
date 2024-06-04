@@ -6,4 +6,5 @@ export type ItemType = {
   label?: string
   iconName?: IconName
   variant?: boolean
+  copy?: boolean
 }

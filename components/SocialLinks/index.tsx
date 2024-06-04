@@ -1,28 +1,7 @@
 import List from '../List'
 
-const SocialLinks = () => (
-  <List
-    data={[
-      {
-        text: 'zdceleste@gmail.com',
-        iconName: 'mail',
-      },
-      {
-        text: 'github.com/zetadeceleste',
-        link: 'https://github.com/zetadeceleste',
-        iconName: 'github',
-      },
-      {
-        text: 'linkedin.com/in/zetadeceleste',
-        link: 'https://www.linkedin.com/in/zetadeceleste/',
-        iconName: 'linkedin',
-      },
-      {
-        text: 'Get my resume!',
-        link: '/assets/celesteZapataResume.pdf',
-      },
-    ]}
-  />
-)
+import { SOCIAL_LINK_LIST } from '@/constants/socialLinkList'
+
+const SocialLinks = () => <List data={SOCIAL_LINK_LIST} />
 
 export default SocialLinks

@@ -4,7 +4,7 @@ body .main-theme {
   --color-accent-hover: #515151;
   --color-neutral-dark-100: #201f1f;
   --color-neutral-dark-200: #333;
-  --color-neutral-green: #00a86b;
+  --color-neutral-dark-300: #331919;
   --color-neutral-grey-100: #74716d;
   --color-neutral-grey-200: #9a9999;
   --color-neutral-grey-300: #bbb;
@@ -36,7 +36,9 @@ body .main-theme {
   --color-switch-on: var(--color-neutral-grey-200);
   --color-text: var(--color-neutral-dark-200);
   --color-text-variant: var(--color-neutral-light-100);
-  --color-text-small: var(--color-neutral-grey-100);
-  --color-text-small-variant: var(--color-neutral-light-100);
+  --color-text-small: var(--color-neutral-grey-200);
+  --color-text-small-variant: var(--color-neutral-grey-300);
   --color-text-star: var(--color-star);
+  --color-tooltip-background: var(--color-neutral-dark-200);
+  --color-tooltip-text: var(--color-neutral-light-100);
 }

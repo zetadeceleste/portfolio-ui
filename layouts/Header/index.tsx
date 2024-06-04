@@ -2,11 +2,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
+import ThemeSwitch from '../ThemeSwitch'
+
 import styles from './Header.module.css'
 
 import FlexWrapper from '@/components/FlexWrapper'
 import Icon from '@/components/Icon'
-import ThemeSwitch from '@/components/ThemeSwitch'
 import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
 import { useTheme } from '@/context/ThemeContext'
 import { buildBooleanClassNameList } from '@/utils/styles'
