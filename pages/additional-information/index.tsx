@@ -1,8 +1,8 @@
-import Container from '@/components/common/Container'
-import DynamicHead from '@/components/common/DynamicHead'
-import FlexWrapper from '@/components/common/FlexWrapper'
-import Headline from '@/components/common/Headline'
-import List from '@/components/common/List'
+import Container from '@/components/Container'
+import DynamicHead from '@/components/DynamicHead'
+import FlexWrapper from '@/components/FlexWrapper'
+import Headline from '@/components/Headline'
+import List from '@/components/List'
 import { Page } from '@/types'
 
 const AdditionalInformationPage = () => (

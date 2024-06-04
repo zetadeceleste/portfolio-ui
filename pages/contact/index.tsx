@@ -1,8 +1,8 @@
-import Container from '@/components/common/Container'
-import DynamicHead from '@/components/common/DynamicHead'
-import FlexWrapper from '@/components/common/FlexWrapper'
-import Headline from '@/components/common/Headline'
-import SocialLinks from '@/components/common/SocialLinks'
+import Container from '@/components/Container'
+import DynamicHead from '@/components/DynamicHead'
+import FlexWrapper from '@/components/FlexWrapper'
+import Headline from '@/components/Headline'
+import SocialLinks from '@/components/SocialLinks'
 import { Page } from '@/types'
 
 const ContactPage = () => (

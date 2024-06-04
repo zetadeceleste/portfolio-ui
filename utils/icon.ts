@@ -10,7 +10,7 @@ export const getIconVariant = (
 
   if (theme === Theme.DARK_THEME) {
     return variant ? '-black' : '-white'
-  } else if (theme === Theme.LIGHT_THEME) {
+  } else if (theme === Theme.MAIN_THEME) {
     return variant ? '-white' : '-black'
   }
 

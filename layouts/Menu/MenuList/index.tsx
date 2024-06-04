@@ -2,6 +2,8 @@ import Link from 'next/link'
 
 import styles from './MenuList.module.css'
 
+import FlexWrapper from '@/components/FlexWrapper'
+import ThemeSwitch from '@/components/ThemeSwitch'
 import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
 
 interface Props {
@@ -29,6 +31,9 @@ const MenuList = ({ onClick, menuVisible }: Props) => (
         },
       )}
     </ul>
+    <FlexWrapper className={styles.wrapper}>
+      <ThemeSwitch showText variant />
+    </FlexWrapper>
   </nav>
 )
 

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-import Loader from '@/components/common/Loader'
+import Loader from '@/components/Loader'
 import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
 
 interface Props {

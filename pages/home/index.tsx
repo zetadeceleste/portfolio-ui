@@ -1,10 +1,10 @@
 import styles from './home.module.css'
 
-import Container from '@/components/common/Container'
-import DynamicHead from '@/components/common/DynamicHead'
-import FlexWrapper from '@/components/common/FlexWrapper'
-import Headline from '@/components/common/Headline'
-import ImageBySize from '@/components/common/ImageBySize'
+import Container from '@/components/Container'
+import DynamicHead from '@/components/DynamicHead'
+import FlexWrapper from '@/components/FlexWrapper'
+import Headline from '@/components/Headline'
+import ImageBySize from '@/components/ImageBySize'
 import { HOME_PAGE_IMAGES } from '@/constants/imagePathList'
 import { Page } from '@/types'
 

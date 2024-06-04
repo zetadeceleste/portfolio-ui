@@ -1,6 +1,6 @@
 import getConfig from 'next/config'
 
-import FlexWrapper from '../../components/common/FlexWrapper'
+import FlexWrapper from '../../components/FlexWrapper'
 
 import styles from './Footer.module.css'
 

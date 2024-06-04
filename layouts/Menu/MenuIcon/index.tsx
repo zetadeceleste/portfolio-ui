@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 
-import FlexWrapper from '../../../components/common/FlexWrapper'
-
 import HamburgerIcon from './HamburgerIcon'
 import styles from './MenuIcon.module.css'
 
@@ -22,11 +20,7 @@ const MenuIcon = ({ onClick, menuVisible }: Props) => {
   }, [])
 
   return (
-    <FlexWrapper
-      className={`${styles.wrapper} ${showIcon ? styles.show : ''}`}
-      alignItems="center"
-      justifyContent="center"
-    >
+    <div className={`${styles['menu-icon']} ${showIcon ? styles.show : ''}`}>
       <button
         className={styles.button}
         onClick={onClick}
@@ -36,7 +30,7 @@ const MenuIcon = ({ onClick, menuVisible }: Props) => {
       >
         <HamburgerIcon active={menuVisible} />
       </button>
-    </FlexWrapper>
+    </div>
   )
 }
 

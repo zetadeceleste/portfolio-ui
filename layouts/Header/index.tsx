@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react'
 
 import styles from './Header.module.css'
 
-import FlexWrapper from '@/components/common/FlexWrapper'
-import Icon from '@/components/common/Icon'
+import FlexWrapper from '@/components/FlexWrapper'
+import Icon from '@/components/Icon'
+import ThemeSwitch from '@/components/ThemeSwitch'
 import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
 import { useTheme } from '@/context/ThemeContext'
 import { buildBooleanClassNameList } from '@/utils/styles'
@@ -37,6 +38,7 @@ const Header = ({ isHome = false }: Props) => {
         flexDirection="row"
         alignItems="center"
         justifyContent="space-between"
+        gap="large"
         className={`${styles.wrapper} ${showHeader ? styles.show : ''}`}
       >
         {!isHome && (
@@ -75,6 +77,7 @@ const Header = ({ isHome = false }: Props) => {
             )}
           </ul>
         </nav>
+        <ThemeSwitch />
       </FlexWrapper>
     </header>
   )

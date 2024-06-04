@@ -14,11 +14,16 @@ a.variant {
   }
 }
 
-span {
+span,
+small {
   color: var(--color-text-small);
 }
 
 span.variant {
+  color: var(--color-text-small-variant);
+}
+
+small.variant {
   color: var(--color-text-small-variant);
 }
 

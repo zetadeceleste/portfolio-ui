@@ -1,6 +1,6 @@
 export enum Theme {
-  LIGHT_THEME = 'light-theme',
+  MAIN_THEME = 'main-theme',
   DARK_THEME = 'dark-theme',
 }
 
-export type ThemeType = 'light-theme' | 'dark-theme'
+export type ThemeType = 'main-theme' | 'dark-theme'

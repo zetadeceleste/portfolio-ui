@@ -18,7 +18,7 @@ interface ThemeProviderProps {
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [variant, setVariant] = useState(false)
-  const [theme, setTheme] = useState<ThemeType>(Theme.LIGHT_THEME)
+  const [theme, setTheme] = useState<ThemeType>(Theme.MAIN_THEME)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -29,11 +29,11 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')
 
     // Set initial theme based on user preference
-    setTheme(prefersDarkScheme.matches ? Theme.DARK_THEME : Theme.LIGHT_THEME)
+    setTheme(prefersDarkScheme.matches ? Theme.DARK_THEME : Theme.MAIN_THEME)
 
     // Update theme if preference changes
     const handleChange = (e: MediaQueryListEvent) => {
-      setTheme(e.matches ? Theme.DARK_THEME : Theme.LIGHT_THEME)
+      setTheme(e.matches ? Theme.DARK_THEME : Theme.MAIN_THEME)
     }
 
     prefersDarkScheme.addEventListener('change', handleChange)
@@ -44,7 +44,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   const toggleTheme = () => {
     setTheme((prevTheme) =>
-      prevTheme === Theme.LIGHT_THEME ? Theme.DARK_THEME : Theme.LIGHT_THEME,
+      prevTheme === Theme.MAIN_THEME ? Theme.DARK_THEME : Theme.MAIN_THEME,
     )
   }
 
