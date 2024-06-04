@@ -1,15 +1,15 @@
 import ExperienceWrapper from './ExperienceWrapper'
 
-import Container from '@/components/common/Container'
-import DynamicHead from '@/components/common/DynamicHead'
-import FlexWrapper from '@/components/common/FlexWrapper'
-import Headline from '@/components/common/Headline'
-import { Page } from '@/constants/pages'
+import Container from '@/components/Container'
+import DynamicHead from '@/components/DynamicHead'
+import FlexWrapper from '@/components/FlexWrapper'
+import Headline from '@/components/Headline'
+import { Page } from '@/types'
 
 const WorkExperiencePage = () => (
   <>
     <DynamicHead page={Page.WORK_EXPERIENCE} />
-    <Container variant scroll>
+    <Container scroll>
       <FlexWrapper gap="large">
         <Headline
           title={
@@ -18,7 +18,6 @@ const WorkExperiencePage = () => (
             </>
           }
           highlighted
-          variant
         />
         <ExperienceWrapper />
       </FlexWrapper>

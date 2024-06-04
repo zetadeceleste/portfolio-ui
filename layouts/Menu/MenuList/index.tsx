@@ -2,7 +2,9 @@ import Link from 'next/link'
 
 import styles from './MenuList.module.css'
 
-import { WEBSITE_PAGES } from '@/constants/websitePages'
+import FlexWrapper from '@/components/FlexWrapper'
+import ThemeSwitch from '@/components/ThemeSwitch'
+import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
 
 interface Props {
   onClick: () => void
@@ -12,17 +14,26 @@ interface Props {
 const MenuList = ({ onClick, menuVisible }: Props) => (
   <nav className={`${styles.menu} ${menuVisible ? styles.show : styles.hide}`}>
     <ul className={styles.list}>
-      {WEBSITE_PAGES.map(({ textTag, link }, index) => (
-        <li className={styles.item} key={index}>
-          <Link href={link} passHref legacyBehavior>
-            <a className="variant" onClick={onClick}>
-              <span className="number">0{index + 1}</span>
-              <p className="big-text">{textTag}</p>
-            </a>
-          </Link>
-        </li>
-      ))}
+      {Object.values(PAGE_INFO_LIST).map(
+        ({ path, text, hideOnMenu }, index) => {
+          if (hideOnMenu) return null
+
+          return (
+            <li className={styles.item} key={index}>
+              <Link href={path} passHref legacyBehavior>
+                <a className="variant" onClick={onClick}>
+                  <span className="number">0{index + 1}</span>
+                  <p className="big-text">{text}</p>
+                </a>
+              </Link>
+            </li>
+          )
+        },
+      )}
     </ul>
+    <FlexWrapper className={styles.wrapper}>
+      <ThemeSwitch showText variant />
+    </FlexWrapper>
   </nav>
 )
 

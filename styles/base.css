@@ -14,11 +14,16 @@ a.variant {
   }
 }
 
-span {
+span,
+small {
   color: var(--color-text-small);
 }
 
 span.variant {
+  color: var(--color-text-small-variant);
+}
+
+small.variant {
   color: var(--color-text-small-variant);
 }
 
@@ -30,4 +35,9 @@ hr {
   border: 0;
   border-top: 1px solid var(--color-border);
   margin: 0;
+}
+
+::-webkit-scrollbar {
+  scrollbar-color: inherit;
+  width: 6px;
 }

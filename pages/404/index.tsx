@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-import Loader from '@/components/common/Loader'
-import { pagesPath } from '@/constants/pages'
+import Loader from '@/components/Loader'
+import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
 
 interface Props {
   isUnderConstruction?: boolean
@@ -13,9 +13,9 @@ const Custom404Page = ({ isUnderConstruction }: Props) => {
 
   useEffect(() => {
     if (isUnderConstruction) {
-      router.push(pagesPath.SITE_UNDER_CONSTRUCTION)
+      router.push(PAGE_INFO_LIST.SITE_UNDER_CONSTRUCTION.path)
     } else {
-      router.push(pagesPath.HOME)
+      router.push(PAGE_INFO_LIST.HOME.path)
     }
   }, [router])
 

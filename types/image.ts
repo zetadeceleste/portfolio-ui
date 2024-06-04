@@ -1,13 +1,13 @@
-export type ImageSet = {
+export type ImageSetType = {
   name: string
   description: string
   sizes?: string
-  mobile?: Image
-  tablet?: Image
-  desktop?: Image
+  mobile?: ImageType
+  tablet?: ImageType
+  desktop?: ImageType
 }
 
-type Image = {
+type ImageType = {
   height?: number
   width: number
   format: string

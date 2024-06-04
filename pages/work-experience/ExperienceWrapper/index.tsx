@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import ExperienceItem from './ExperienceItem'
 import styles from './ExperienceWrapper.module.css'
 
-import Loader from '@/components/common/Loader'
+import Loader from '@/components/Loader'
 import { EXPERIENCE_LIST } from '@/constants/experienceList'
 
 const ExperienceWrapper = () => {

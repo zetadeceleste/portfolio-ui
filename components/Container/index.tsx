@@ -1,9 +1,9 @@
 import styles from './Container.module.css'
 
+import { useTheme } from '@/context/ThemeContext'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
 interface Props {
-  variant?: boolean
   full?: boolean
   scroll?: boolean
   className?: string
@@ -11,12 +11,13 @@ interface Props {
 }
 
 const Container = ({
-  variant = false,
   full = false,
   scroll = false,
   className = '',
   children,
 }: Props) => {
+  const { variant } = useTheme()
+
   const classNameList = buildBooleanClassNameList(styles, {
     variant,
     scroll,

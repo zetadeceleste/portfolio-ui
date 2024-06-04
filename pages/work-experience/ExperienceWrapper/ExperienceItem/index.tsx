@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 import styles from './ExperienceItem.module.css'
 
-import FlexWrapper from '@/components/common/FlexWrapper'
-import List from '@/components/common/List'
+import FlexWrapper from '@/components/FlexWrapper'
+import List from '@/components/List'
 import { ExperienceType } from '@/types'
 
 interface Props {

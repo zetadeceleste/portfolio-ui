@@ -1,6 +1,6 @@
-import { ImageSet } from '@/types'
+import { ImageSetType } from '@/types'
 
-export const HOME_PAGE_IMAGES: ImageSet = {
+export const HOME_PAGE_IMAGES: ImageSetType = {
   name: 'home-page',
   description: 'Ilustration of a developer girl and her dog Luna.',
   sizes: '(max-width: 768px) 50vw, 100vw',

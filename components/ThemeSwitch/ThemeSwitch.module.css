@@ -1,0 +1,47 @@
+.wrapper {
+  flex-shrink: 0;
+}
+
+.text {
+  text-transform: uppercase;
+}
+
+.wrapper input {
+  display: none;
+}
+
+.label {
+  background: var(--color-switch-off);
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  display: block;
+  height: 18px;
+  position: relative;
+  width: 34px;
+}
+
+.label::after {
+  background: var(--color-switch);
+  border: 0.1px solid var(--color-switch-border);
+  border-radius: 14px;
+  content: '';
+  height: 14px;
+  inset: 2px 0 0 2px;
+  position: absolute;
+  transition: 0.3s;
+  width: 14px;
+}
+
+.wrapper input:checked + .label {
+  background: var(--color-switch-on);
+}
+
+.label:active::after {
+  width: 20px;
+}
+
+.wrapper input:checked + .label::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}

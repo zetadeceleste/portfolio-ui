@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Page } from '@/constants/pages'
+import { Page } from '@/types'
 import { getHeadByPage } from '@/utils/head'
 
 interface Props {
@@ -9,13 +9,14 @@ interface Props {
 
 const DynamicHead = ({ page }: Props) => {
   const { title, pageUrl } = getHeadByPage(page)
+  const isWorkExperience = page === Page.WORK_EXPERIENCE
 
   return (
     <Head>
       <title>{title}</title>
       <link rel="canonical" href={pageUrl} />
       <meta property="og:url" content={pageUrl} />
-      {page === Page.WORK_EXPERIENCE && (
+      {isWorkExperience && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -23,7 +24,7 @@ const DynamicHead = ({ page }: Props) => {
               '@context': 'http://schema.org',
               '@type': 'CollectionPage',
               name: 'Work experience',
-              url: { pageUrl },
+              url: pageUrl,
               about: 'A collection of job experiences of Celeste Zapata',
               author: {
                 '@type': 'Person',

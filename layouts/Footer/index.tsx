@@ -1,18 +1,16 @@
 import getConfig from 'next/config'
-import { usePathname } from 'next/navigation'
 
-import FlexWrapper from '../../components/common/FlexWrapper'
+import FlexWrapper from '../../components/FlexWrapper'
 
 import styles from './Footer.module.css'
 
-import { pagesPath } from '@/constants/pages'
+import { useTheme } from '@/context/ThemeContext'
 
 const { publicRuntimeConfig } = getConfig()
 
 const Footer = () => {
+  const { variant } = useTheme()
   const currentYear = new Date().getFullYear()
-  const pathname = usePathname()
-  const variant = pathname === pagesPath.WORK_EXPERIENCE
 
   return (
     <footer className={`${styles.footer} ${variant ? styles.variant : ''}`}>
