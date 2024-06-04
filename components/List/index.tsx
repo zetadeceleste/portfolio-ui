@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import CopyText from '../CopyText'
 import FlexWrapper from '../FlexWrapper'
 
 import Item from './Item'
@@ -17,28 +18,42 @@ interface Props {
 
 const List = ({ data, title, rounded = false, divided = false }: Props) => {
   const classNameList = buildBooleanClassNameList(styles, {
-    divided,
     rounded,
+    divided,
   })
+
+  const renderListItem = (item: ItemType) => {
+    const itemContent = (
+      <Item text={item.text} label={item.label} iconName={item.iconName} />
+    )
+
+    if (item.link) {
+      return (
+        <Link
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={item.text}
+        >
+          {itemContent}
+        </Link>
+      )
+    }
+
+    if (item.copy) {
+      return <CopyText textToCopy={item.text}>{itemContent}</CopyText>
+    }
+
+    return itemContent
+  }
 
   return (
     <FlexWrapper gap="medium">
       {title && <h3>{title}</h3>}
       <ul className={`${styles.list} ${classNameList}`}>
-        {data.map(({ text, link, label, iconName }, index) => (
+        {data.map((item, index) => (
           <li className={styles.item} key={index}>
-            {link ? (
-              <Link
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={text}
-              >
-                <Item text={text} iconName={iconName} />
-              </Link>
-            ) : (
-              <Item text={text} label={label} iconName={iconName} />
-            )}
+            {renderListItem(item)}
           </li>
         ))}
       </ul>

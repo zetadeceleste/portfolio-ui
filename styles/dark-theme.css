@@ -5,7 +5,6 @@ body .dark-theme {
   --color-neutral-dark-100: #1c1818;
   --color-neutral-dark-200: #2e2e2e;
   --color-neutral-dark-300: #331919;
-  --color-neutral-green: #00a86b;
   --color-neutral-grey-100: #87847f;
   --color-neutral-grey-200: #9a9999;
   --color-neutral-grey-300: #e2e2e2;
@@ -40,4 +39,6 @@ body .dark-theme {
   --color-text-small: var(--color-neutral-grey-300);
   --color-text-small-variant: var(--color-neutral-light-100);
   --color-text-star: var(--color-star-light);
+  --color-tooltip-background: var(--color-neutral-dark-300);
+  --color-tooltip-text: var(--color-neutral-light-100);
 }

@@ -7,3 +7,13 @@ export enum Page {
   SKILLS = 'SKILLS',
   WORK_EXPERIENCE = 'WORK_EXPERIENCE',
 }
+
+export type PageInfoType = {
+  [key in Page]: {
+    path: string
+    title: string
+    text?: string
+    hideOnHeader?: boolean
+    hideOnMenu?: boolean
+  }
+}

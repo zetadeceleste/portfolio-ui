@@ -1,0 +1,8 @@
+.wrapper {
+  color: var(--color-link);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}

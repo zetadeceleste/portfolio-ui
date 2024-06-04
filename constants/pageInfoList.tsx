@@ -1,17 +1,7 @@
-import { Page } from '@/types/'
+import { Page, PageInfoType } from '@/types/'
 
 export const WEBSITE_URL = 'https://zetadeceleste.dev'
 export const COMMON_TITLE = 'Celeste Zapata | '
-
-type PageInfoType = {
-  [key in Page]: {
-    path: string
-    title: string
-    text?: string
-    hideOnHeader?: boolean
-    hideOnMenu?: boolean
-  }
-}
 
 export const PAGE_INFO_LIST: PageInfoType = {
   [Page.HOME]: {

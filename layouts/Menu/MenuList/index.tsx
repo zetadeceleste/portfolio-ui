@@ -3,8 +3,8 @@ import Link from 'next/link'
 import styles from './MenuList.module.css'
 
 import FlexWrapper from '@/components/FlexWrapper'
-import ThemeSwitch from '@/components/ThemeSwitch'
 import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
+import ThemeSwitch from '@/layouts/ThemeSwitch'
 
 interface Props {
   onClick: () => void
