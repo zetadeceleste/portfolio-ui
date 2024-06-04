@@ -21,7 +21,7 @@ body .dark-theme {
   --color-border: var(--color-neutral-light-100);
   --color-border-variant: var(--color-neutral-light-100);
   --color-headline: var(--color-star);
-  --color-headline-variant: var(--color-neutral-light-100);
+  --color-headline-variant: var(--color-neutral-light-200);
   --color-highlighted: var(--color-neutral-light-100);
   --color-highlighted-variant: var(--color-neutral-grey-100);
   --color-icon: var(--color-neutral-dark-100);
@@ -37,7 +37,7 @@ body .dark-theme {
   --color-switch-on: var(--color-neutral-grey-200);
   --color-text: var(--color-neutral-light-100);
   --color-text-variant: var(--color-neutral-light-200);
-  --color-text-small: var(--color-neutral-grey-100);
-  --color-text-small-variant: var(--color-neutral-light-200);
+  --color-text-small: var(--color-neutral-grey-300);
+  --color-text-small-variant: var(--color-neutral-light-100);
   --color-text-star: var(--color-star-light);
 }

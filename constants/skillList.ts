@@ -1,6 +1,6 @@
 import { ItemType } from '@/types'
 
-export const SKILL_LIST: ItemType[] = [
+export const TECH_SKILL_LIST: ItemType[] = [
   { text: 'React.js' },
   { text: 'Next.js' },
   { text: 'TypeScript' },
@@ -15,6 +15,9 @@ export const SKILL_LIST: ItemType[] = [
   { text: 'Responsive web design' },
   { text: 'Digital marketing tools integration' },
   { text: 'WCAG 3' },
+]
+
+export const SOFT_SKILL_LIST: ItemType[] = [
   { text: 'Teamwork' },
   { text: 'Proactivity' },
   { text: 'Continuous learning' },
