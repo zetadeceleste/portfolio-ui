@@ -24,8 +24,8 @@ body .dark-theme {
   --color-headline-variant: var(--color-neutral-light-100);
   --color-highlighted: var(--color-neutral-light-100);
   --color-highlighted-variant: var(--color-neutral-grey-100);
-  --color-icon: var(--color-neutral-light-100);
-  --color-icon-variant: var(--color-neutral-dark-200);
+  --color-icon: var(--color-neutral-dark-100);
+  --color-icon-variant: var(--color-neutral-light-100);
   --color-icon-background: var(--color-neutral-grey-100);
   --color-link: var(--color-accent);
   --color-link-hover: var(--color-accent-hover);
@@ -36,8 +36,8 @@ body .dark-theme {
   --color-switch-off: var(--color-neutral-light-100);
   --color-switch-on: var(--color-neutral-grey-200);
   --color-text: var(--color-neutral-light-100);
-  --color-text-variant: var(--color-neutral-light-100);
-  --color-text-small: var(--color-neutral-light-100);
+  --color-text-variant: var(--color-neutral-light-200);
+  --color-text-small: var(--color-neutral-grey-100);
   --color-text-small-variant: var(--color-neutral-light-200);
   --color-text-star: var(--color-star-light);
 }

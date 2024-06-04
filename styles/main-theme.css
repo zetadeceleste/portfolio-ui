@@ -36,7 +36,7 @@ body .main-theme {
   --color-switch-on: var(--color-neutral-grey-200);
   --color-text: var(--color-neutral-dark-200);
   --color-text-variant: var(--color-neutral-light-100);
-  --color-text-small: var(--color-neutral-grey-100);
-  --color-text-small-variant: var(--color-neutral-light-100);
+  --color-text-small: var(--color-neutral-grey-200);
+  --color-text-small-variant: var(--color-neutral-grey-300);
   --color-text-star: var(--color-star);
 }
