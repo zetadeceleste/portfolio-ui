@@ -4,7 +4,7 @@ import Header from '../Header'
 
 import styles from './MainLayout.module.css'
 
-import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
+import { PAGE_INFO_LIST } from '@/constants/pageInfo'
 import { useTheme } from '@/context/ThemeContext'
 import Footer from '@/layouts/Footer'
 import Menu from '@/layouts/Menu'

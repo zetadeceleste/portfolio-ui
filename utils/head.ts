@@ -1,8 +1,4 @@
-import {
-  WEBSITE_URL,
-  COMMON_TITLE,
-  PAGE_INFO_LIST,
-} from '@/constants/pageInfoList'
+import { WEBSITE_URL, COMMON_TITLE, PAGE_INFO_LIST } from '@/constants/pageInfo'
 import { Page } from '@/types'
 
 interface HeadInfo {

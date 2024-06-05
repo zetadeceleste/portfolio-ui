@@ -8,7 +8,7 @@ import styles from './Header.module.css'
 
 import FlexWrapper from '@/components/FlexWrapper'
 import Icon from '@/components/Icon'
-import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
+import { PAGE_INFO_LIST } from '@/constants/pageInfo'
 import { useTheme } from '@/context/ThemeContext'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
