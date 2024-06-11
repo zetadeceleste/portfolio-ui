@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './MenuList.module.css'
 
 import FlexWrapper from '@/components/FlexWrapper'
-import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
+import { PAGE_INFO_LIST } from '@/constants/pageInfo'
 import ThemeSwitch from '@/layouts/ThemeSwitch'
 
 interface Props {

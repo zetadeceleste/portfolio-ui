@@ -1,7 +1,7 @@
 import { usePathname } from 'next/navigation'
 import React, { createContext, useContext, useState, useEffect } from 'react'
 
-import { PAGE_INFO_LIST } from '@/constants/pageInfoList'
+import { PAGE_INFO_LIST } from '@/constants/pageInfo'
 import { Theme, ThemeType } from '@/types'
 
 interface ThemeContextProps {

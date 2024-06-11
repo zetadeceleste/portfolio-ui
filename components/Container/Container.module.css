@@ -1,7 +1,6 @@
 .container {
   background-color: var(--color-background);
   color: var(--color-text);
-  max-height: 100vh;
 
   &.variant {
     background-color: var(--color-background-variant);
@@ -9,6 +8,7 @@
   }
 
   &.scroll {
+    max-height: 100vh;
     overflow-y: scroll;
   }
 }
