@@ -1,4 +1,4 @@
-import { WEBSITE_URL, COMMON_TITLE, PAGE_INFO_LIST } from '@/constants/pageInfo'
+import { WEBSITE_URL, PAGE_INFO_LIST, AUTHOR } from '@/constants/pageInfo'
 import { Page } from '@/types'
 
 interface HeadInfo {
@@ -7,7 +7,7 @@ interface HeadInfo {
 }
 
 export const getHeadByPage = (page: Page): HeadInfo => {
-  const title = `${COMMON_TITLE}${PAGE_INFO_LIST[page].title}`
+  const title = `${AUTHOR} | ${PAGE_INFO_LIST[page].title}`
   const pageUrl = `${WEBSITE_URL}${PAGE_INFO_LIST[page].path}`
 
   return { title, pageUrl }

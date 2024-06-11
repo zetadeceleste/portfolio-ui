@@ -1,18 +1,20 @@
 import React from 'react'
 
+import { WEBSITE_IMAGE } from '@/constants/imagePathList'
 import {
   AUTHOR,
-  KEYWORDS,
-  MAIN_DESCRIPTION,
-  PAGE_IMAGE_PATH,
-  TITLE,
+  WEBSITE_KEYWORDS,
+  WEBSITE_DESCRIPTION,
+  WEBSITE_TITLE,
+  AUTHOR_USERNAME,
+  AUTHOR_TWITTER,
 } from '@/constants/pageInfo'
 
 const MainMetaTags = () => (
   <>
-    <meta name="description" content={MAIN_DESCRIPTION} />
+    <meta name="description" content={WEBSITE_DESCRIPTION} />
     <meta name="author" content={AUTHOR} />
-    <meta name="keywords" content={KEYWORDS} />
+    <meta name="keywords" content={WEBSITE_KEYWORDS} />
     <meta name="robots" content="index, follow" />
     <meta name="google" content="notranslate" />
     <meta name="theme-color" content="#000000" />
@@ -22,18 +24,18 @@ const MainMetaTags = () => (
     <link rel="android-chrome-512x512" href="/android-chrome-512x512.png" />
     <link rel="manifest" href="/manifest.json" />
     {/* Open Graph tags */}
-    <meta property="og:description" content={MAIN_DESCRIPTION} />
+    <meta property="og:description" content={WEBSITE_DESCRIPTION} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={PAGE_IMAGE_PATH} />
+    <meta property="og:image" content={WEBSITE_IMAGE} />
     {/* Twitter Card tags */}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@zetadeceleste" />
-    <meta name="twitter:title" content={TITLE} />
-    <meta name="twitter:description" content={MAIN_DESCRIPTION} />
-    <meta name="twitter:image" content={PAGE_IMAGE_PATH} />
-    <meta name="twitter:creator" content="@zetadeceleste" />
-    <meta name="twitter:url" content="https://twitter.com/zetadeceleste" />
-    <meta name="twitter:domain" content="https://twitter.com/zetadeceleste" />
+    <meta name="twitter:site" content={`@${AUTHOR_USERNAME}`} />
+    <meta name="twitter:title" content={WEBSITE_TITLE} />
+    <meta name="twitter:description" content={WEBSITE_DESCRIPTION} />
+    <meta name="twitter:image" content={WEBSITE_IMAGE} />
+    <meta name="twitter:creator" content={`@${AUTHOR_USERNAME}`} />
+    <meta name="twitter:url" content={AUTHOR_TWITTER} />
+    <meta name="twitter:domain" content={AUTHOR_TWITTER} />
   </>
 )
 

@@ -4,6 +4,7 @@ import FlexWrapper from '../../components/FlexWrapper'
 
 import styles from './Footer.module.css'
 
+import { AUTHOR_ORGANIZATION, AUTHOR_USERNAME } from '@/constants/pageInfo'
 import { useTheme } from '@/context/ThemeContext'
 
 const { publicRuntimeConfig } = getConfig()
@@ -24,7 +25,7 @@ const Footer = () => {
           justifyContent="space-between"
         >
           <small>
-            Copyright © {currentYear} chikilabs. All rights reserved.
+            {currentYear} {AUTHOR_ORGANIZATION} | @{AUTHOR_USERNAME}
           </small>
           <small>v{publicRuntimeConfig.version}</small>
         </FlexWrapper>

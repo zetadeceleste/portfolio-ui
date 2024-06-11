@@ -1,8 +1,8 @@
-import { IconName, Theme } from '@/types'
+import { IconType, Theme } from '@/types'
 
 // TODO: Make this util function more generic
 export const getIconVariant = (
-  name: IconName,
+  name: IconType,
   theme: string,
   variant: boolean,
 ) => {

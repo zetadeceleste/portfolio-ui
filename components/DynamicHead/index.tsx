@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { AUTHOR } from '@/constants/pageInfo'
 import { Page } from '@/types'
 import { getHeadByPage } from '@/utils/head'
 
@@ -25,10 +26,10 @@ const DynamicHead = ({ page }: Props) => {
               '@type': 'CollectionPage',
               name: 'Work experience',
               url: pageUrl,
-              about: 'A collection of job experiences of Celeste Zapata',
+              about: `A collection of job experiences of ${AUTHOR}.`,
               author: {
                 '@type': 'Person',
-                name: 'Celeste Zapata',
+                name: AUTHOR,
               },
             }),
           }}

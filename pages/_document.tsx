@@ -3,6 +3,16 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import MainMetaTags from './mainMetaTags'
 
 import { googleTagManagerId } from '@/config'
+import {
+  AUTHOR_GITHUB,
+  AUTHOR_LINKEDIN,
+  AUTHOR_ORGANIZATION,
+  AUTHOR_TWITTER,
+  AUTHOR,
+  WEBSITE_SHORT_DESCRIPTION,
+  WEBSITE_URL,
+  AUTHOR_JOB_TITLE,
+} from '@/constants/pageInfo'
 
 class MyDocument extends Document {
   render() {
@@ -17,21 +27,16 @@ class MyDocument extends Document {
               __html: JSON.stringify({
                 '@context': 'http://schema.org',
                 '@type': 'Person',
-                name: 'Celeste Zapata',
-                description:
-                  'Developer focused in Growth Engineering & Frontend Development',
+                name: AUTHOR,
+                description: WEBSITE_SHORT_DESCRIPTION,
                 datePublished: '2024-02-19',
                 publisher: {
                   '@type': 'Organization',
-                  name: 'chikilabs',
+                  name: AUTHOR_ORGANIZATION,
                 },
-                jobTitle: 'Developer',
-                url: 'https://zetadeceleste.dev',
-                sameAs: [
-                  'https://twitter.com/zetadeceleste',
-                  'https://www.linkedin.com/in/zetadeceleste/',
-                  'https://github.com/zetadeceleste',
-                ],
+                jobTitle: AUTHOR_JOB_TITLE,
+                url: WEBSITE_URL,
+                sameAs: [AUTHOR_TWITTER, AUTHOR_LINKEDIN, AUTHOR_GITHUB],
               }),
             }}
           />

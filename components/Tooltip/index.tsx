@@ -19,14 +19,14 @@ const Tooltip = ({ children, text = '' }: Prop) => {
   }
 
   return (
-    <div
+    <span
       className={styles.wrapper}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {children}
       {showTooltip && <span className={styles.tooltip}>{text}</span>}
-    </div>
+    </span>
   )
 }
 

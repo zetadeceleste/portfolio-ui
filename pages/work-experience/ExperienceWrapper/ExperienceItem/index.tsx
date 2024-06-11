@@ -7,15 +7,11 @@ import List from '@/components/List'
 import { ExperienceType } from '@/types'
 
 interface Props {
-  order: number
-  total: number
   experience: ExperienceType
 }
 
 const ExperienceItem = ({ experience }: Props) => {
-  if (!experience) {
-    return null
-  }
+  if (!experience) return null
 
   const {
     role,
@@ -27,8 +23,8 @@ const ExperienceItem = ({ experience }: Props) => {
     jobType = '',
     dateTo = '',
     current = false,
-    accomplishments = [],
-    mainTechStack = [],
+    accomplishmentList = [],
+    mainTechList = [],
   } = experience
 
   return (
@@ -62,11 +58,11 @@ const ExperienceItem = ({ experience }: Props) => {
           </FlexWrapper>
         </FlexWrapper>
       </FlexWrapper>
-      {accomplishments.length > 0 && <List data={accomplishments} />}
-      {mainTechStack.length > 0 && (
+      {accomplishmentList?.length > 0 && <List data={accomplishmentList} />}
+      {mainTechList?.length > 0 && (
         <>
           <hr />
-          <List data={mainTechStack} rounded />
+          <List data={mainTechList} rounded />
         </>
       )}
     </FlexWrapper>

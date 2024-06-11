@@ -1,10 +1,10 @@
-import { IconName } from './icon'
+import { IconType } from './icon'
 
 export type ItemType = {
   text: string
   link?: string
   label?: string
-  iconName?: IconName
+  iconName?: IconType
   variant?: boolean
   copy?: boolean
 }

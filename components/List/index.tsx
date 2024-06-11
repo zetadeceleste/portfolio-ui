@@ -24,25 +24,24 @@ const List = ({ data, title, rounded = false, divided = false }: Props) => {
 
   const renderListItem = (item: ItemType) => {
     const itemContent = (
-      <Item text={item.text} label={item.label} iconName={item.iconName} />
+      <Item text={item?.text} label={item?.label} iconName={item?.iconName} />
     )
 
-    if (item.link) {
+    if (item?.link) {
       return (
         <Link
-          href={item.link}
+          href={item?.link}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={item.text}
+          aria-label={item?.text}
         >
           {itemContent}
         </Link>
       )
     }
 
-    if (item.copy) {
-      return <CopyText textToCopy={item.text}>{itemContent}</CopyText>
-    }
+    if (item?.copy)
+      return <CopyText textToCopy={item?.text}>{itemContent}</CopyText>
 
     return itemContent
   }
@@ -51,7 +50,7 @@ const List = ({ data, title, rounded = false, divided = false }: Props) => {
     <FlexWrapper gap="medium">
       {title && <h3>{title}</h3>}
       <ul className={`${styles.list} ${classNameList}`}>
-        {data.map((item, index) => (
+        {data?.map((item, index) => (
           <li className={styles.item} key={index}>
             {renderListItem(item)}
           </li>

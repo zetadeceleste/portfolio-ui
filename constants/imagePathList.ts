@@ -1,6 +1,8 @@
 import { ImageSetType } from '@/types'
 
-export const HOME_PAGE_IMAGES: ImageSetType = {
+export const WEBSITE_IMAGE = '/website-image.webp'
+
+export const HOME_PAGE_IMAGE: ImageSetType = {
   name: 'home-page',
   description: 'Ilustration of a developer girl and her dog Luna.',
   sizes: '(max-width: 768px) 50vw, 100vw',

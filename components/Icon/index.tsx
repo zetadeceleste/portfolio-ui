@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 import { ICON_DESCRIPTION_LIST } from '@/constants/iconDescriptionList'
 import { useTheme } from '@/context/ThemeContext'
-import { IconName } from '@/types'
+import { IconType } from '@/types'
 
 interface Props {
-  name: IconName
+  name: IconType
   variant?: boolean
 }
 
