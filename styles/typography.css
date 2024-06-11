@@ -6,8 +6,8 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 2.5rem;
+  font-size: 3.25rem;
+  line-height: 2.25rem;
 
   &.bigger {
     font-size: 4.75rem;
