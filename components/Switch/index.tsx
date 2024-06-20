@@ -1,3 +1,5 @@
+import { useCallback } from 'react'
+
 import FlexWrapper from '../FlexWrapper'
 
 import styles from './Switch.module.css'
@@ -10,9 +12,9 @@ interface Props {
 }
 
 const Switch = ({ checked, onChange, label, variant }: Props) => {
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     onChange()
-  }
+  }, [onChange])
 
   return (
     <FlexWrapper

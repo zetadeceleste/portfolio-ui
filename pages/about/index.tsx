@@ -1,52 +1,56 @@
+/* eslint-disable react/no-children-prop */
+import { useEffect, useState } from 'react'
+import Markdown from 'react-markdown'
+
 import styles from './about.module.css'
 
 import Container from '@/components/Container'
 import DynamicHead from '@/components/DynamicHead'
 import FlexWrapper from '@/components/FlexWrapper'
 import Headline from '@/components/Headline'
+import Loader from '@/components/Loader'
 import SocialLinks from '@/components/SocialLinks'
-import Tooltip from '@/components/Tooltip'
+import { fetchAboutData } from '@/services'
+import { AboutType } from '@/services/types'
 import { Page } from '@/types'
 
-const AboutPage = () => (
-  <>
-    <DynamicHead page={Page.ABOUT} />
-    <Container>
-      <FlexWrapper gap="large">
-        <Headline title={<>howdy!</>} highlighted />
-        <FlexWrapper gap="medium">
-          <p>
-            I´m <strong className={styles.name}>Celes</strong>, a developer
-            focused in <strong>Growth Engineering</strong>{' '}
-            <Tooltip text="yup, the '&&' is totally on purpose">&&</Tooltip>{' '}
-            <strong>Frontend Development</strong>.
-          </p>
-          <p>
-            With over 5 years of cross-industry experience, I´ve closely
-            collaborated with designers, marketers, and analysts.
-          </p>
-          <p>
-            Passionate about continuous learning, I strive to deliver
-            pixel-perfect designs with a focus on <strong>SEO</strong> and{' '}
-            <strong>Performance</strong> optimization, essential for maintaining
-            a high <em>Quality Score</em> for websites.
-          </p>
-          <p>
-            I’m committed to the principles of{' '}
-            <em>🌱 Sustainable Software Engineering</em>: prioritizing best
-            practices for clean code and resource optimization, both to minimize
-            environmental impact and to smartly cut costs.
-          </p>
-          <p>
-            Additionally, I consider <em>Web Accessibility</em> a priority,
-            ensuring an inclusive user experience by providing seamless access
-            for individuals with disabilities.
-          </p>
+const AboutPage = () => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [aboutData, setAboutData] = useState<AboutType>({
+    about: '',
+  })
+
+  useEffect(() => {
+    const loadAboutData = async () => {
+      try {
+        const data = await fetchAboutData()
+        data?.about && setAboutData(data)
+      } catch (err) {
+        console.error('Error fetching additional information:', err)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    loadAboutData()
+  }, [])
+
+  if (isLoading) return <Loader />
+
+  return (
+    <>
+      <DynamicHead page={Page.ABOUT} />
+      <Container>
+        <FlexWrapper gap="large">
+          <Headline title={<>howdy!</>} highlighted />
+          <FlexWrapper className={styles.content} gap="medium">
+            <Markdown children={aboutData?.about} />
+          </FlexWrapper>
+          <SocialLinks />
         </FlexWrapper>
-        <SocialLinks />
-      </FlexWrapper>
-    </Container>
-  </>
-)
+      </Container>
+    </>
+  )
+}
 
 export default AboutPage

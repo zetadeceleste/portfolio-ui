@@ -50,8 +50,8 @@ const List = ({ data, title, rounded = false, divided = false }: Props) => {
     <FlexWrapper gap="medium">
       {title && <h3>{title}</h3>}
       <ul className={`${styles.list} ${classNameList}`}>
-        {data?.map((item, index) => (
-          <li className={styles.item} key={index}>
+        {data?.map((item) => (
+          <li className={styles.item} key={item?.id}>
             {renderListItem(item)}
           </li>
         ))}

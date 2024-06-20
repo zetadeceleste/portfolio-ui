@@ -3,15 +3,16 @@ import { fetchData } from './fetchData'
 
 const fetchServiceData = async (path: string) => await fetchData(path)
 
-export const fetchAbout = () => fetchServiceData(API_SERVICE_LIST.about)
+export const fetchAboutData = () => fetchServiceData(API_SERVICE_LIST.about)
 
-export const fetchAdditionalInformation = () =>
+export const fetchAdditionalInformationData = () =>
   fetchServiceData(API_SERVICE_LIST.additionalInformation)
 
-export const fetchExperienceList = () =>
+export const fetchExperienceListData = () =>
   fetchServiceData(API_SERVICE_LIST.experiences)
 
-export const fetchSkillsList = () => fetchServiceData(API_SERVICE_LIST.skills)
+export const fetchSkillsListData = () =>
+  fetchServiceData(API_SERVICE_LIST.skills)
 
-export const fetchSocialLinks = () =>
+export const fetchSocialLinksData = () =>
   fetchServiceData(API_SERVICE_LIST.socialLinks)

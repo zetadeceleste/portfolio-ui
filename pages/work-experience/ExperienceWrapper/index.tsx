@@ -4,18 +4,19 @@ import ExperienceItem from './ExperienceItem'
 import styles from './ExperienceWrapper.module.css'
 
 import Loader from '@/components/Loader'
-import { fetchExperienceList } from '@/services/'
+import { fetchExperienceListData } from '@/services/'
 import { ExperienceListType } from '@/services/types'
 
 const ExperienceWrapper = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [experienceList, setExperienceList] = useState<ExperienceListType>([])
+  const [experienceListData, setExperienceListData] =
+    useState<ExperienceListType>([])
 
   useEffect(() => {
-    const loadExperienceList = async () => {
+    const loadExperienceListData = async () => {
       try {
-        const data = await fetchExperienceList()
-        data?.length > 0 && setExperienceList(data)
+        const data = await fetchExperienceListData()
+        data?.length > 0 && setExperienceListData(data)
       } catch (err) {
         console.error(err)
       } finally {
@@ -23,14 +24,14 @@ const ExperienceWrapper = () => {
       }
     }
 
-    loadExperienceList()
+    loadExperienceListData()
   }, [])
 
   if (isLoading) return <Loader />
 
   return (
     <ol className={styles.list}>
-      {experienceList?.map((experience, index) => (
+      {experienceListData?.map((experience, index) => (
         <li className={styles.item} key={index}>
           <ExperienceItem experience={experience} />
         </li>

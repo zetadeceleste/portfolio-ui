@@ -1,3 +1,5 @@
-.name {
-  color: var(--color-text-star);
+.content {
+  & p:first-child strong:first-child {
+    color: var(--color-text-star);
+  }
 }

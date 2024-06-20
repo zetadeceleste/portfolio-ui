@@ -6,24 +6,24 @@ import FlexWrapper from '@/components/FlexWrapper'
 import Headline from '@/components/Headline'
 import List from '@/components/List'
 import Loader from '@/components/Loader'
-import { fetchSkillsList } from '@/services'
+import { fetchSkillsListData } from '@/services'
 import { SkillLinkListType } from '@/services/types'
 import { Page } from '@/types'
 
 const SkillsPage = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [skillList, setSkillList] = useState<SkillLinkListType>({
+  const [skillListData, setSkillListData] = useState<SkillLinkListType>({
     tech_skills: [],
     soft_skills: [],
   })
 
   useEffect(() => {
-    const loadSkillList = async () => {
+    const loadSkillListData = async () => {
       try {
-        const data = await fetchSkillsList()
+        const data = await fetchSkillsListData()
         data?.tech_skills?.length > 0 &&
           data?.soft_skills?.length > 0 &&
-          setSkillList(data)
+          setSkillListData(data)
       } catch (err) {
         console.error(err)
       } finally {
@@ -31,7 +31,7 @@ const SkillsPage = () => {
       }
     }
 
-    loadSkillList()
+    loadSkillListData()
   }, [])
 
   if (isLoading) return <Loader />
@@ -43,8 +43,8 @@ const SkillsPage = () => {
         <FlexWrapper gap="large">
           <Headline title={<>skills</>} highlighted />
           <FlexWrapper gap="large">
-            <List title="Tech" data={skillList?.tech_skills} divided />
-            <List title="Soft" data={skillList?.soft_skills} divided />
+            <List title="Tech" data={skillListData?.tech_skills} divided />
+            <List title="Soft" data={skillListData?.soft_skills} divided />
           </FlexWrapper>
         </FlexWrapper>
       </Container>

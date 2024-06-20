@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 import HamburgerIcon from './HamburgerIcon'
 import styles from './MenuIcon.module.css'
@@ -19,11 +19,15 @@ const MenuIcon = ({ onClick, menuVisible }: Props) => {
     return () => clearTimeout(timer)
   }, [])
 
+  const handleClick = useCallback(() => {
+    onClick()
+  }, [onClick])
+
   return (
     <div className={`${styles['menu-icon']} ${showIcon ? styles.show : ''}`}>
       <button
         className={styles.button}
-        onClick={onClick}
+        onClick={handleClick}
         aria-controls="menu"
         aria-expanded={menuVisible ? 'true' : 'false'}
         aria-label="Toggle menu"

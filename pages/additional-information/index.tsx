@@ -6,28 +6,33 @@ import FlexWrapper from '@/components/FlexWrapper'
 import Headline from '@/components/Headline'
 import List from '@/components/List'
 import Loader from '@/components/Loader'
-import { fetchAdditionalInformation } from '@/services'
+import { fetchAdditionalInformationData } from '@/services'
 import { AdditionalInformationType } from '@/services/types'
 import { Page } from '@/types'
 
 const AdditionalInformationPage = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [additionalInformation, setAdditionalInformation] =
+  const [additionalInformationData, setAdditionalInformationData] =
     useState<AdditionalInformationType>({
-      education: [],
+      education: {
+        degree: '',
+        institution: '',
+        duration: '',
+        location: '',
+      },
       languages: [],
       volunteering: [],
     })
   const [languageConnector, setLanguageConnector] = useState('')
 
   useEffect(() => {
-    const loadAdditionalInformation = async () => {
+    const loadAdditionalInformationData = async () => {
       try {
-        const data = await fetchAdditionalInformation()
-        data.education?.length > 0 &&
+        const data = await fetchAdditionalInformationData()
+        data.education &&
           data.languages?.length > 0 &&
           data.volunteering?.length > 0 &&
-          setAdditionalInformation(data)
+          setAdditionalInformationData(data)
 
         if (data.languages?.length === 2) {
           setLanguageConnector(' and ')
@@ -41,7 +46,7 @@ const AdditionalInformationPage = () => {
       }
     }
 
-    loadAdditionalInformation()
+    loadAdditionalInformationData()
   }, [])
 
   if (isLoading) return <Loader />
@@ -62,26 +67,26 @@ const AdditionalInformationPage = () => {
           <FlexWrapper gap="large">
             <FlexWrapper gap="medium">
               <h3>Education</h3>
-              {additionalInformation?.education?.map(
-                ({ degree, institution, duration, location }, index) => (
-                  <FlexWrapper key={index}>
-                    <p>
-                      {degree} at {institution}
-                    </p>
-                    <span>
-                      {duration} [{location}]
-                    </span>
-                  </FlexWrapper>
-                ),
-              )}
+              <FlexWrapper>
+                <p>
+                  {additionalInformationData?.education?.degree} at{' '}
+                  {additionalInformationData?.education?.institution}
+                </p>
+                <span>
+                  {additionalInformationData?.education?.duration} [
+                  {additionalInformationData?.education?.location}]
+                </span>
+              </FlexWrapper>
             </FlexWrapper>
             <FlexWrapper gap="medium">
               <h3>Languages</h3>
-              <p>{additionalInformation?.languages.join(languageConnector)}</p>
+              <p>
+                {additionalInformationData?.languages.join(languageConnector)}
+              </p>
             </FlexWrapper>
             <List
               title="Volunteering"
-              data={additionalInformation?.volunteering}
+              data={additionalInformationData?.volunteering}
             />
           </FlexWrapper>
         </FlexWrapper>

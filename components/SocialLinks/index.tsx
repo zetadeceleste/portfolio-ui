@@ -3,18 +3,20 @@ import { useEffect, useState } from 'react'
 import List from '../List'
 import Loader from '../Loader'
 
-import { fetchSocialLinks } from '@/services'
+import { fetchSocialLinksData } from '@/services'
 import { SocialLinkListType } from '@/services/types'
 
 const SocialLinks = () => {
   const [isLoading, setIsLoading] = useState(true)
-  const [socialLinkList, setSocialList] = useState<SocialLinkListType>([])
+  const [socialLinkListData, setSocialListData] = useState<SocialLinkListType>(
+    [],
+  )
 
   useEffect(() => {
-    const loadSocialLinkList = async () => {
+    const loadSocialLinkListData = async () => {
       try {
-        const data = await fetchSocialLinks()
-        data?.length > 0 && setSocialList(data)
+        const data = await fetchSocialLinksData()
+        data?.length > 0 && setSocialListData(data)
       } catch (err) {
         console.error(err)
       } finally {
@@ -22,12 +24,12 @@ const SocialLinks = () => {
       }
     }
 
-    loadSocialLinkList()
+    loadSocialLinkListData()
   }, [])
 
   if (isLoading) return <Loader />
 
-  return <List data={socialLinkList} />
+  return <List data={socialLinkListData} />
 }
 
 export default SocialLinks
