@@ -8,7 +8,7 @@ export const AUTHOR_TWITTER = `https://twitter.com/${AUTHOR_USERNAME}`
 export const AUTHOR_LINKEDIN = `https://www.linkedin.com/in/${AUTHOR_USERNAME}`
 export const AUTHOR_GITHUB = `https://github.com/${AUTHOR_USERNAME}`
 
-export const WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL
+export const WEBSITE_URL = 'https://zetadeceleste.com'
 export const WEBSITE_TITLE = `${AUTHOR} | Developer`
 export const WEBSITE_SHORT_DESCRIPTION =
   'Developer focused in Growth Engineering & Frontend Development'
