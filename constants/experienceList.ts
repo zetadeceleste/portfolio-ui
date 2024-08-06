@@ -2,6 +2,26 @@ import { ExperienceType } from '@/types'
 
 export const EXPERIENCE_LIST: ExperienceType[] = [
   {
+    role: 'Integration Specialist',
+    dateFrom: 'JUL 2024',
+    company: 'AWG',
+    companyWebsite: 'https://awg.la/',
+    companyType: 'Telecommunications, B2C',
+    jobLocation: 'Buenos Aires, Argentina',
+    jobType: 'full-time',
+    dateTo: 'PRESENT',
+    current: true,
+    accomplishments: [
+      {
+        text: 'Worked on the creation of the Technical Digital Advertising department, serving as the primary point of reference for the company.',
+      },
+      {
+        text: 'Refactored and modernized the code used for generating reports with the Google Ads API.',
+      },
+    ],
+    mainTechStack: [{ text: 'PHP' }, { text: 'Node.js' }],
+  },
+  {
     role: 'Growth Engineer',
     dateFrom: 'AGO 2022',
     company: 'Slang',
@@ -9,7 +29,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     companyType: 'EdTech, B2B2C',
     jobLocation: 'Boston, USA',
     jobType: 'full-time',
-    dateTo: 'PRESENT',
+    dateTo: 'FEB 2024',
     current: true,
     accomplishments: [
       {
