@@ -30,7 +30,6 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     jobLocation: 'Boston, USA',
     jobType: 'full-time',
     dateTo: 'FEB 2024',
-    current: true,
     accomplishments: [
       {
         text: 'Established and tailored the Growth department to meet organizational needs, driving significant growth.',
