@@ -13,13 +13,30 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     current: true,
     accomplishments: [
       {
-        text: 'Worked on the creation of the Technical Digital Advertising department, serving as the primary point of reference for the company.',
+        text: "Led the development and maintenance of multiple full-stack applications used by AWG's Digital Advertising team, supporting both internal workflows and external publishers.",
       },
       {
-        text: 'Refactored and modernized the code used for generating reports with the Google Ads API.',
+        text: 'Built tools using Laravel, PHP, Node.js, and JavaScript, integrating with Google Ad Manager API and other ad-related web services to automate reporting and data visualization.',
+      },
+      {
+        text: 'Improved operational efficiency by reducing manual tasks and implementation times, enabling faster and more accurate decision-making across teams.',
+      },
+      {
+        text: 'Worked autonomously, managed my own tasks, conducted demos, fixed bugs, and led internal workshops to share knowledge and onboard teammates.',
+      },
+      {
+        text: 'Gained deep technical expertise in digital advertising systems and strengthened my ability to propose, build, and deliver impactful solutions using AI tools as part of my development workflow.',
+      },
+      {
+        text: 'Create an API from scratch for clients consuming.',
       },
     ],
-    mainTechStack: [{ text: 'PHP' }, { text: 'Node.js' }],
+    mainTechStack: [
+      { text: 'Laravel' },
+      { text: 'PHP' },
+      { text: 'Node.js' },
+      { text: 'JavaScript' },
+    ],
   },
   {
     role: 'Growth Engineer',
