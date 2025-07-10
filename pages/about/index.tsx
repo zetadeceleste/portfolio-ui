@@ -5,7 +5,6 @@ import DynamicHead from '@/components/DynamicHead'
 import FlexWrapper from '@/components/FlexWrapper'
 import Headline from '@/components/Headline'
 import SocialLinks from '@/components/SocialLinks'
-import Tooltip from '@/components/Tooltip'
 import { Page } from '@/types'
 
 const AboutPage = () => (
@@ -16,31 +15,22 @@ const AboutPage = () => (
         <Headline title={<>howdy!</>} highlighted />
         <FlexWrapper gap="medium">
           <p>
-            I´m <strong className={styles.name}>Celes</strong>, a developer
-            focused in <strong>Growth Engineering</strong>{' '}
-            <Tooltip text="yup, the '&&' is totally on purpose">&&</Tooltip>{' '}
-            <strong>Frontend Development</strong>.
+            I´m <strong className={styles.name}>Celes</strong> with a
+            programming degree and over 5 years of cross-industry experience,
+            having worked closely with designers, publishers, marketers and
+            analysts to deliver high-impact digital products.
           </p>
           <p>
-            With over 5 years of cross-industry experience, I´ve closely
-            collaborated with designers, marketers, and analysts.
-          </p>
-          <p>
-            Passionate about continuous learning, I strive to deliver
-            pixel-perfect designs with a focus on <strong>SEO</strong> and{' '}
-            <strong>Performance</strong> optimization, essential for maintaining
+            I specialize in building <em>pixel-perfect</em>,
+            <strong>accessible</strong> and <strong>SEO-optimized</strong>{' '}
+            interfaces, with a strong focus on{' '}
+            <strong>performance optimization</strong>, essential for maintaining
             a high <em>Quality Score</em> for websites.
           </p>
           <p>
-            I’m committed to the principles of{' '}
-            <em>🌱 Sustainable Software Engineering</em>: prioritizing best
-            practices for clean code and resource optimization, both to minimize
-            environmental impact and to smartly cut costs.
-          </p>
-          <p>
-            Additionally, I consider <em>Web Accessibility</em> a priority,
-            ensuring an inclusive user experience by providing seamless access
-            for individuals with disabilities.
+            Passionate about 🌱 <em>Sustainable Software Engineering</em>, I
+            prioritize clean code and resource-efficient practices to reduce
+            environmental impact and optimize infrastructure costs.
           </p>
         </FlexWrapper>
         <SocialLinks />
