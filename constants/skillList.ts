@@ -1,26 +1,18 @@
 import { ItemType } from '@/types'
 
 export const TECH_SKILL_LIST: ItemType[] = [
-  { text: 'React.js' },
-  { text: 'Next.js' },
-  { text: 'TypeScript' },
-  { text: 'JavaScript' },
-  { text: 'Ruby on Rails' },
-  { text: 'Node.js' },
-  { text: 'PHP' },
-  { text: 'Laravel' },
-  { text: 'Nginx' },
-  { text: 'CSS | Sass/SCSS' },
-  { text: 'Git' },
-  { text: 'Google Tag Manager' },
-  { text: 'Google Ads API' },
-  { text: 'SEO' },
-  { text: 'Semantic HTML' },
+  { text: 'React.js & TypeScript' },
+  { text: 'Node.js & PHP' },
+  { text: 'AWS' },
+  { text: 'Google Ad Manager API' },
+  { text: 'SQL' },
+  { text: 'WordPress' },
+  { text: 'SEO & Semantic HTML' },
+  { text: 'Git & GitHub' },
+  { text: 'Responsive Design & WCAG' },
   { text: 'Figma' },
-  { text: 'Responsive web design' },
-  { text: 'Digital marketing tools integration' },
-  { text: 'WCAG 3' },
-  { text: 'Agile Methodology Tools' },
+  { text: 'Digital & Advertising Tools Integration' },
+  { text: 'Automation & Workflow Optimization' },
 ]
 
 export const SOFT_SKILL_LIST: ItemType[] = [
