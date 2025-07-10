@@ -1,4 +1,5 @@
 import getConfig from 'next/config'
+import Link from 'next/link'
 
 import FlexWrapper from '../../components/FlexWrapper'
 
@@ -17,14 +18,20 @@ const Footer = () => {
       <FlexWrapper className={styles.wrapper}>
         <FlexWrapper>
           <p>Website handcrafted with 🤘😎.</p>
-          <p>Marvelous illustration and icons made by Luz Zapata.</p>
+          <p>
+            Marvelous illustration and icons made by{' '}
+            <Link href="https://www.behance.net/luzzapata2" target="_blank">
+              Luz Zapata
+            </Link>
+            .
+          </p>
         </FlexWrapper>
         <FlexWrapper
           flexDirection="column-to-row"
           justifyContent="space-between"
         >
           <small>
-            Copyright © {currentYear} chikilabs. All rights reserved.
+            Copyright © {currentYear} File City Creations. All rights reserved.
           </small>
           <small>v{publicRuntimeConfig.version}</small>
         </FlexWrapper>

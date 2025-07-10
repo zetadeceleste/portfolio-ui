@@ -7,14 +7,20 @@ export const TECH_SKILL_LIST: ItemType[] = [
   { text: 'JavaScript' },
   { text: 'Ruby on Rails' },
   { text: 'Node.js' },
+  { text: 'PHP' },
+  { text: 'Laravel' },
+  { text: 'Nginx' },
   { text: 'CSS | Sass/SCSS' },
-  { text: 'Semantic HTML' },
-  { text: 'SEO' },
   { text: 'Git' },
+  { text: 'Google Tag Manager' },
+  { text: 'Google Ads API' },
+  { text: 'SEO' },
+  { text: 'Semantic HTML' },
   { text: 'Figma' },
   { text: 'Responsive web design' },
   { text: 'Digital marketing tools integration' },
   { text: 'WCAG 3' },
+  { text: 'Agile Methodology Tools' },
 ]
 
 export const SOFT_SKILL_LIST: ItemType[] = [

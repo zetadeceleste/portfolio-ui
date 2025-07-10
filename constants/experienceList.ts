@@ -13,13 +13,16 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     current: true,
     accomplishments: [
       {
-        text: 'Worked on the creation of the Technical Digital Advertising department, serving as the primary point of reference for the company.',
+        text: 'Designed and maintained internal tools and dashboards using Google Ad Manager’s API and AWS, automating workflows and reporting across the ad delivery process.',
       },
       {
-        text: 'Refactored and modernized the code used for generating reports with the Google Ads API.',
+        text: 'Reduced implementation time and manual work by building scalable full-stack solutions, enabling faster decision-making for internal teams and external publishers.',
+      },
+      {
+        text: 'Acted as a technical lead in cross-team initiatives, running internal workshops and leveraging AI tools to improve efficiency and code quality.',
       },
     ],
-    mainTechStack: [{ text: 'PHP' }, { text: 'Node.js' }],
+    mainTechStack: [{ text: 'PHP' }, { text: 'Node.js' }, { text: 'AWS' }],
   },
   {
     role: 'Growth Engineer',
@@ -32,25 +35,13 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     dateTo: 'FEB 2024',
     accomplishments: [
       {
-        text: 'Established and tailored the Growth department to meet organizational needs, driving significant growth.',
+        text: 'Built and structured the Growth Engineering function from scratch, focusing on scalable solutions to support marketing and sales needs.',
       },
       {
-        text: 'Revamped over 20 Marketing pages, the company blog, and email structures, enhancing performance and user experience.',
+        text: 'Led the redesign and performance optimization of over 20 marketing assets, improved analytics accuracy, and boosted SEO health.',
       },
       {
-        text: 'Installed and reconfigured analytics tools, improving data accuracy for better decision-making.',
-      },
-      {
-        text: 'Led a workshop for non-tech team members, simplifying technical concepts and processes.',
-      },
-      {
-        text: "Boosted the website's SEO score from 70 to over 90, significantly increasing visibility.",
-      },
-      {
-        text: 'Developed a Feature Request Guide for Marketing and Sales teams, streamlining project processes and enhancing efficiency.',
-      },
-      {
-        text: 'Created integrated with Sales system landing pages, reducing dependency on third-party tools, cutting costs, and improving analytics capabilities.',
+        text: 'Replaced third-party dependencies by developing internal landing pages and tools, cutting costs and improving user data tracking.',
       },
     ],
     mainTechStack: [
@@ -70,13 +61,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     dateTo: 'JUL 2022',
     accomplishments: [
       {
-        text: 'Conducted technical analysis for new features, enhancing product development.',
-      },
-      {
-        text: 'Managed and prioritized tasks efficiently within an agile framework.',
-      },
-      {
-        text: 'Developed innovative solutions to close technology gaps, improving user experience.',
+        text: 'Delivered high-impact features that closed technical gaps and enhanced UX in a fast-paced agile team.',
       },
     ],
     mainTechStack: [{ text: 'Svelte' }, { text: 'Firebase' }],
@@ -92,16 +77,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     dateTo: 'DEC 2021',
     accomplishments: [
       {
-        text: 'Led the development of a new module, managing tasks and applying best practices.',
-      },
-      {
-        text: 'Served as the UI team lead, mentoring junior developers and ensuring adherence to standards.',
-      },
-      {
-        text: 'Implemented a stringent code review process, reducing deployment errors and enhancing code reliability.',
-      },
-      {
-        text: 'Participated in hiring processes by conducting technical interviews and assessments.',
+        text: 'Led a product module from scratch and mentored UI team members, improving app design and team standards.',
       },
     ],
     mainTechStack: [{ text: 'React.js' }, { text: 'React Native' }],
@@ -117,14 +93,10 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     dateTo: 'AGO 2022',
     accomplishments: [
       {
-        text: 'Developed custom features tailored to client needs, enhancing overall user satisfaction.',
+        text: 'Built custom features for client-specific needs in B2C software, improving usability and user satisfaction.',
       },
     ],
-    mainTechStack: [
-      { text: 'React.js' },
-      { text: 'Next.js' },
-      { text: 'WordPress' },
-    ],
+    mainTechStack: [{ text: 'Next.js' }, { text: 'WordPress' }],
   },
   {
     role: 'Full Stack Developer',
@@ -137,16 +109,14 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     dateTo: 'OCT 2020',
     accomplishments: [
       {
-        text: 'Integrated Schema.org and Facebook Pixel, boosting online presence and engagement.',
-      },
-      {
-        text: 'Achieved a 100% SEO score, significantly increasing search visibility and traffic.',
-      },
-      {
-        text: 'Improved user satisfaction by implementing design changes based on user behavior analysis.',
+        text: 'Achieved a 100% SEO score and boosted organic traffic by enhancing UX and integrating advanced analytics.',
       },
     ],
-    mainTechStack: [{ text: 'React.js' }, { text: 'Ruby on Rails' }],
+    mainTechStack: [
+      { text: 'React.js' },
+      { text: 'Ruby on Rails' },
+      { text: 'AWS' },
+    ],
   },
   {
     role: 'Frontend Developer',
