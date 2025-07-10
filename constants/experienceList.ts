@@ -26,7 +26,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   },
   {
     role: 'Growth Engineer',
-    dateFrom: 'AGO 2022',
+    dateFrom: 'AUG 2022',
     company: 'Slang',
     companyWebsite: 'https://slangapp.com/',
     companyType: 'EdTech, B2B2C',
@@ -90,7 +90,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     companyType: 'Software Solutions, B2C',
     jobLocation: 'Philadelphia, USA',
     jobType: 'freelance',
-    dateTo: 'AGO 2022',
+    dateTo: 'AUG 2022',
     accomplishments: [
       {
         text: 'Built custom features for client-specific needs in B2C software, improving usability and user satisfaction.',
@@ -120,7 +120,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   },
   {
     role: 'Frontend Developer',
-    dateFrom: 'DIC 2018',
+    dateFrom: 'DEC 2018',
     company: 'R1 Group',
     companyWebsite: 'https://www.r1group.ar/',
     companyType: 'IT Solutions, B2B',
@@ -131,7 +131,7 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
   },
   {
     role: 'Frontend Developer',
-    dateFrom: 'ENE 2018',
+    dateFrom: 'JAN 2018',
     company: 'Zamphyr',
     companyWebsite: 'https://zamphyr.com/',
     companyType: 'EdTech, B2C',
