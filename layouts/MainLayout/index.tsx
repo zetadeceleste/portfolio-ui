@@ -1,10 +1,9 @@
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 
 import Header from '../Header'
 
 import styles from './MainLayout.module.css'
 
-import { PAGE_INFO_LIST } from '@/constants/pageInfo'
 import { useTheme } from '@/context/ThemeContext'
 import Footer from '@/layouts/Footer'
 import Menu from '@/layouts/Menu'
@@ -16,18 +15,16 @@ interface Props {
 }
 
 const MainLayout = ({ children, isUnderConstruction = false }: Props) => {
-  const pathname = usePathname()
-  const isHome = pathname === PAGE_INFO_LIST.HOME.path
   const { theme } = useTheme()
 
   if (isUnderConstruction) return <SiteUnderConstructionPage />
 
   return (
-    <main className={`${styles.layout} ${isHome ? styles.home : ''} ${theme}`}>
-      <Header isHome={isHome} />
+    <main className={`${styles.layout} ${theme}`}>
+      <Header />
       <Menu />
       {children}
-      {!isHome && <Footer />}
+      <Footer />
     </main>
   )
 }

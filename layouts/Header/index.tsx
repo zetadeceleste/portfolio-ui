@@ -29,7 +29,7 @@ const Header = ({ isHome = false }: Props) => {
   }, [])
 
   const classNameListHeader = buildBooleanClassNameList(styles, {
-    home: isHome,
+    hero: isHome,
     variant,
   })
 
@@ -42,15 +42,13 @@ const Header = ({ isHome = false }: Props) => {
         gap="large"
         className={`${styles.wrapper} ${showHeader ? styles.show : ''}`}
       >
-        {!isHome && (
-          <Link
-            href={PAGE_INFO_LIST.HOME.path}
-            aria-label="Link to Home"
-            passHref
-          >
-            <Icon name="logo" variant={variant} />
-          </Link>
-        )}
+        <Link
+          href={PAGE_INFO_LIST.HERO.path}
+          aria-label="Link to Home"
+          passHref
+        >
+          <Icon name="logo" variant={variant} />
+        </Link>
         <nav className={styles.navbar}>
           <ul className={styles.list}>
             {Object.values(PAGE_INFO_LIST).map(

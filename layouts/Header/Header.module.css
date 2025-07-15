@@ -81,7 +81,7 @@
       }
     }
 
-    &.home {
+    &.hero {
       background-color: transparent;
       position: absolute;
       z-index: 1;

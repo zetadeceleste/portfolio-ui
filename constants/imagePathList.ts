@@ -1,7 +1,7 @@
 import { ImageSetType } from '@/types'
 
-export const HOME_PAGE_IMAGES: ImageSetType = {
-  name: 'home-page',
+export const HERO_SECTION_IMAGES: ImageSetType = {
+  name: 'hero',
   description: 'Ilustration of a developer girl and her dog Luna.',
   sizes: '(max-width: 768px) 50vw, 100vw',
   mobile: {

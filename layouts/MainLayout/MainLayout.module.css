@@ -3,7 +3,7 @@
   display: grid;
   grid-template-rows: 1fr auto;
 
-  &.home {
+  &.hero {
     grid-template-rows: 1fr;
   }
 }

@@ -1,7 +1,6 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import { siteUnderConstruction } from '../config'
 import { ThemeProvider } from '../context/ThemeContext'
 import MainLayout from '../layouts/MainLayout'
 
@@ -13,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
     <ThemeProvider>
-      <MainLayout isUnderConstruction={siteUnderConstruction}>
+      <MainLayout>
         <Component {...pageProps} />
       </MainLayout>
     </ThemeProvider>

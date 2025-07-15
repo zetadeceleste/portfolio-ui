@@ -15,7 +15,7 @@ const Custom404Page = ({ isUnderConstruction }: Props) => {
     if (isUnderConstruction) {
       router.push(PAGE_INFO_LIST.SITE_UNDER_CONSTRUCTION.path)
     } else {
-      router.push(PAGE_INFO_LIST.HOME.path)
+      router.push(PAGE_INFO_LIST.HERO.path)
     }
   }, [router])
 

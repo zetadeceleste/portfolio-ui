@@ -1,5 +1,16 @@
-import HomePage from './home'
+import DynamicHead from '@/components/DynamicHead'
+import AboutSection from '@/sections/AboutSection'
+import HeroSection from '@/sections/HeroSection'
+import { Page } from '@/types'
 
-const MainPage = () => <HomePage />
+const HomePage = () => {
+  return (
+    <>
+      <DynamicHead page={Page.HERO} />
+      <HeroSection />
+      <AboutSection />
+    </>
+  )
+}
 
-export default MainPage
+export default HomePage
