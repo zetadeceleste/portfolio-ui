@@ -15,8 +15,8 @@ const AboutPage = () => (
         <Headline title={<>howdy!</>} highlighted />
         <FlexWrapper gap="medium">
           <p>
-            I´m <strong className={styles.name}>Celes</strong> with a
-            programming degree and over 5 years of cross-industry experience,
+            I´m <strong className={styles.name}>Celes</strong>, a developer with
+            a programming degree and over 5 years of cross-industry experience,
             having worked closely with designers, publishers, marketers and
             analysts to deliver high-impact digital products.
           </p>
