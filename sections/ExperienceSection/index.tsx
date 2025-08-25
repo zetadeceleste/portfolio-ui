@@ -1,7 +1,8 @@
+import ExperienceWrapper from './ExperienceWrapper'
+
 import Container from '@/components/Container'
 import FlexWrapper from '@/components/FlexWrapper'
 import Headline from '@/components/Headline'
-import ExperienceWrapper from '@/sections/WorkExperienceSection/ExperienceWrapper'
 
 const ExperienceSection = () => (
   <Container scroll>

@@ -13,19 +13,19 @@ html {
 
 /* Landing page sections */
 .hero-section {
-  min-height: 100vh;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
+  min-height: 100vh;
   position: relative;
 }
 
 .hero-image {
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
   z-index: 1;
 }
 
@@ -35,9 +35,9 @@ html {
 }
 
 .section {
-  min-height: 100vh;
-  display: flex;
   align-items: center;
+  display: flex;
+  min-height: 100vh;
   padding: 2rem 0;
 }
 
@@ -50,12 +50,12 @@ html {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .section {
-    padding: 1rem 0;
     min-height: auto;
+    padding: 1rem 0;
   }
-  
+
   .hero-section {
     min-height: 80vh;
   }
