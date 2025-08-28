@@ -12,16 +12,21 @@ import SiteUnderConstructionPage from '@/pages/site-under-construction'
 interface Props {
   isUnderConstruction?: boolean
   children: React.ReactNode
+  isHome?: boolean
 }
 
-const MainLayout = ({ children, isUnderConstruction = false }: Props) => {
+const MainLayout = ({
+  children,
+  isUnderConstruction = false,
+  isHome = false,
+}: Props) => {
   const { theme } = useTheme()
 
   if (isUnderConstruction) return <SiteUnderConstructionPage />
 
   return (
-    <main className={`${styles.layout} ${theme}`}>
-      <Header />
+    <main className={`${styles.layout} ${theme} ${isHome ? styles.hero : ''}`}>
+      <Header isHome={isHome} />
       <Menu />
       {children}
       <Footer />

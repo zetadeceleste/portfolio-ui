@@ -21,20 +21,37 @@ const Header = ({ isHome = false }: Props) => {
   const [showHeader, setShowHeader] = useState(false)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowHeader(true)
-    }, 200)
+    if (!isHome) {
+      const timer = setTimeout(() => {
+        setShowHeader(true)
+      }, 200)
+      return () => clearTimeout(timer)
+    }
 
-    return () => clearTimeout(timer)
-  }, [])
+    const handleScroll = () => {
+      const heroHeight = window.innerHeight
+      const scrollY = window.scrollY
+
+      // Show header when we reach the AboutSection (just after hero)
+      setShowHeader(scrollY >= heroHeight - 100)
+    }
+
+    // Initial check
+    handleScroll()
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [isHome])
 
   const classNameListHeader = buildBooleanClassNameList(styles, {
     hero: isHome,
     variant,
   })
 
+  const headerClassNames = `${styles.header} ${classNameListHeader} ${isHome && showHeader ? styles.show : ''}`
+
   return (
-    <header className={`${styles.header} ${classNameListHeader}`}>
+    <header className={headerClassNames}>
       <FlexWrapper
         flexDirection="row"
         alignItems="center"
