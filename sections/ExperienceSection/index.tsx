@@ -14,6 +14,7 @@ const ExperienceSection = () => (
           </>
         }
         highlighted
+        animate
       />
       <ExperienceWrapper />
     </FlexWrapper>

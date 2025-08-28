@@ -16,6 +16,7 @@ const ContactSection = () => (
         }
         subtitle="Let´s work together!"
         center
+        animate
       />
       <SocialLinks />
     </FlexWrapper>

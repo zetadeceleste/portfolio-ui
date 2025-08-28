@@ -8,7 +8,7 @@ import SocialLinks from '@/components/SocialLinks'
 const AboutSection = () => (
   <Container>
     <FlexWrapper gap="large">
-      <Headline title={<>howdy!</>} highlighted />
+      <Headline title={<>howdy!</>} highlighted animate />
       <FlexWrapper gap="medium">
         <p>
           I´m <strong className={styles.name}>Celes</strong> with a programming

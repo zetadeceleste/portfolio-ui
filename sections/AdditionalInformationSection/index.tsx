@@ -13,6 +13,7 @@ const AdditionalInformationSection = () => (
           </>
         }
         highlighted
+        animate
       />
       <FlexWrapper gap="large">
         <FlexWrapper gap="medium">

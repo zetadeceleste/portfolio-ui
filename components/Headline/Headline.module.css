@@ -29,6 +29,7 @@
       color: var(--color-headline-variant);
     }
   }
+
 }
 
 @media (width >= 768px) {
@@ -36,6 +37,11 @@
     width: 100%;
 
     .title {
+      background-color: var(--color-highlighted);
+      width: 1ch;
+    }
+
+    &.animate .title {
       animation: fill-background 1.5s ease forwards;
     }
   }

@@ -7,7 +7,7 @@ import { TECH_SKILL_LIST, SOFT_SKILL_LIST } from '@/constants/skillList'
 const SkillsSection = () => (
   <Container>
     <FlexWrapper gap="large">
-      <Headline title={<>skills</>} highlighted />
+      <Headline title={<>skills</>} highlighted animate />
       <FlexWrapper gap="large">
         <List title="Tech" data={TECH_SKILL_LIST} divided />
         <List title="Soft" data={SOFT_SKILL_LIST} divided />

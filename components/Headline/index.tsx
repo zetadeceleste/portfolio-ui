@@ -1,6 +1,7 @@
 import styles from './Headline.module.css'
 
 import { useTheme } from '@/context/ThemeContext'
+import { useInViewport } from '@/hooks/useInViewport'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
   highlighted?: boolean
   variant?: boolean
   subtitle?: string
+  animate?: boolean
 }
 
 const Headline = ({
@@ -18,17 +20,23 @@ const Headline = ({
   center = false,
   highlighted = false,
   subtitle = '',
+  animate = false,
 }: Props) => {
   const { variant } = useTheme()
+  const { elementRef, isInViewport } = useInViewport({
+    threshold: 0.3,
+    triggerOnce: true,
+  })
 
   const classNameList = buildBooleanClassNameList(styles, {
     center,
     highlighted,
     variant,
+    animate: animate && isInViewport,
   })
 
   return (
-    <hgroup className={`${styles.headline} ${classNameList}`}>
+    <hgroup ref={elementRef} className={`${styles.headline} ${classNameList}`}>
       <h1 className={`${styles.title} ${bigTitles ? 'bigger' : ''}`}>
         {title}
       </h1>
