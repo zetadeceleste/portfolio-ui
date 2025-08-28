@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import ThemeSwitch from '../ThemeSwitch'
@@ -10,6 +8,7 @@ import FlexWrapper from '@/components/FlexWrapper'
 import Icon from '@/components/Icon'
 import { PAGE_INFO_LIST } from '@/constants/pageInfo'
 import { useTheme } from '@/context/ThemeContext'
+import { useScrollToSection } from '@/hooks/useScrollToSection'
 import { buildBooleanClassNameList } from '@/utils/styles'
 
 interface Props {
@@ -17,7 +16,7 @@ interface Props {
 }
 const Header = ({ isHome = false }: Props) => {
   const { variant } = useTheme()
-  const pathname = usePathname()
+  const { scrollToSection } = useScrollToSection()
   const [showHeader, setShowHeader] = useState(false)
 
   useEffect(() => {
@@ -36,11 +35,23 @@ const Header = ({ isHome = false }: Props) => {
       setShowHeader(scrollY >= heroHeight - 100)
     }
 
+    // Throttle scroll events for better performance
+    let ticking = false
+    const throttledScrollHandler = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
     // Initial check
     handleScroll()
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', throttledScrollHandler, { passive: true })
+    return () => window.removeEventListener('scroll', throttledScrollHandler)
   }, [isHome])
 
   const classNameListHeader = buildBooleanClassNameList(styles, {
@@ -59,34 +70,40 @@ const Header = ({ isHome = false }: Props) => {
         gap="large"
         className={`${styles.wrapper} ${showHeader ? styles.show : ''}`}
       >
-        <Link
-          href={PAGE_INFO_LIST.HERO.path}
-          aria-label="Link to Home"
-          passHref
+        <button
+          onClick={() => scrollToSection('hero')}
+          aria-label="Go to Home"
+          className={styles['logo-button']}
         >
           <Icon name="logo" variant={variant} />
-        </Link>
+        </button>
         <nav className={styles.navbar}>
           <ul className={styles.list}>
             {Object.values(PAGE_INFO_LIST).map(
-              ({ text, path, hideOnHeader }, index) => {
-                const isActive = pathname === path
-
+              ({ text, sectionId, hideOnHeader }, index) => {
                 const classNameListItem = buildBooleanClassNameList(styles, {
-                  active: isActive,
                   variant,
                 })
 
-                if (hideOnHeader) return null
+                if (hideOnHeader || !sectionId) return null
+
+                const handleNavClick = (e: React.MouseEvent) => {
+                  e.preventDefault()
+                  scrollToSection(sectionId)
+                }
 
                 return (
                   <li
                     className={`${styles.item} ${classNameListItem}`}
                     key={index}
                   >
-                    <Link href={path} aria-label={text} passHref>
+                    <button
+                      onClick={handleNavClick}
+                      aria-label={`Navigate to ${text} section`}
+                      className={styles['nav-button']}
+                    >
                       <p className={`bold ${styles.text}`}>{text}</p>
-                    </Link>
+                    </button>
                   </li>
                 )
               },

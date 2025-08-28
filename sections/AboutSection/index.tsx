@@ -6,7 +6,7 @@ import Headline from '@/components/Headline'
 import SocialLinks from '@/components/SocialLinks'
 
 const AboutSection = () => (
-  <Container>
+  <Container id="about">
     <FlexWrapper gap="large">
       <Headline title={<>howdy!</>} highlighted animate />
       <FlexWrapper gap="medium">

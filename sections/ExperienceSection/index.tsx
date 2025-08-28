@@ -5,7 +5,7 @@ import FlexWrapper from '@/components/FlexWrapper'
 import Headline from '@/components/Headline'
 
 const ExperienceSection = () => (
-  <Container scroll>
+  <Container id="experience" scroll>
     <FlexWrapper gap="large">
       <Headline
         title={

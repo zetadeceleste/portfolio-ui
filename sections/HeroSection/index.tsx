@@ -7,7 +7,7 @@ import ImageBySize from '@/components/ImageBySize'
 import { HERO_SECTION_IMAGES } from '@/constants/imagePathList'
 
 const HeroSection = () => (
-  <Container className={styles.container} full>
+  <Container id="hero" className={styles.container} full>
     <ImageBySize images={HERO_SECTION_IMAGES} className={styles.image} />
     <FlexWrapper className={styles.wrapper}>
       <Headline

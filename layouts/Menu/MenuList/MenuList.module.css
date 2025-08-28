@@ -34,6 +34,27 @@
 
     .item {
       text-align: center;
+      
+      .menu-button {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+        padding: 8px 0;
+        text-align: left;
+        width: 100%;
+        
+        &:focus {
+          border-radius: 4px;
+          outline: 2px solid var(--color-border-variant);
+          outline-offset: 2px;
+        }
+        
+        &:focus:not(:focus-visible) {
+          outline: none;
+        }
+      }
     }
   }
 

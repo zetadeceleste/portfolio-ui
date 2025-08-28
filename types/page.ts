@@ -15,5 +15,6 @@ export type PageInfoType = {
     text?: string
     hideOnHeader?: boolean
     hideOnMenu?: boolean
+    sectionId?: string
   }
 }

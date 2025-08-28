@@ -4,7 +4,7 @@ import Headline from '@/components/Headline'
 import List from '@/components/List'
 
 const AdditionalInformationSection = () => (
-  <Container>
+  <Container id="additional-info">
     <FlexWrapper gap="large">
       <Headline
         title={

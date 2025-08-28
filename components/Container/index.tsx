@@ -8,6 +8,7 @@ interface Props {
   scroll?: boolean
   className?: string
   children: React.ReactNode
+  id?: string
 }
 
 const Container = ({
@@ -15,6 +16,7 @@ const Container = ({
   scroll = false,
   className = '',
   children,
+  id,
 }: Props) => {
   const { variant } = useTheme()
 
@@ -24,7 +26,7 @@ const Container = ({
   })
 
   return (
-    <section className={`${styles.container} ${classNameList}`}>
+    <section id={id} className={`${styles.container} ${classNameList}`}>
       <div
         className={`${styles['grid-wrapper']} ${full ? styles.full : ''} ${className}`}
       >

@@ -4,7 +4,7 @@ import Headline from '@/components/Headline'
 import SocialLinks from '@/components/SocialLinks'
 
 const ContactSection = () => (
-  <Container>
+  <Container id="contact">
     <FlexWrapper alignItems="center" gap="large">
       <Headline
         title={
