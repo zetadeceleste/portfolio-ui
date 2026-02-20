@@ -1,5 +1,12 @@
 import { usePathname } from 'next/navigation'
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+} from 'react'
 
 import { PAGE_INFO_LIST } from '@/constants/pageInfo'
 import { Theme, ThemeType } from '@/types'
@@ -55,7 +62,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     }
   }, [])
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme((prevTheme) => {
       const newTheme =
         prevTheme === Theme.MAIN_THEME ? Theme.DARK_THEME : Theme.MAIN_THEME
@@ -68,13 +75,14 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       }
       return newTheme
     })
-  }
+  }, [])
 
-  return (
-    <ThemeContext.Provider value={{ variant, theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
+  const value = useMemo(
+    () => ({ variant, theme, toggleTheme }),
+    [variant, theme, toggleTheme],
   )
+
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
 
 export const useTheme = () => {

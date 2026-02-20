@@ -10,14 +10,15 @@ import '../styles/main.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
-    // Hide loading overlay after hydration
+    // Hide loading overlay immediately after hydration
     const loadingEl = document.getElementById('__loading')
     if (loadingEl) {
-      loadingEl.classList.add('hidden')
-      // Remove from DOM after transition
-      setTimeout(() => {
-        loadingEl.remove()
-      }, 200)
+      // Use requestAnimationFrame for better performance
+      requestAnimationFrame(() => {
+        loadingEl.classList.add('hidden')
+        // Remove from DOM after short transition
+        setTimeout(() => loadingEl.remove(), 150)
+      })
     }
   }, [])
 

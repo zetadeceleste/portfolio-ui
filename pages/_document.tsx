@@ -78,7 +78,8 @@ class MyDocument extends Document {
                   bottom: 0;
                   background: var(--color-background, #eaeaea);
                   z-index: 9999;
-                  transition: opacity 0.2s ease-out;
+                  transition: opacity 0.15s ease-out;
+                  will-change: opacity;
                 }
                 #__loading.hidden {
                   opacity: 0;
