@@ -2,7 +2,7 @@ import { ExperienceType } from '@/types'
 
 export const EXPERIENCE_LIST: ExperienceType[] = [
   {
-    role: 'Integration Specialist',
+    role: 'Tech Lead',
     dateFrom: 'JUL 2024',
     company: 'AWG',
     companyWebsite: 'https://awg.la/',
@@ -13,13 +13,13 @@ export const EXPERIENCE_LIST: ExperienceType[] = [
     current: true,
     accomplishments: [
       {
-        text: 'Designed and maintained internal tools and dashboards using Google Ad Manager’s API and AWS, automating workflows and reporting across the ad delivery process.',
+        text: 'Led technical analysis, design, and development of ad tech platforms integrated with Google Ad Manager API, creating specialized tools for programmatic advertising workflows.',
       },
       {
-        text: 'Reduced implementation time and manual work by building scalable full-stack solutions, enabling faster decision-making for internal teams and external publishers.',
+        text: 'Owned end-to-end development and maintenance of internal reporting systems and publisher-facing tools, reducing manual processes and enabling data-driven decision-making.',
       },
       {
-        text: 'Acted as a technical lead in cross-team initiatives, running internal workshops and leveraging AI tools to improve efficiency and code quality.',
+        text: 'Drove technical leadership initiatives including cross-functional collaboration, code quality standards, and team knowledge-sharing through workshops and AI-assisted development practices.',
       },
     ],
     mainTechStack: [{ text: 'PHP' }, { text: 'Node.js' }, { text: 'AWS' }],
