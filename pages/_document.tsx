@@ -67,8 +67,32 @@ class MyDocument extends Document {
               }}
             />
           )}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                #__loading {
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background: var(--color-background, #eaeaea);
+                  z-index: 9999;
+                  transition: opacity 0.2s ease-out;
+                }
+                #__loading.hidden {
+                  opacity: 0;
+                  pointer-events: none;
+                }
+                html.dark-theme #__loading {
+                  background: var(--color-background, #1c1818);
+                }
+              `,
+            }}
+          />
         </Head>
         <body>
+          <div id="__loading"></div>
           {/* Google Tag Manager (noscript) */}
           {googleTagManagerId && (
             <noscript
