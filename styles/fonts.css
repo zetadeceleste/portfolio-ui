@@ -1,18 +1,12 @@
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: Limelight;
-
-  /* Fallback to prevent layout shift */
-  size-adjust: 100%;
   src: url('../public/fonts/Limelight-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: RobotoMono;
   font-weight: 200;
-
-  /* Fallback to prevent layout shift */
-  size-adjust: 100%;
   src: url('../public/fonts/RobotoMono-Regular.ttf') format('truetype');
 }
