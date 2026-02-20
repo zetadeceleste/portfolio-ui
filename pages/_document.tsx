@@ -10,6 +10,21 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <MainMetaTags />
+          {/* Preload critical fonts to prevent layout shift */}
+          <link
+            rel="preload"
+            href="/fonts/Limelight-Regular.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/RobotoMono-Regular.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
           {/* Schema.org markup */}
           <script
             type="application/ld+json"
