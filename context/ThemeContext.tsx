@@ -28,21 +28,13 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   useEffect(() => {
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')
 
-    // Set initial theme based on user preference or existing class
-    const initialTheme =
-      document.documentElement.classList.contains('dark-theme') || prefersDarkScheme.matches
-        ? Theme.DARK_THEME
-        : Theme.MAIN_THEME
+    // Set initial theme based on existing class (applied by script in _document)
+    const initialTheme = document.documentElement.classList.contains(
+      'dark-theme',
+    )
+      ? Theme.DARK_THEME
+      : Theme.MAIN_THEME
     setTheme(initialTheme)
-
-    // Apply initial theme class
-    if (initialTheme === Theme.DARK_THEME) {
-      document.documentElement.classList.add('dark-theme')
-      document.documentElement.classList.remove('main-theme')
-    } else {
-      document.documentElement.classList.add('main-theme')
-      document.documentElement.classList.remove('dark-theme')
-    }
 
     // Update theme if preference changes
     const handleChange = (e: MediaQueryListEvent) => {
@@ -65,7 +57,8 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
-      const newTheme = prevTheme === Theme.MAIN_THEME ? Theme.DARK_THEME : Theme.MAIN_THEME
+      const newTheme =
+        prevTheme === Theme.MAIN_THEME ? Theme.DARK_THEME : Theme.MAIN_THEME
       if (newTheme === Theme.DARK_THEME) {
         document.documentElement.classList.add('dark-theme')
         document.documentElement.classList.remove('main-theme')
