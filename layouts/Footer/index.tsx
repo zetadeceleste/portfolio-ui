@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className={`${styles.footer} ${variant ? styles.variant : ''}`}>
       <FlexWrapper className={styles.wrapper}>
         <FlexWrapper>
-          <p>Website handcrafted with 🤘😎.</p>
+          <p>Website handcrafted with ❤️ and maintained with a 🤖 colleague.</p>
           <p>
             Marvelous illustration and icons made by{' '}
             <Link href="https://www.behance.net/luzzapata2" target="_blank">

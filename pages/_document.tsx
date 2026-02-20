@@ -54,6 +54,19 @@ class MyDocument extends Document {
           )}
         </Head>
         <body>
+          {/* Prevent flash of unstyled content (FOUC) for dark mode */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (prefersDark) {
+                    document.documentElement.classList.add('dark-theme');
+                  }
+                })();
+              `,
+            }}
+          />
           {/* Google Tag Manager (noscript) */}
           {googleTagManagerId && (
             <noscript
