@@ -6,7 +6,7 @@ export const TITLE = 'Celeste Zapata | Developer'
 export const MAIN_DESCRIPTION =
   "I'm Celeste Zapata, a developer with 6+ years of cross-industry experience. Tech lead bridging engineering and business goals, delivering scalable, high-quality solutions."
 export const KEYWORDS =
-  'Celeste Zapata, Developer, Web Developer, Frontend, Front-End, Fullstack, Full-Stack, Growth Engineer, Tech Lead, Development, Engineering, React, ReactJS, React.js, Next.js, JavaScript, TypeScript, SEO, Ruby on Rails, Web Accessibility, Quality Score, AI, Portfolio, Resume'
+  'Celeste Zapata, Developer, Web Developer, Frontend, Front-End, Fullstack, Full-Stack, Full Stack, Growth Engineer, Tech Lead, Developer, Development, Engineering, React, ReactJS, React.js, Next.js, JavaScript, TypeScript, SEO, Ruby on Rails, Web Accessibility, Quality Score, AI, Portfolio, Resume'
 
 export const WEBSITE_URL = 'https://zetadeceleste.dev'
 export const COMMON_TITLE = 'Celeste Zapata | '
