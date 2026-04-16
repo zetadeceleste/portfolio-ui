@@ -18,19 +18,17 @@ const AboutPage = () => (
             I´m <strong className={styles.name}>Celes</strong>, a developer with
             a programming degree and over 6 years of cross-industry experience,
             having worked closely with designers, publishers, marketers and
-            analysts to deliver high-impact digital products.
+            analysts across diverse industries.
           </p>
           <p>
-            I specialize in building <em>pixel-perfect</em>,
-            <strong>accessible</strong> and <strong>SEO-optimized</strong>{' '}
-            interfaces, with a strong focus on{' '}
-            <strong>performance optimization</strong>, essential for maintaining
-            a high <em>Quality Score</em> for websites.
+            As a tech lead, I guide teams through technical decisions while
+            keeping communication clear across all levels — bridging the gap
+            between engineering and business goals.
           </p>
           <p>
-            Passionate about 🌱 <em>Sustainable Software Engineering</em>, I
-            prioritize clean code and resource-efficient practices to reduce
-            environmental impact and optimize infrastructure costs.
+            I pair strong engineering fundamentals with AI-assisted workflows to
+            consistently deliver scalable, high-quality solutions — built to
+            last.
           </p>
         </FlexWrapper>
         <SocialLinks />
