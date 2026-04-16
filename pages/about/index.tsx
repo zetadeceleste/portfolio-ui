@@ -26,9 +26,9 @@ const AboutPage = () => (
             bridging the gap between engineering and business goals.
           </p>
           <p>
-            I pair strong engineering fundamentals with{' '}
-            <em>AI-assisted</em> workflows to consistently deliver scalable,
-            high-quality solutions — built to last.
+            I pair strong engineering fundamentals with <em>AI-assisted</em>{' '}
+            workflows to consistently deliver scalable, high-quality solutions —
+            built to last.
           </p>
         </FlexWrapper>
         <SocialLinks />
