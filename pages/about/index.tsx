@@ -21,14 +21,14 @@ const AboutPage = () => (
             analysts across diverse industries.
           </p>
           <p>
-            As a <strong>Tech Lead</strong>, I guide teams through technical decisions while
-            keeping communication clear across all levels — bridging the gap
-            between engineering and business goals.
+            As a <strong>Tech Lead</strong>, I guide teams through technical
+            decisions while keeping communication clear across all levels —
+            bridging the gap between engineering and business goals.
           </p>
           <p>
-            I pair strong engineering fundamentals with <em>AI-assisted</em> workflows to
-            consistently deliver scalable, high-quality solutions — built to
-            last.
+            I pair strong engineering fundamentals with{' '}
+            <em>AI-assisted</em> workflows to consistently deliver scalable,
+            high-quality solutions — built to last.
           </p>
         </FlexWrapper>
         <SocialLinks />
