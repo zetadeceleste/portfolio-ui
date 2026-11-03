@@ -11,36 +11,26 @@
 }
 
 .figure {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   margin: 0;
   position: relative;
   width: 100%;
 
   .caption {
-    color: var(--color-text-small);
-    font-size: 0.75rem;
-    font-style: italic;
-    padding: var(--gap-small) var(--gap-medium) 0;
-    text-align: center;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .figure .caption {
     background-color: var(--color-tooltip-background);
     border-radius: var(--border-radius);
     bottom: var(--gap-large);
     box-shadow: var(--box-shadow);
     color: var(--color-tooltip-text);
     font-size: 0.875rem;
+    font-style: italic;
     left: 50%;
     max-width: calc(100% - var(--gap-large) * 2);
     opacity: 0;
     padding: var(--gap-small) var(--gap-medium);
     pointer-events: none;
     position: absolute;
+    text-align: center;
     transform: translate(-50%, 4px);
     transition:
       opacity 0.4s ease,
@@ -48,6 +38,13 @@
     width: max-content;
   }
 
+  &.visible .caption {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
   .figure:hover .caption {
     opacity: 1;
     transform: translate(-50%, 0);

@@ -17,6 +17,7 @@ const ImageBySize = ({ images, className = '' }: Props) => {
   const [src, setSrc] = useState('')
   const [imgWidth, setImgWidth] = useState(0)
   const [imgHeight, setImgHeight] = useState(0)
+  const [showCaption, setShowCaption] = useState(false)
   const { width: windowWidth } = useWindowSize()
 
   useEffect(() => {
@@ -57,7 +58,12 @@ const ImageBySize = ({ images, className = '' }: Props) => {
   if (!caption) return picture
 
   return (
-    <figure className={styles.figure}>
+    // Hover shows the caption on desktop; tapping toggles it on touch devices.
+    <figure
+      className={`${styles.figure} ${showCaption ? styles.visible : ''}`}
+      onClick={() => setShowCaption((visible) => !visible)}
+      onMouseLeave={() => setShowCaption(false)}
+    >
       {picture}
       <figcaption className={styles.caption}>{caption}</figcaption>
     </figure>
