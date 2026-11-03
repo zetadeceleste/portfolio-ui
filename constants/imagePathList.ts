@@ -2,7 +2,8 @@ import { ImageSetType } from '@/types'
 
 export const HOME_PAGE_IMAGES: ImageSetType = {
   name: 'home-page',
-  description: 'Ilustration of a developer girl and her dog Luna.',
+  description: 'Illustration of a developer girl and her dog Luna.',
+  caption: 'In memory of Luna, the sweetest dog in the world.',
   sizes: '(max-width: 768px) 50vw, 100vw',
   mobile: {
     height: 364,

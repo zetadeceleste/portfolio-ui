@@ -13,7 +13,7 @@ interface Props {
 
 // This component is used to render a "same image" based on different resolutions: mobile, tablet and desktop.
 const ImageBySize = ({ images, className = '' }: Props) => {
-  const { name, description, sizes, mobile, tablet, desktop } = images
+  const { name, description, caption, sizes, mobile, tablet, desktop } = images
   const [src, setSrc] = useState('')
   const [imgWidth, setImgWidth] = useState(0)
   const [imgHeight, setImgHeight] = useState(0)
@@ -37,7 +37,7 @@ const ImageBySize = ({ images, className = '' }: Props) => {
     }
   }, [windowWidth])
 
-  return (
+  const picture = (
     <picture className={styles.picture}>
       {src !== '' && (
         <Image
@@ -52,6 +52,15 @@ const ImageBySize = ({ images, className = '' }: Props) => {
         />
       )}
     </picture>
+  )
+
+  if (!caption) return picture
+
+  return (
+    <figure className={styles.figure}>
+      {picture}
+      <figcaption className={styles.caption}>{caption}</figcaption>
+    </figure>
   )
 }
 

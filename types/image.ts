@@ -1,6 +1,7 @@
 export type ImageSetType = {
   name: string
   description: string
+  caption?: string
   sizes?: string
   mobile?: ImageType
   tablet?: ImageType
